@@ -1,0 +1,14 @@
+///
+/// @file
+/// Reset margin and/or padding values.
+///
+@mixin margin {
+  margin: 0;
+}
+@mixin padding {
+  padding: 0;
+}
+@mixin box {
+  @include margin;
+  @include padding;
+}

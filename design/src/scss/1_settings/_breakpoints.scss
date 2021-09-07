@@ -1,0 +1,13 @@
+///
+/// @file
+/// Define breakpoints.
+///
+$breakpoints: (
+  'tiny':   320px,
+  'xsmall': 480px,
+  'small':  576px,
+  'medium': 768px,
+  'large':  992px,
+  'xlarge': 1024px,
+  'giant':  1200px,
+);

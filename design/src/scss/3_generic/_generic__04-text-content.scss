@@ -1,0 +1,45 @@
+///
+/// @file
+/// Reset & normalize text content elements
+/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element#text_content
+///
+@use "../2_tools/resets";
+
+blockquote,
+dl,
+dd,
+dt,
+figure,
+hr,
+ol,
+pre,
+ul {
+  @include resets.box;
+}
+
+dl, dd {
+  @include resets.box;
+}
+
+hr {
+  box-sizing: content-box; // Add the correct box sizing in Firefox.
+  height: 0; // Add the correct box sizing in Firefox.
+  overflow: visible; // Show the overflow in Edge and IE.
+}
+
+li > {
+  ol,
+  ul {
+    @include resets.margin;
+  }
+}
+
+p {
+  @include resets.margin;
+}
+
+pre {
+  font-family: monospace, monospace; // Correct the inheritance and scaling of font size in all browsers.
+  font-size: 1em; // Correct the odd `em` font sizing in all browsers.
+  white-space: pre-wrap;
+}

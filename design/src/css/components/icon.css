@@ -1,0 +1,33 @@
+.icon--before {
+  margin-right: 0.375em;
+}
+
+.icon--after {
+  margin-left: 0.375em;
+}
+
+[class*=icon--shape] {
+  width: 1.75em;
+  height: 1.75em;
+  padding: 0.375em;
+  background-color: var(--esl-color-green);
+  color: var(--esl-color-white);
+  transition: ease-in-out 0.3s;
+  transition-property: background-color;
+}
+
+.icon--shape-square {
+  border-radius: 25%;
+}
+
+.icon--shape-circle {
+  border-radius: 50%;
+}
+
+a:not(.btn):hover [class*=icon--shape] {
+  background-color: var(--esl-color-aqua-blue);
+}
+
+a:not(.btn):active [class*=icon--shape] {
+  background-color: var(--esl-color-dark-grey);
+}

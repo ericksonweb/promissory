@@ -1,0 +1,16 @@
+{#
+/**
+ * Form - Input Pattern
+ */
+#}
+{# Establish HTML element #}
+{% set element = 'input' %}
+
+{% set button = false %}
+{% if attributes.type in ['button', 'reset', 'submit'] %}
+  {% set button = true %}
+{% endif %}
+
+{% extends button ? '@atoms/button.twig' : '@promissory/_macros/_element.twig' %}
+
+{% block content %}{{ content }}{% endblock content %}

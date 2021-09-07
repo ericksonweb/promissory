@@ -1,0 +1,29 @@
+{#
+/**
+ * Icon Pattern
+ */
+#}
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element #}
+{% set element = 'span' %}
+
+{% set attributes = {
+  'class': ['icon']
+} %}
+
+{% if position %}
+  {% set attributes = attributes|merge({
+    'class': attributes.class|merge(['icon--' ~ position])
+  }) %}
+{% endif %}
+
+{% if shape in ['square', 'circle'] %}
+  {% set attributes = attributes|merge({
+    'class': attributes.class|merge(['icon--shape-' ~ shape])
+  }) %}
+{% endif %}
+
+{% set attributes = attributes|merge({
+  'class': attributes.class|merge([fa_prefix|default('fas'), 'fa-' ~ fa_name|default('phone-alt')])
+}) %}

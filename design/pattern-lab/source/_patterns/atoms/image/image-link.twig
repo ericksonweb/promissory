@@ -1,0 +1,15 @@
+{% set content %}
+{{ include ('@atoms/image.twig', {
+  attributes: {
+    src: 'https://via.placeholder.com/320x240',
+    alt: "Alt text",
+  }
+}) }}
+{% endset %}
+
+{{ include ('@atoms/link.twig', {
+  content: content,
+  attributes: {
+    href: 'https://www.ericksonseniorliving.com',
+  }
+}) }}

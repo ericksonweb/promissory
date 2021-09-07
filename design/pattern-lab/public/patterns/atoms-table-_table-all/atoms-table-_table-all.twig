@@ -1,0 +1,95 @@
+{{ include ('@atoms/table.twig', {
+	caption: "Kate Capshun",
+	columns: [
+		{
+			attributes: {
+				class: ['column1']
+			}
+		},
+		{
+			attributes: {
+				span: 2,
+				class: ['column2']
+			}
+		}
+	],
+	header: {
+		rows: [
+			{
+				cells: [
+					{},
+					{
+						content: "blaarp.",
+						attributes: {
+							colspan: 2,
+							class: ['unnngt']
+						}
+					}
+				],
+				attributes: {
+					class: ['blupp']
+				}
+			}
+		],
+	},
+	body: [
+		{
+			rows: [
+				{
+					cells: [
+						{
+							element: 'th',
+							content: "buppus.",
+							attributes: {
+								scope: 'row',
+								class: ['shgunt']
+							}
+						},
+						{
+							content: "shuppus.",
+							attributes: {
+								colspan: 2,
+								class: ['gunkus']
+							}
+						},
+					]
+				},
+				{
+					cells: [
+						{
+							content: 'geepis.'
+						},
+						{
+							content: 'pweepis.'
+						},
+						{
+							content: 'pweenis.'
+						},
+					]
+				},
+			],
+		}
+	],
+	footer: {
+		rows: [
+			{
+				cells: [
+					{},
+					{
+						content: "blaarp.",
+						attributes: {
+							colspan: 2,
+							class: ['unnngt']
+						}
+					}
+				],
+				attributes: {
+					class: ['blupp']
+				}
+			}
+		],
+	},
+	attributes: {
+		class: ['boopy']
+	}
+}) }}

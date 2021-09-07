@@ -1,0 +1,52 @@
+///
+/// @file
+/// Calculate fluid responsive typography values.
+///
+@use "../1_settings/breakpoints" as *;
+@use "../1_settings/typography";
+
+$min-width--start: map-get($breakpoints, typography.$breakpoint--start);
+$min-width--end: map-get($breakpoints, typography.$breakpoint--end);
+
+@mixin fluid-type($min, $max) {
+  & {
+    font-size: $min;
+  }
+  @media all and (min-width: $min-width--start) {
+    ///                                                                      \\\
+    /// ==================================================================== \\\
+    ///                         FLUID TYPOGRAPHY                             \\\
+    ///    See: https://websemantics.uk/tools/responsive-font-calculator/    \\\
+    ///                                                                      \\\
+    ///    XX = minimum size stated in REM                                   \\\
+    ///    YY = viewport_width_minimum / 100                                 \\\
+    ///    ZZ = 100 * size_difference / viewport_width_difference            \\\
+    ///                                                                      \\\
+    ///    value = calc(XX + ((1vw - YY) * ZZ));                             \\\
+    /// ==================================================================== \\\
+    ///                                                                      \\\
+    $xx: $min;
+    $yy: $min-width--start / 100;
+    $zz: 100 * ((strip-unit($max) * 16) - (strip-unit($min) * 16)) / (strip-unit($min-width--end) - strip-unit($min-width--start));
+
+    & {
+      font-size: calc(#{$xx} + ((1vw - #{$yy}) * #{$zz}));
+    }
+  }
+  @media all and (min-width: $min-width--end) {
+    & {
+      font-size: $max;
+    }
+  }
+}
+
+/// Helper functions
+/// ======================================================================== \\\
+
+// Remove the unit from input values
+@function strip-unit($num) {
+  @if type-of($num) == 'number' and not unitless($num) {
+    @return $num / ($num * 0 + 1);
+  }
+  @return $num;
+}

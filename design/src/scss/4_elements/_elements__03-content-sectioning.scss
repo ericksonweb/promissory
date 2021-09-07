@@ -1,0 +1,66 @@
+///
+/// @file
+/// Base styles for content sectioning elements
+/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning
+///
+@use "sass:math";
+@use "../1_settings/spacing" as *;
+@use "../1_settings/typography";
+@use "../2_tools/fluid-typography" as *;
+@use "../2_tools/resets";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include resets.margin;
+}
+
+h1:not(:last-child),
+h2:not(:last-child),
+h3:not(:last-child),
+h4:not(:last-child),
+h5:not(:last-child),
+h6:not(:last-child) {
+  margin-bottom: $spacing--single + 0rem;
+}
+
+h1,
+h2 {
+  font-family: var(--esl-font-serif);
+  font-weight: normal;
+}
+
+h1 {
+  @include fluid-type(math.pow(typography.$scale--start, 5) + 0rem, math.pow(typography.$scale--end, 5) + 0rem);
+  line-height: 1.1;
+}
+h2 {
+  @include fluid-type(math.pow(typography.$scale--start, 4) + 0rem, math.pow(typography.$scale--end, 4) + 0rem);
+  line-height: 1.18;
+}
+h3 {
+  @include fluid-type(math.pow(typography.$scale--start, 3) + 0rem, math.pow(typography.$scale--end, 3) + 0rem);
+  line-height: 1.26;
+}
+h4 {
+  @include fluid-type(math.pow(typography.$scale--start, 2) + 0rem, math.pow(typography.$scale--end, 2) + 0rem);
+  line-height: 1.34;
+}
+h5 {
+  @include fluid-type(typography.$scale--start + 0rem, typography.$scale--end + 0rem);
+  line-height: 1.42;
+}
+h6 {
+  font-size: 1rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+nav {
+  outline: none;
+}

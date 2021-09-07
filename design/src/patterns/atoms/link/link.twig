@@ -1,0 +1,78 @@
+{#
+/**
+ * Link Pattern
+ */
+#}
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element #}
+{% set element = 'a' %}
+
+{# Set 'href' attribute if not defined #}
+{% if not attributes is defined %}
+  {% set attributes = {
+    href: "#"
+  } %}
+{% elseif attributes is defined and not attributes.href is defined %}
+  {% set attributes = attributes|merge({
+    href: "#"
+  }) %}
+{% endif %}
+
+{# 'cta' style - overrides all icon properties except 'position' #}
+{% if cta %}
+  {% set cta_class = ['cta'] %}
+  
+  {% if not icon is defined %}
+    {% set icon = {
+      position: 'after',
+      fa_prefix: 'fas',
+      fa_name: 'chevron-right'
+    } %}
+  {% elseif icon is defined and not icon.position is defined %}
+    {% set icon = icon|merge({
+      position: 'after',
+      fa_prefix: 'fas',
+      fa_name: 'chevron-right'
+    }) %}
+  {% else %}
+    {% if icon.position == "before" %}
+      {% set fa_name = 'chevron-left' %}
+    {% endif %}
+    {% set icon = icon|merge({
+      position: icon.position,
+      fa_prefix: 'fas',
+      fa_name: fa_name|default('chevron_right')
+    }) %}
+  {% endif %}
+
+  {# Incorporate 'cta' class into 'attributes' array #}
+  {% if not attributes is defined %}
+    {% set attributes = {
+      class: cta_class
+    } %}
+  {% elseif attributes is defined and not attributes.class is defined %}
+    {% set attributes = attributes|merge({
+      class: cta_class
+    }) %}
+  {% else %}
+    {% set attributes = attributes|merge({
+      class: cta_class|merge(attributes.class)
+    }) %}
+  {% endif %}
+{% endif %}
+
+{%- block content -%}
+  {%- if icon and not content -%}
+    {{- include ('@atoms/icon.twig', {
+      shape: icon.shape,
+      fa_prefix: icon.fa_prefix,
+      fa_name: icon.fa_name,
+    }) -}}
+  {%- elseif content and icon -%}
+    {%- import '@promissory/_macros/_content-w-icon.twig' as content_w_icon -%}
+    {{- content_w_icon.render(content, icon.position|default('before'), icon.shape, icon.fa_prefix|default('fas'), icon.fa_name|default('circle')) -}}
+  {%- else -%}
+    {{- content|default("Link") -}}
+  {%- endif -%}
+{%- endblock content -%}

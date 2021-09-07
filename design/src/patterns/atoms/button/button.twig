@@ -1,0 +1,66 @@
+{#
+/**
+ * Button Pattern
+ */
+#}
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element #}
+{% if attributes.href %}
+  {% set element = 'a' %}
+{% else %}
+  {% set element = element|default('button') %}
+  {% set type = attributes.type|default('button') %}
+{% endif %}
+
+{# Establish 'btn' class(es) #}
+{% set btn_classes = ['btn'] %}
+{% if wide %}
+  {% set btn_classes = btn_classes|merge(['btn--wide']) %}
+{% endif %}
+{% if large %}
+  {% set btn_classes = btn_classes|merge(['btn--large']) %}
+{% endif %}
+
+{# Incorporate 'btn' class(es) into 'attributes' array #}
+{% if not attributes is defined %}
+  {% set attributes = {
+    class: btn_classes
+  } %}
+{% elseif attributes is defined and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: btn_classes
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: btn_classes|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{# Validation #}
+{% set validElements = ['a', 'button', 'input'] %}
+{% set validTypes = ['button', 'reset', 'submit'] %}
+
+{% if element in validElements %}
+  {% if element == 'input' %}
+    {# Set <input> 'value' attribute #}
+    {% if not attributes is defined %}
+      {% set attributes = {
+        value: content|default("Input")
+      } %}
+    {% elseif attributes is defined and not attributes.value is defined %}
+      {% set attributes = attributes|merge({
+        value: content|default("Input")
+      }) %}
+    {% endif %}
+  {% else %}
+    {% block content %}
+      {%- if icon -%}
+        {%- import '@promissory/_macros/_content-w-icon.twig' as content_w_icon -%}
+        {{- content_w_icon.render(content|default("Button"), icon.position|default('before'), icon.shape, icon.fa_prefix|default('fas'), icon.fa_name|default('circle')) -}}
+      {%- else -%}
+        {{- content|default("Button") -}}
+      {%- endif -%}
+    {% endblock content %}
+  {% endif %}
+{% endif %}

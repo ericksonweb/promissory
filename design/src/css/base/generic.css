@@ -1,0 +1,91 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: block;
+}
+
+blockquote,
+dl,
+dd,
+dt,
+figure,
+hr,
+ol,
+pre,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+li > ol,
+li > ul {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  white-space: pre-wrap;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+button,
+fieldset,
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+[hidden] {
+  display: none;
+}

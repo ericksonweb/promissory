@@ -1,0 +1,398 @@
+@charset "UTF-8";
+@import url("https://use.typekit.net/kbj8rbz.css");
+:root {
+  --esl-color-blue: #00395d;
+  --esl-color-green: #00843d;
+  --esl-color-aqua-blue: #00a3e0;
+  --esl-color-medium-green: #02833d;
+  --esl-color-dark-green: #015126;
+  --esl-color-pga-blue: #00819e;
+  --esl-color-pga-green: #6c7d31;
+  --esl-color-pga-cream: #fbf7e8;
+  --esl-color-black: #000;
+  --esl-color-dark-grey: #212529;
+  --esl-color-medium-grey: #a8a8a8;
+  --esl-color-light-grey: #d2d2d7;
+  --esl-color-xlight-grey: #ededee;
+  --esl-color-white: #fff;
+  --esl-font-serif: 'Sutro', serif;
+  --esl-font-sans-serif: 'Proxima-Nova', sans-serif;
+  line-height: 1.5;
+  min-height: 0vw;
+  -webkit-text-size-adjust: 100%;
+}
+:root {
+  font-size: 1rem;
+}
+@media all and (min-width: 768px) {
+  :root {
+    font-size: calc(1rem + ((1vw - 7.68px) * 0.462962963));
+  }
+}
+@media all and (min-width: 1200px) {
+  :root {
+    font-size: 1.125rem;
+  }
+}
+
+body {
+  font-family: var(--esl-font-sans-serif);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1:not(:last-child),
+h2:not(:last-child),
+h3:not(:last-child),
+h4:not(:last-child),
+h5:not(:last-child),
+h6:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+h1,
+h2 {
+  font-family: var(--esl-font-serif);
+  font-weight: normal;
+}
+
+h1 {
+  line-height: 1.1;
+}
+h1 {
+  font-size: 2.48832rem;
+}
+@media all and (min-width: 768px) {
+  h1 {
+    font-size: calc(2.48832rem + ((1vw - 7.68px) * 2.086806713));
+  }
+}
+@media all and (min-width: 1200px) {
+  h1 {
+    font-size: 3.0517578125rem;
+  }
+}
+
+h2 {
+  line-height: 1.18;
+}
+h2 {
+  font-size: 2.0736rem;
+}
+@media all and (min-width: 768px) {
+  h2 {
+    font-size: calc(2.0736rem + ((1vw - 7.68px) * 1.3622453704));
+  }
+}
+@media all and (min-width: 1200px) {
+  h2 {
+    font-size: 2.44140625rem;
+  }
+}
+
+h3 {
+  line-height: 1.26;
+}
+h3 {
+  font-size: 1.728rem;
+}
+@media all and (min-width: 768px) {
+  h3 {
+    font-size: calc(1.728rem + ((1vw - 7.68px) * 0.8337962963));
+  }
+}
+@media all and (min-width: 1200px) {
+  h3 {
+    font-size: 1.953125rem;
+  }
+}
+
+h4 {
+  line-height: 1.34;
+}
+h4 {
+  font-size: 1.44rem;
+}
+@media all and (min-width: 768px) {
+  h4 {
+    font-size: calc(1.44rem + ((1vw - 7.68px) * 0.4537037037));
+  }
+}
+@media all and (min-width: 1200px) {
+  h4 {
+    font-size: 1.5625rem;
+  }
+}
+
+h5 {
+  line-height: 1.42;
+}
+h5 {
+  font-size: 1.2rem;
+}
+@media all and (min-width: 768px) {
+  h5 {
+    font-size: calc(1.2rem + ((1vw - 7.68px) * 0.1851851852));
+  }
+}
+@media all and (min-width: 1200px) {
+  h5 {
+    font-size: 1.25rem;
+  }
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+nav {
+  outline: none;
+}
+
+a {
+  display: inline-block;
+  outline: 0.25rem solid transparent;
+  font-weight: bold;
+  text-decoration-color: var(--esl-color-light-grey);
+  color: var(--esl-color-blue);
+  transition: ease-in-out 0.3s;
+  transition-property: outline-color, color;
+}
+a:hover {
+  color: var(--esl-color-aqua-blue);
+}
+a:focus {
+  outline-color: rgba(0, 163, 224, 0.25);
+}
+a:active {
+  color: var(--esl-color-dark-grey);
+}
+
+blockquote p::before {
+  content: "“";
+  font-family: var(--esl-font-serif);
+}
+
+blockquote p:last-child::after {
+  content: "”";
+  font-family: var(--esl-font-serif);
+}
+
+blockquote:not(:first-child),
+dl:not(:first-child),
+hr:not(:first-child),
+ol:not(:first-child),
+p:not(:first-child),
+ul:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+blockquote:not(:last-child),
+dl:not(:last-child),
+hr:not(:last-child),
+ol:not(:last-child),
+p:not(:last-child),
+ul:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+dd,
+li {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+dd:not(:last-child),
+li:not(:last-child) {
+  margin-bottom: 1.125em;
+}
+
+li > ol,
+li > ul {
+  margin-top: 1.125em;
+}
+
+figure img {
+  display: block;
+}
+
+figcaption {
+  padding: 0.75rem 0.375rem;
+  color: var(--esl-color-medium-grey);
+}
+figcaption {
+  font-size: 0.8333333333rem;
+}
+@media all and (min-width: 768px) {
+  figcaption {
+    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * -0.1234567901));
+  }
+}
+@media all and (min-width: 1200px) {
+  figcaption {
+    font-size: 0.8rem;
+  }
+}
+
+table {
+  width: calc(100% - 2px);
+  outline: 1px solid var(--esl-color-dark-grey);
+}
+
+table:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
+td, th {
+  padding: 0.375em 1.125em;
+}
+
+td:not(:first-child) {
+  border-left: 1px solid var(--esl-color-medium-grey);
+}
+
+th {
+  text-align: start;
+}
+
+thead {
+  background-color: var(--esl-color-blue);
+  color: var(--esl-color-white);
+}
+
+thead th {
+  padding: 0.75em 1.125em;
+}
+
+th:not(:first-child) {
+  border-left: 1px solid var(--esl-color-black);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--esl-color-xlight-grey);
+}
+
+button:not(.btn),
+input[type=button]:not(.btn),
+input[type=reset]:not(.btn),
+input[type=submit]:not(.btn) {
+  display: inline-block;
+  margin: 0;
+  border: 1px solid;
+  padding: 0.375rem 0.75rem;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
+  border-color: transparent;
+  background-color: var(--esl-color-green);
+  outline: 0.25rem solid transparent;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--esl-color-white);
+  transition: ease-in-out 0.3s;
+  transition-property: background-color, outline-color;
+  cursor: pointer;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+button:not(.btn):hover,
+input[type=button]:not(.btn):hover,
+input[type=reset]:not(.btn):hover,
+input[type=submit]:not(.btn):hover {
+  background-color: var(--esl-color-aqua-blue);
+  color: var(--esl-color-white);
+}
+button:not(.btn):focus,
+input[type=button]:not(.btn):focus,
+input[type=reset]:not(.btn):focus,
+input[type=submit]:not(.btn):focus {
+  outline-color: rgba(0, 163, 224, 0.25);
+}
+button:not(.btn):active,
+input[type=button]:not(.btn):active,
+input[type=reset]:not(.btn):active,
+input[type=submit]:not(.btn):active {
+  background-color: var(--esl-color-blue);
+  color: var(--esl-color-white);
+}
+
+form:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+@supports (-webkit-appearance: none) {
+  input {
+    -webkit-appearance: none;
+    padding: 0.75rem;
+    border: 1px solid;
+    border-color: var(--esl-color-medium-grey);
+    outline: 0.25rem solid transparent;
+    outline-offset: unset;
+    transition: ease-in-out 0.3s;
+    transition-property: padding, border-color, background-color, outline-color;
+  }
+  input:focus {
+    outline-color: rgba(0, 163, 224, 0.25);
+  }
+  input:-webkit-any([type=checkbox], [type=radio]), input:-moz-any([type=checkbox], [type=radio]), input:is([type=checkbox], [type=radio]) {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+  }
+  input:-webkit-any([type=checkbox], [type=radio]):active, input:-moz-any([type=checkbox], [type=radio]):active, input:is([type=checkbox], [type=radio]):active {
+    background-color: var(--esl-color-xlight-grey);
+  }
+  input:-webkit-any([type=checkbox], [type=radio]):checked, input:-moz-any([type=checkbox], [type=radio]):checked, input:is([type=checkbox], [type=radio]):checked {
+    position: relative;
+    border-color: transparent;
+    background-color: var(--esl-color-green);
+    color: var(--esl-color-white);
+  }
+  input:-webkit-any([type=checkbox], [type=radio]):checked::after, input:-moz-any([type=checkbox], [type=radio]):checked::after, input:is([type=checkbox], [type=radio]):checked::after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+  }
+  input[type=checkbox]:checked::after {
+    content: "";
+  }
+  input[type=radio] {
+    border-radius: 50%;
+  }
+  input[type=radio]:checked::after {
+    content: "";
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+  }
+
+  label + input:is([type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url], [type=week]):focus {
+    padding: 1.125rem 0.75rem 0.375rem;
+  }
+
+  input + label {
+    position: unset;
+  }
+}

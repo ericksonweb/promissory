@@ -1,0 +1,41 @@
+{#
+/**
+ * Attributes
+ *
+ * Helper function to process and render typically used element attributes.
+ */
+#}
+
+{% macro global(attributes) %}
+
+  {# 'aria' attribute(s) #}
+  {% if attributes.aria %}
+    {% set aria = '' %}
+    {% for role, value in attributes.aria %}
+      {% set aria = aria ~ ' aria-' ~ role ~ '="' ~ value ~ '"' %}
+    {% endfor %}
+    {{ aria }}
+  {% endif %}
+  
+  {# 'class' attribute #}
+  {% if attributes.class %}
+    {% set class = ' class="' ~ attributes.class|join(' ') ~ '"' %}
+    {{ class }}
+  {% endif %}
+  
+  {# 'id' attribute #}
+  {% if attributes.id %}
+    {% set id = ' id="' ~ attributes.id ~ '"' %}
+    {{ id }}
+  {% endif %}
+  
+  {# handler attribute(s) #}
+  {% if attributes.handlers %}
+    {% set handlers = '' %}
+    {% for handler, value in attributes.handlers %}
+      {% set handlers = handlers ~ ' ' ~ handler ~ '="' ~ value ~ '"' %}
+    {% endfor %}
+    {{ handlers }}
+  {% endif %}
+
+{% endmacro global %}

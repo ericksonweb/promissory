@@ -1,0 +1,17 @@
+///
+/// @file
+/// Define vertical rhythm and spacing.
+///
+
+// $rhythm__unit
+// -----------------------------------------------------------------------------
+// The base multiple used to calculate vertical rhythm. Determines default
+// line-height and spacing.
+// -----------------------------------------------------------------------------
+$rhythm-unit:       1.5;
+
+$spacing--1qtr:     $rhythm-unit * 0.25;
+$spacing--half:     $rhythm-unit * 0.5;
+$spacing--3qtr:     $rhythm-unit * 0.75;
+$spacing--single:   $rhythm-unit; // default
+$spacing--double:   $rhythm-unit * 2;

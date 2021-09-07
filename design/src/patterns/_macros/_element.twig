@@ -1,0 +1,54 @@
+{%- macro render_attribute(attribute, value) -%}
+  {#- If attribute has multiple values, iterate through them... -#}
+  {%- if value is iterable -%}
+    {#- If value keys are numerical (a.k.a. a simple array... -#}
+    {%- if value|keys|first == "0" -%}
+      {{- attribute ~ '="' ~ value|join(' ') ~ '"' -}}
+    {%- else -%}
+    {#- If value keys are named (a.k.a. a hash... -#}
+      {%- for key, item in value -%}
+        {% set attribute_name = attribute %}
+        {#- Set attribute name (modify if necessary) -#}
+        {%- if attribute == "aria" -%}
+          {%- set attribute_name = "aria-" ~ key -%}
+        {%- elseif attribute == "handlers" -%}
+          {%- set attribute_name = key -%}
+        {%- endif -%}
+        {{- attribute_name ~ '="' ~ item ~ '"' -}}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- else -%}
+    {#- If attribute has single value, just display it... -#}
+    {{- attribute ~ '="' ~ value ~ '"' -}}
+  {%- endif -%}
+{%- endmacro render_attribute -%}
+
+{%- if attributes is defined -%}
+  {%- set element_attributes = '' -%}
+  {%- set global_attributes = '' -%}
+
+  {#- Designate globally available attribute types -#}
+  {%- set global_types = ['aria', 'class', 'id', 'handlers'] -%}
+
+  {%- for attribute, value in attributes -%}
+    {%- if attribute not in global_types -%}
+      {#- Render element-specific attributes -#}
+      {%- set element_attributes = element_attributes ~ _self.render_attribute(attribute, value) -%}
+    {%- else -%}
+      {#- Render global attributes -#}
+      {%- set global_attributes = global_attributes ~ _self.render_attribute(attribute, value) -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{#- Designate void (self-closing) elements -#}
+{%- set void = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'] -%}
+
+{#- Render the element -#}
+{%- apply spaceless -%}
+<{{ element }} {{ element_attributes }} {{- global_attributes }}>
+{%- if element not in void -%}
+  {%- block content -%}{%- endblock content -%}
+</{{ element }}>
+{%- endif -%}
+{%- endapply -%}

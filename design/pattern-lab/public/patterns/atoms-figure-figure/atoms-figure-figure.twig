@@ -1,0 +1,15 @@
+{% set content -%}
+{{ include ('@atoms/image.twig', {
+  attributes: {
+    src: 'https://via.placeholder.com/320x240',
+    alt: "Alt text",
+  }
+}) -}}
+{{- include ('@atoms/figcaption.twig', {
+  content: "This is a caption."
+}) }}
+{%- endset %}
+
+{{ include ('@atoms/figure.twig', {
+  content: content
+}) }}
