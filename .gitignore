@@ -1,0 +1,4 @@
+*.codekit3
+design/pattern-lab/node_modules
+.DS_Store
+design/node_modules

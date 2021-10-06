@@ -1,0 +1,26 @@
+@use "../1_settings/spacing" as *;
+@use "../2_tools/button";
+@use "../2_tools/font-size";
+
+.btn {
+  @include button.styles;
+  
+  &--large {
+    @include font-size.large;
+    padding-left: $spacing--3qtr + 0rem;
+    padding-right: $spacing--3qtr + 0rem;
+  }
+
+  &--wide {
+    padding-left: $spacing--double + 0rem;
+    padding-right: $spacing--double + 0rem;
+  }
+  
+  & .icon--before {
+    margin-right: $spacing--half + 0rem;
+  }
+  
+  & .icon--after {
+    margin-left: $spacing--half + 0rem;
+  }
+}

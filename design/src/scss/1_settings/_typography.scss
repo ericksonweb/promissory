@@ -1,0 +1,46 @@
+///
+/// @file
+/// Define fluid typography scale.
+///
+
+// $breakpoint
+// -----------------------------------------------------------------------------
+// Allows you to choose the breakpoints at which your content will
+// start and stop scaling. Breakpoints can be viewed and/or modified
+// in _breakpoints.scss
+// -----------------------------------------------------------------------------
+
+// Input the minimum ('start') breakpoint at which your content will
+// begin to scale.
+$breakpoint--start: 'md';
+
+// Input the maximum ('end') breakpoint at which your content will stop scaling.
+$breakpoint--end:   'max';
+
+// $scale
+// -----------------------------------------------------------------------------
+// Allows you to choose the modular type scale at which your content will start
+// and stop when resizing the browser.
+//
+// Type scales can be found at https://type-scale.com.
+// -----------------------------------------------------------------------------
+
+// Input the minimum ('start') type scale at which your content will appear.
+$scale--start: 1.200; // "Minor Third"
+
+// Input the maximum ('end') type scale at which your content will appear.
+$scale--end:   1.250; // "Major Third"
+
+// $font-size-range
+// -----------------------------------------------------------------------------
+// Allows you to choose the minimum and maximum base font-size when resizing 
+// the browser.
+//
+// Type scales can be found at https://type-scale.com.
+// -----------------------------------------------------------------------------
+
+// Input the minimum ('start') base font size at which your content will appear.
+$font-size--start: 1rem; // 16px
+
+// Input the maximum ('end') base font size at which your content will appear.
+$font-size--end:   1.125rem; // 18px

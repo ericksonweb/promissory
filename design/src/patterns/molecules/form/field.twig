@@ -1,0 +1,149 @@
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element. #}
+{% set element = 'div' %}
+
+{# Incorporate 'form__field' class into 'attributes' array. #}
+{% if attributes is empty %}
+  {% set attributes = {
+    class: ['form__field']
+  } %}
+{% elseif not attributes is empty and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: ['form__field']
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: ['form__field']|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{# Determine label placement and behavior. #}
+{% if (control.element in ['input'] and control.attributes.type not in ['button', 'color', 'file', 'range', 'reset', 'submit']) or control.element in ['select', 'textarea'] %}
+  {# All of these element types require the label to be placed after the element. #}
+  {% set label_after = true %}
+  
+  {# 'checkbox' and 'radio' types have no further label styling, so exclude them. #}
+  {% if control.attributes.type not in ['checkbox', 'radio'] %}
+  
+    {# Determine label behavior based on 'control.attributes'. #}
+    {% if control.element not in ['select'] %}
+      {# At this point, we have excluded all elements that do not accept a 
+       # 'placeholder' attribute, so check for one here. #}
+      {% set label_class = control.attributes.placeholder is defined ? "eyebrow" : "placeholder" %}
+    {% else %}
+      {# 'select' elements do not accept a 'placeholder' attribute, but our 
+       # Bootstrap Select dropdowns accept 'title' as an alternative. #}
+      {% if control.attributes.required %}
+        {% set label_class = "eyebrow" %}
+      {% else %}
+        {% set label_class = control.attributes.title is defined ? "eyebrow" : "placeholder" %}
+      {% endif %}
+    {% endif %}
+    
+    {# Add the correct label class to the 'label.attributes' array. #}
+    {% if label.attributes is empty %}
+      {% set label = label|merge({
+        attributes: {
+          class: ['label--' ~ label_class]
+        }
+      }) %}
+    {% elseif not label.attributes is empty and not label.attributes.class is defined %}
+      {% set label = label|merge({
+        attributes: label.attributes|merge({
+          class: ['label--' ~ label_class]
+        })
+      }) %}
+    {% else %}
+      {% set label = label|merge({
+        attributes: label.attributes|merge({
+          class: ['label--' ~ label_class]|merge(label.attributes.class)
+        })
+      }) %}
+    {% endif %}
+    
+  {% endif %}
+{% endif %}
+
+{# Create the label. #}
+{% set label %}
+  {% if control.attributes.required %}
+    {% if label.attributes is empty %}
+      {% set label = label|merge({
+        attributes: {
+          class: ['mark-required']
+        }
+      }) %}
+    {% elseif not label.attributes is empty and not label.attributes.class is defined %}
+      {% set label = label|merge({
+        attributes: label.attributes|merge({
+          class: ['mark-required']
+        })
+      }) %}
+    {% else %}
+      {% set label = label|merge({
+        attributes: label.attributes|merge({
+          class: ['mark-required']|merge(label.attributes.class)
+        })
+      }) %}
+    {% endif %}
+  {% endif %}
+  
+  {# Render the label. #}
+  {{ include ('@atoms/label.twig', {
+    content: label.content,
+    attributes: label.attributes
+  }) }}
+{% endset %}
+
+{# Establish control 'name' attribute if not defined (required for validation). #}
+{% if control.attributes is empty %}
+  {% set control = control|merge({
+    attributes: {
+      name: 'field'
+    }
+  }) %}
+{% elseif not control.attributes is empty and not control.attributes.name is defined %}
+  {% if control.attributes.id is defined %}
+    {% set control = control|merge({
+      attributes: control.attributes|merge({
+        name: control.attributes.id
+      })
+    }) %}
+  {% else %}
+    {% set control = control|merge({
+      attributes: control.attributes|merge({
+        name: 'field'
+      })
+    }) %}
+  {% endif %}
+{% endif %}
+
+{# Render the control. #}
+{% set control %}
+  {% if control.element == 'input' %}
+    {{ include ('@atoms/input.twig', {
+      attributes: control.attributes
+    }) }}
+  {% elseif control.element == 'select' %}
+    {{ include ('@atoms/select.twig', {
+      menu: control.menu,
+      attributes: control.attributes
+    }) }}
+  {% elseif control.element == 'textarea' %}
+    {{ include ('@atoms/textarea.twig', {
+      content: control.content,
+      attributes: control.attributes
+    }) }}
+  {% endif %}
+{% endset %}
+
+{% if control.element in ['button', 'input', 'select', 'textarea'] %}
+  {% block content %}
+    {% if not label_after is defined %}{{ label }}{% endif %}
+    {{ control }}
+    {% if label_after is defined %}{{ label }}{% endif %}
+    {% if control.element not in ['button'] and control.attributes.type not in ['button', 'reset', 'submit'] %}
+    {% endif %}
+  {% endblock content %}
+{% endif %}

@@ -1,0 +1,34 @@
+{% extends '@atoms/figure.twig' %}
+
+{% if not attributes is defined %}
+  {% set attributes = {
+    'class': ['testimonial']
+  } %}
+{% elseif attributes is defined and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    'class': ['testimonial']
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    'class': ['testimonial']|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{% block content %}
+  {{ include ('@atoms/blockquote.twig', {
+    content: content,
+    attributes: {
+      class: ['testimonial__body']
+    }
+  }) }}
+  {% set caption %}
+    <div class="testimonial__author-name">{{ author_name }}</div>
+    <div class="testimonial__author-desc">{{ author_desc }}</div>
+  {% endset %}
+  {{ include ('@atoms/figcaption.twig', {
+    content: caption,
+    attributes: {
+      class: ['testimonial__author']
+    }
+  }) }}
+{% endblock content %}

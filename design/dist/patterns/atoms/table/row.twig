@@ -1,0 +1,21 @@
+{#
+/**
+ * Table - Row Pattern
+ */
+#}
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element #}
+{% set element = 'tr' %}
+
+{% set content %}
+  {% for cell in cells %}
+    {{ include ('@atoms/table/cell.twig', {
+      element: cell.element,
+      content: cell.content,
+      attributes: cell.attributes
+    }, with_context = false) }}
+  {% endfor %}
+{% endset %}
+
+{% block content %}{{ content }}{% endblock content %}

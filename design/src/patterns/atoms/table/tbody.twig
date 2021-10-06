@@ -1,0 +1,20 @@
+{#
+/**
+ * Table - Caption Pattern
+ */
+#}
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element #}
+{% set element = 'tbody' %}
+
+{% set content %}
+  {% for row in rows %}
+    {{ include ('@atoms/table/row.twig', {
+      cells: row.cells,
+      attributes: row.attributes
+    }, with_context = false) }}
+  {% endfor %}
+{% endset %}
+
+{% block content %}{{ content }}{% endblock content %}

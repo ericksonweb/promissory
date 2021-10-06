@@ -1,0 +1,53 @@
+{{ include ('@atoms/select.twig', {
+  menu: [
+    {
+      optgroup: {
+        attributes: {
+          label: "Option Group"
+        },
+        options: [
+          {
+            content: "Option 1",
+            attributes: {
+              value: "option_1"
+            }
+          },
+          {
+            content: "Option 2",
+            attributes: {
+              value: "option_2"
+            }
+          },
+          {
+            content: "Option 3",
+            attributes: {
+              value: "option_3"
+            }
+          },
+        ]
+      }
+    },
+    {
+      options: [
+        {
+          content: "Option 4",
+          attributes: {
+            value: "option_4"
+          }
+        },
+        {
+          content: "Option 5",
+          attributes: {
+            value: "option_5"
+          }
+        },
+        {
+          content: "Option 6",
+          attributes: {
+            value: "option_6"
+          }
+        },
+      ]
+    }
+  ]
+}) }}

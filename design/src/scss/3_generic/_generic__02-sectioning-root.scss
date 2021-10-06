@@ -1,0 +1,10 @@
+///
+/// @file
+/// Reset & normalize sectioning root
+/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element#sectioning_root
+///
+@use "../2_tools/resets";
+
+body {
+  @include resets.box;
+}

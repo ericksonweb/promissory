@@ -1,0 +1,30 @@
+{#
+/**
+ * Paragraph Pattern
+ */
+#}
+{% extends '@promissory/_macros/_element.twig' %}
+
+{% set element = 'p' %}
+
+{% if size %}
+  {% set size_class = ['font-size--' ~ size] %}
+  {# Incorporate 'font-size' class into 'attributes' array #}
+  {% if not attributes is defined %}
+    {% set attributes = {
+      'class': size_class
+    } %}
+  {% elseif attributes is defined and not attributes.class is defined %}
+    {% set attributes = attributes|merge({
+      'class': size_class
+    }) %}
+  {% else %}
+    {% set attributes = attributes|merge({
+      'class': size_class|merge(attributes.class)
+    }) %}
+  {% endif %}
+{% endif %}
+
+{% block content %}
+  {{- content|default("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.") -}}
+{% endblock content %}

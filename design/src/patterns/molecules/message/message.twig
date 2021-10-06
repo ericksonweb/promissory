@@ -1,0 +1,26 @@
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element. #}
+{% set element = 'div' %}
+
+{# Determine message 'type' value #}
+{% if not type is defined %}
+  {% set type = 'status' %}
+{% endif %}
+
+{# Incorporate 'message' classes into 'attributes' array. #}
+{% if attributes is empty %}
+  {% set attributes = {
+    class: ['message', 'message--' ~ type]
+  } %}
+{% elseif not attributes is empty and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: ['message', 'message--' ~ type]
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: ['message', 'message--' ~ type]|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{% block content %}{{ content }}{% endblock %}

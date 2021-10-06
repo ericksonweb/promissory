@@ -1,0 +1,20 @@
+{#
+/**
+ * Form - Optgroup Pattern
+ */
+#}
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element #}
+{% set element = 'optgroup' %}
+
+{% set content %}
+  {% for option in options %}
+    {{ include ('@atoms/form/option.twig', {
+      content: option.content,
+      attributes: option.attributes
+    }) }}
+  {% endfor %}
+{% endset %}
+
+{% block content %}{{ content }}{% endblock content %}

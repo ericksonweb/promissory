@@ -1,0 +1,8 @@
+///
+/// @file
+/// Reset & normalize content sectioning elements
+/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning
+///
+main {
+  display: block; // Render the `main` element consistently in IE.
+}

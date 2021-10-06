@@ -1,0 +1,111 @@
+@use "../../1_settings/colors";
+@use "../../1_settings/spacing" as *;
+@use "../../1_settings/transition" as *;
+@use "../../2_tools/font-size";
+@use "../../2_tools/resets";
+
+@mixin label-eyebrow {
+  padding-top: $spacing--1qtr + 0rem;
+  @include font-size.small;
+  line-height: 1;
+  
+  &.mark-required::before {
+    vertical-align: top;
+  }
+}
+
+@mixin input-eyebrow {
+  padding: ($spacing--3qtr + 0rem) ($spacing--half + 0rem) ($spacing--1qtr + 0rem);
+}
+
+.form__field {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: $spacing--single + 0rem;
+  
+  fieldset &,
+  .field__group & {
+    &:last-child {
+      margin-bottom: 0
+    }
+  }
+  
+  input:is([type=date], [type=datetime-local], [type=month], [type=time], [type=week]) {
+    // These input types will always be shown with an 'eyebrow' label, so apply
+    // the appropriate padding to accommodate.
+    @include input-eyebrow;
+  }
+  
+  input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]),
+  textarea {
+    // These input types will always be shown with a floating 'overlay' 
+    // label if no placeholder is provided.
+    
+    // When these elements are focused on or have content, animate the label.
+    &:focus,
+    &:not(:placeholder-shown) {
+      @include input-eyebrow;
+      
+      & + .label--placeholder {
+        @include label-eyebrow;
+      }
+    }
+    
+    &:not([placeholder=​]) {
+      @include input-eyebrow;
+    }
+    
+    &::placeholder {
+      color: var(--esl-color-medium-grey);
+    }
+    
+    & ~ label {
+      cursor: text;
+    }
+  }  
+  
+  .dropdown {
+    // <select> elements are rendered using the Bootstrap Select plugin, which 
+    // uses Bootstrap's 'dropdown' component classes.
+    .selectpicker {    
+      & + .btn {
+        @include input-eyebrow;
+      }
+    }
+    
+    & ~ label {
+      z-index: -1;
+      cursor: pointer;
+    }
+  }  
+}
+
+.label--eyebrow,
+.label--placeholder {
+  position: absolute;
+  left: 0;
+  align-self: flex-start;
+  border: 1px solid;
+  @include resets.margin;
+  padding: $spacing--half + 0rem;
+  border-color: transparent;
+  transition: $transition;
+  transition-property: padding-top, font-weight, font-size, line-height, color;
+  
+  .row > .form__field & {
+    margin-left: $spacing--half + 0rem;
+  }
+}
+.label--eyebrow {
+  @include label-eyebrow;
+  
+  input:not([placeholder=​]):placeholder-shown + & {
+    color: var(--esl-color-dark-grey);
+  }
+}
+
+.mark-required.mark-invalid::before {
+  color: var(--esl-color-error);
+}

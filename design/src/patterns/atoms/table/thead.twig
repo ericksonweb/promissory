@@ -1,0 +1,28 @@
+{#
+/**
+ * Table - Header Pattern
+ */
+#}
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element #}
+{% set element = 'thead' %}
+
+{% set content %}
+  {% for row in rows %}
+    {% set cells = [] %}
+    {% for cell in row.cells %}
+      {% set cell = cell|merge({
+        element: 'th'
+      }) %}
+      {% set cells = cells|merge([cell]) %}
+    {% endfor %}
+            
+    {{ include ('@atoms/table/row.twig', {
+      cells: cells,
+      attributes: row.attributes
+    }, with_context = false) }}
+  {% endfor %}
+{% endset %}
+
+{% block content %}{{ content }}{% endblock content %}

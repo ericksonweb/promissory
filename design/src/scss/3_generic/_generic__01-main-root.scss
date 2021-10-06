@@ -1,0 +1,14 @@
+///
+/// @file
+/// Reset & normalize main root
+/// https://developer.mozilla.org/en-US/docs/Web/HTML/Element#main_root
+///
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

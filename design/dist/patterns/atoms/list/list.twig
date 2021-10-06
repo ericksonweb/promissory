@@ -1,0 +1,32 @@
+{#
+/**
+ * List Pattern
+ */
+#}
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element #}
+{% set element = element|default('ul') %}
+
+{# Validation #}
+{% set validElements = ['ul', 'ol', 'dl'] %}
+
+{% if element in validElements %}
+  {% set content %}  
+    {% for item, value in items %}
+      {% if element == 'ul' or element == 'ol' %}
+        <li>{{ value }}</li>
+      {% elseif element == 'dl' %}
+        <dt>{{ item }}</dt>
+        {% if value is iterable %}
+          {% for definition in value %}
+            <dd>{{ definition }}</dd>
+          {% endfor %}
+        {% else %}
+          <dd>{{ value }}</dd>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endset %}
+  {% block content %}{{ content }}{% endblock content %}
+{% endif %}

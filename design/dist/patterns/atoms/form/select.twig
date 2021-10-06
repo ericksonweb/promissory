@@ -1,0 +1,83 @@
+{#
+/**
+ * Form - Select Pattern
+ */
+#}
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element #}
+{% set element = 'select' %}
+
+{# Establish 'selectpicker' class #}
+{% set select_class = ['selectpicker'] %}
+
+{# Check for and optionally set "placeholder" ('title') text where applicable #}
+{% if not attributes is defined %}
+  {% set attributes = {
+    title: ""
+  } %}
+{% elseif not attributes.title is defined %}
+  {% if attributes.required is defined %}
+    {% set attributes = attributes|merge({
+      title: "Please select..."
+    }) %}
+  {% else %}
+    {% set attributes = attributes|merge({
+      title: ""
+    }) %}
+  {% endif %}
+{% endif %}
+
+{# Add empty option if not required and not multiple #}
+{% if not attributes.required is defined and not attributes.multiple is defined %}
+  {% if menu is defined %}
+    {% set menu = [
+      {
+        options: [
+          {
+            content: '',
+            attributes: {
+              selected: true,
+              value: ''
+            }
+          }
+        ]
+      }
+    ]|merge(menu) %}
+  {% endif %}
+{% endif %}
+
+{# Incorporate 'selectpicker' class into 'attributes' array #}
+{% if not attributes is defined %}
+  {% set attributes = {
+    class: select_class
+  } %}
+{% elseif attributes is defined and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: select_class
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: select_class|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{% set content %}
+  {% for item in menu %}
+    {% if item.optgroup %}
+      {{ include ('@atoms/form/optgroup.twig', {
+        options: item.optgroup.options,
+        attributes: item.optgroup.attributes
+      }, with_context = false) }}
+    {% elseif item.options %}
+      {% for option in item.options %}
+        {{ include ('@atoms/form/option.twig', {
+          content: option.content,
+          attributes: option.attributes
+        }, with_context = false) }}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+{% endset %}
+
+{% block content %}{{ content }}{% endblock content %}

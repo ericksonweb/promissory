@@ -1,0 +1,12 @@
+@use "../2_tools/resets";
+
+button,
+fieldset,
+input,
+select,
+textarea {
+  @include resets.box;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}

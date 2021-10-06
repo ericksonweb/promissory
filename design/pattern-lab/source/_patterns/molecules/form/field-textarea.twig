@@ -1,0 +1,14 @@
+{{ include ('@molecules/form/field.twig', {
+  label: {
+    content: "Description",
+    attributes: {
+      for: 'description',
+    }
+  },
+  control: {
+    element: 'textarea',
+    attributes: {
+      id: 'description',
+    }
+  }
+}) }}

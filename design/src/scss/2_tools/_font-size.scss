@@ -1,0 +1,33 @@
+@use "sass:math";
+@use "../1_settings/typography";
+@use "fluid-typography" as *;
+
+@mixin xsmall {
+  @include fluid-type(math.pow(typography.$scale--start, -2) + 0rem, math.pow(typography.$scale--end, -2) + 0rem);
+}
+@mixin xsmall-start {
+  @include fluid-type(math.pow(typography.$scale--start, -2) + 0rem, 1rem);
+}
+@mixin xsmall-end {
+  @include fluid-type(1rem, math.pow(typography.$scale--end, -2) + 0rem);
+}
+
+@mixin small {
+  @include fluid-type(math.pow(typography.$scale--start, -1) + 0rem, math.pow(typography.$scale--end, -1) + 0rem);
+}
+@mixin small-start {
+  @include fluid-type(math.pow(typography.$scale--start, -1) + 0rem, 1rem);
+}
+@mixin small-end {
+  @include fluid-type(1rem, math.pow(typography.$scale--end, -1) + 0rem);
+}
+
+@mixin large {
+  @include fluid-type(typography.$scale--start + 0rem, typography.$scale--end + 0rem);
+}
+@mixin large-start {
+  @include fluid-type(typography.$scale--start + 0rem, 1rem);
+}
+@mixin large-end {
+  @include fluid-type(1rem, typography.$scale--end + 0rem);
+}

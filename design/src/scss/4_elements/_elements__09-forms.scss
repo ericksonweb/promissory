@@ -1,0 +1,230 @@
+@use "sass:color";
+@use "../1_settings/colors";
+@use "../1_settings/spacing" as *;
+@use "../1_settings/transition" as *;
+@use "../2_tools/appearance";
+@use "../2_tools/border-radius";
+@use "../2_tools/button";
+@use "../2_tools/font-size";
+@use "../2_tools/forms";
+
+// Cover our bases for external "button"-type elements where we cannot add the 
+// '.btn' class.
+button:not(.btn),
+input[type=button]:not(.btn),
+input[type=reset]:not(.btn),
+input[type=submit]:not(.btn) {
+  @include button.styles;
+}
+
+form {
+  &:not(:last-child) {
+    margin-bottom: $spacing--single + 0rem;
+  }
+}
+
+fieldset {
+  padding: $spacing--half + 0rem;
+  border: 1px solid var(--esl-color-xlight-grey);
+  
+  &:not(:last-child) {
+    margin-bottom: $spacing--single + 0rem;
+  }
+}
+
+label {
+  margin-right: $spacing--half + 0rem;
+  vertical-align: middle;
+  
+  input + & {
+    margin-right: 0;
+    margin-left: $spacing--half + 0rem;
+  }
+}
+
+legend {
+  margin: 0 (-$spacing--1qtr + 0rem);
+  padding: 0 $spacing--1qtr + 0rem;
+}
+
+input {
+  @include forms.input;
+  
+  &:is([type=checkbox], [type=radio]) {
+    width: $spacing--single + 0rem;
+    height: $spacing--single + 0rem;
+    padding: 0;
+    background-color: var(--esl-color-white);
+    
+    &:active {
+      background-color: var(--esl-color-xlight-grey);
+    }
+    
+    &:checked {
+      position: relative;
+      border-color: transparent;
+      background-color: var(--esl-color-green);
+      color: var(--esl-color-white);
+      
+      &::after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+      }
+    }
+  }
+  
+  &[type=checkbox]:checked::after {
+    content: "\f00c";
+  }
+  
+  &[type=radio] {
+    border-radius: 50%;
+    
+    &:checked::after {
+      content: "\f111";
+      font-size: 0.75rem;
+      line-height: 1.5rem;
+    }
+  }
+  
+  &:is([type=date], [type=datetime-local], [type=email], [type=file], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week]) {
+    width: 100%;    
+  }
+  
+  &[type=search] {
+    &::-webkit-search-decoration,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      @include appearance.none;
+    }
+  }
+  
+  &[type=color] {
+    -webkit-appearance: color-well;
+    appearance: color-well;
+    width: $spacing--single + 0rem;
+    height: $spacing--single + 0rem;
+    padding: 0;
+    
+    &::-webkit-color-swatch-wrapper {
+      padding: unset;
+    }
+    
+    &::-webkit-color-swatch {
+      @include border-radius.none;
+    }
+  }
+  
+  &[type=range] {
+    width: 100%;
+    height: $spacing--single + 0rem;
+    padding: 0;
+    border-color: transparent;
+    
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: $spacing--1qtr + 0rem;
+      cursor: pointer;
+      background: var(--esl-color-xlight-grey);
+      border: 1px solid var(--esl-color-medium-grey);
+    }
+    &::-webkit-slider-thumb {
+      @include appearance.none;
+      box-shadow: 0 3px 7px 0 color.adjust(colors.$black, $alpha: -0.75);
+      border: 1px solid var(--esl-color-dark-grey);
+      @include border-radius.none;
+      width: $spacing--3qtr + 0rem;
+      height: $spacing--single + 0rem;
+      background: var(--esl-color-green);
+      cursor: pointer;
+      margin-top: -11px;
+    }  
+    &::-moz-range-track {
+      width: 100%;
+      height: $spacing--1qtr + 0rem;
+      cursor: pointer;
+      background: var(--esl-color-xlight-grey);
+      border: 1px solid var(--esl-color-medium-grey);
+    }
+    &::-moz-range-thumb {
+      @include appearance.none;
+      box-shadow: 0 3px 7px 0 color.adjust(colors.$black, $alpha: -0.75);
+      border: 1px solid var(--esl-color-dark-grey);
+      @include border-radius.none;
+      width: $spacing--3qtr + 0rem;
+      height: $spacing--single + 0rem;
+      background: var(--esl-color-green);
+      cursor: pointer;
+      margin-top: -11px;
+    }  
+  }
+  
+  &[type=file] {
+    width: calc(100% + 7px);
+    overflow: visible;
+    margin: 0 0 -7px -7px;
+    padding: 0 7px 7px;
+    border-color: transparent;
+    
+    &::file-selector-button {
+      @include appearance.none;
+      @include button.styles;
+      font-family: inherit;
+      line-height: inherit;
+      
+      margin-inline-end: $spacing--1qtr + 0rem;
+      
+      & + span {
+        margin-left: $spacing--1qtr + 0rem;
+      }
+    }
+  }
+  
+  &::-webkit-datetime-edit-year-field,
+  &::-webkit-datetime-edit-month-field,
+  &::-webkit-datetime-edit-week-field,
+  &::-webkit-datetime-edit-day-field,
+  &::-webkit-datetime-edit-hour-field,
+  &::-webkit-datetime-edit-minute-field,
+  &::-webkit-datetime-edit-second-field,
+  &::-webkit-datetime-edit-millisecond-field,
+  &::-webkit-datetime-edit-ampm-field,
+  &::-webkit-datetime-edit-meridiem-field {
+    
+    &:focus {
+      background-color: color.adjust(colors.$esl-green, $alpha: -0.75);
+      @include border-radius.none;
+    }
+  }
+  
+  &:autofill,
+  &:-internal-autofill-selected,
+  &:-webkit-autofill,
+  &:-webkit-autofill-strong-password,
+  &:-webkit-autofill-strong-password-viewable {
+    -webkit-animation: autofill 0s forwards;
+    animation: autofill 0s forwards;
+  }
+  @keyframes autofill {
+    100% {
+      background-color: transparent;
+      color: inherit;
+    }
+  }
+  
+  @-webkit-keyframes autofill {
+    100% {
+      background-color: transparent;
+      color: inherit;
+    }
+  }
+}
+
+select,
+textarea {
+  @include forms.input;
+  width: 100%;
+}

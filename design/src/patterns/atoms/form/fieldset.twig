@@ -1,0 +1,120 @@
+{#
+/**
+ * Form - Fieldset Pattern
+ */
+#}
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element #}
+{% set element = 'fieldset' %}
+
+{# If the fieldset is marked as required, ensure there is a legend and mark. #}
+{% if required %}
+  {% if legend is empty %}
+    {% set legend = {
+      content: "Required",
+      attributes: {
+        class: ['mark-required']
+      }
+    } %}
+  {% else %}
+    {% if legend.attributes is empty %}
+      {% set legend = legend|merge({
+        attributes: {
+          class: ['mark-required']
+        }
+      }) %}
+    {% elseif not legend.attributes is empty and not legend.attributes.class is defined %}
+      {% set legend = legend|merge({
+        attributes: (legend.attributes)|merge({
+          class: ['mark-required']
+        }) 
+      }) %}
+    {% else %}
+      {% set legend = legend|merge({
+        attributes: (legend.attributes)|merge({
+          class: ['mark-required']|merge(legend.attributes.class)
+        })
+      }) %}
+    {% endif %}
+  {% endif %}
+  
+  {# Incorporate 'is-required' class into fieldset attributes array. #}
+  {% if attributes is empty %}
+    {% set attributes = {
+      class: ['is-required']
+    } %}
+  {% elseif not attributes is empty and not attributes.class is defined %}
+    {% set attributes = attributes|merge({
+      class: ['is-required']
+    }) %}
+  {% else %}
+    {% set attributes = attributes|merge({
+      class: ['is-required']|merge(attributes.class)
+    }) %}
+  {% endif %}
+  
+{% endif %}
+
+{# Compile the fieldset content. #}
+{% set content %} 
+
+  {# Render the legend. #}
+  {% if not legend is empty %}
+    {{ include ('@atoms/form/legend.twig', {
+      content: legend.content,
+      attributes: legend.attributes
+    }) }}
+  {% endif %}
+  
+  {# Parse through the fields. #}
+  {% for field in fields %}
+  
+    {# If the fieldset is marked as required, mark all fields as required. #}
+    {% if required %}
+      {% if field.control.attributes is empty %}
+        {% set field = field|merge({
+          control: field.control|merge({
+            attributes: {
+              required: true
+            }
+          })
+        }) %}
+      {% elseif not field.control.attributes is empty and not field.control.attributes.required is defined %}
+        {% set field = field|merge({
+          control: field.control|merge({
+            attributes: field.control.attributes|merge({
+              required: true
+            })
+          })
+        }) %}
+      {% endif %}
+    {% else %}
+      {% if field.control.attributes.required %}
+        {# Incorporate 'has-required' class into fieldset attributes array. #}
+        {% if attributes is empty %}
+          {% set attributes = {
+            class: ['has-required']
+          } %}
+        {% elseif not attributes is empty and not attributes.class is defined %}
+          {% set attributes = attributes|merge({
+            class: ['has-required']
+          }) %}
+        {% else %}
+          {% set attributes = attributes|merge({
+            class: ['has-required']|merge(attributes.class)
+          }) %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+    
+    {# Render the field. #}
+    {{ include ('@molecules/form/field.twig', {
+      label: field.label,
+      control: field.control,
+      attributes: field.attributes
+    }) }}
+  {% endfor %}
+{% endset %}
+
+{% block content %}{{ content }}{% endblock content %}

@@ -1,0 +1,24 @@
+@use "sass:color";
+@use "../1_settings/colors";
+@use "../1_settings/spacing" as *;
+@use "../1_settings/transition" as *;
+@use "../2_tools/appearance";
+@use "../2_tools/border-radius";
+
+@mixin input {
+  @include appearance.none;
+  padding: $spacing--half + 0rem;
+  border: 1px solid;
+  border-color: var(--esl-color-medium-grey);
+  @include border-radius.none;
+  background-color: transparent;
+  outline: 0.25rem solid transparent;
+  outline-offset: unset;
+  vertical-align: middle;
+  transition: $transition;
+  transition-property: padding, border-color, background-color, outline-color;
+  
+  &:focus {
+    outline-color: color.adjust(colors.$aqua-blue, $alpha: -0.75);      
+  }
+}

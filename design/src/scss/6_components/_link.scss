@@ -1,0 +1,23 @@
+@use "../1_settings/spacing" as *;
+@use "../1_settings/transition" as *;
+
+
+.cta {
+  color: var(--esl-color-dark-grey);
+  text-decoration: none;
+}
+.cta .icon {
+  color: var(--esl-color-green);
+  transition: $transition;
+  transition-property: transform;
+}
+
+.cta:hover {
+  color: var(--esl-color-green);
+}
+.cta:hover .icon--before {
+  transform: translateX((0 - $spacing--1qtr) + 0rem);
+}
+.cta:hover .icon--after {
+  transform: translateX($spacing--1qtr + 0rem);
+}

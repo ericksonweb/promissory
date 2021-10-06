@@ -1,0 +1,133 @@
+.d-block {
+  display: block;
+}
+
+d-none {
+  display: none;
+}
+
+.font-size--xsmall:not(h1, h2, h3, h4, h5, h6) {
+  font-size: 0.6944444444rem;
+}
+@media all and (min-width: 768px) {
+  .font-size--xsmall:not(h1, h2, h3, h4, h5, h6) {
+    font-size: calc(0.6944444444rem + ((1vw - 7.68px) * -0.2016460905));
+  }
+}
+@media all and (min-width: 1200px) {
+  .font-size--xsmall:not(h1, h2, h3, h4, h5, h6) {
+    font-size: 0.64rem;
+  }
+}
+
+.font-size--xsmall-start:not(h1, h2, h3, h4, h5, h6) {
+  font-size: 0.6944444444rem;
+}
+@media all and (min-width: 768px) {
+  .font-size--xsmall-start:not(h1, h2, h3, h4, h5, h6) {
+    font-size: calc(0.6944444444rem + ((1vw - 7.68px) * 1.1316872428));
+  }
+}
+@media all and (min-width: 1200px) {
+  .font-size--xsmall-start:not(h1, h2, h3, h4, h5, h6) {
+    font-size: 1rem;
+  }
+}
+
+.font-size--xsmall-end:not(h1, h2, h3, h4, h5, h6) {
+  font-size: 1rem;
+}
+@media all and (min-width: 768px) {
+  .font-size--xsmall-end:not(h1, h2, h3, h4, h5, h6) {
+    font-size: calc(1rem + ((1vw - 7.68px) * -1.3333333333));
+  }
+}
+@media all and (min-width: 1200px) {
+  .font-size--xsmall-end:not(h1, h2, h3, h4, h5, h6) {
+    font-size: 0.64rem;
+  }
+}
+
+.font-size--small:not(h1, h2, h3, h4, h5, h6) {
+  font-size: 0.8333333333rem;
+}
+@media all and (min-width: 768px) {
+  .font-size--small:not(h1, h2, h3, h4, h5, h6) {
+    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * -0.1234567901));
+  }
+}
+@media all and (min-width: 1200px) {
+  .font-size--small:not(h1, h2, h3, h4, h5, h6) {
+    font-size: 0.8rem;
+  }
+}
+
+.font-size--small-start:not(h1, h2, h3, h4, h5, h6) {
+  font-size: 0.8333333333rem;
+}
+@media all and (min-width: 768px) {
+  .font-size--small-start:not(h1, h2, h3, h4, h5, h6) {
+    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * 0.6172839506));
+  }
+}
+@media all and (min-width: 1200px) {
+  .font-size--small-start:not(h1, h2, h3, h4, h5, h6) {
+    font-size: 1rem;
+  }
+}
+
+.font-size--small-end:not(h1, h2, h3, h4, h5, h6) {
+  font-size: 1rem;
+}
+@media all and (min-width: 768px) {
+  .font-size--small-end:not(h1, h2, h3, h4, h5, h6) {
+    font-size: calc(1rem + ((1vw - 7.68px) * -0.7407407407));
+  }
+}
+@media all and (min-width: 1200px) {
+  .font-size--small-end:not(h1, h2, h3, h4, h5, h6) {
+    font-size: 0.8rem;
+  }
+}
+
+.font-size--large:not(h1, h2, h3, h4, h5, h6) {
+  font-size: 1.2rem;
+}
+@media all and (min-width: 768px) {
+  .font-size--large:not(h1, h2, h3, h4, h5, h6) {
+    font-size: calc(1.2rem + ((1vw - 7.68px) * 0.1851851852));
+  }
+}
+@media all and (min-width: 1200px) {
+  .font-size--large:not(h1, h2, h3, h4, h5, h6) {
+    font-size: 1.25rem;
+  }
+}
+
+.font-size--large-start:not(h1, h2, h3, h4, h5, h6) {
+  font-size: 1.2rem;
+}
+@media all and (min-width: 768px) {
+  .font-size--large-start:not(h1, h2, h3, h4, h5, h6) {
+    font-size: calc(1.2rem + ((1vw - 7.68px) * -0.7407407407));
+  }
+}
+@media all and (min-width: 1200px) {
+  .font-size--large-start:not(h1, h2, h3, h4, h5, h6) {
+    font-size: 1rem;
+  }
+}
+
+.font-size--large-end:not(h1, h2, h3, h4, h5, h6) {
+  font-size: 1rem;
+}
+@media all and (min-width: 768px) {
+  .font-size--large-end:not(h1, h2, h3, h4, h5, h6) {
+    font-size: calc(1rem + ((1vw - 7.68px) * 0.9259259259));
+  }
+}
+@media all and (min-width: 1200px) {
+  .font-size--large-end:not(h1, h2, h3, h4, h5, h6) {
+    font-size: 1.25rem;
+  }
+}

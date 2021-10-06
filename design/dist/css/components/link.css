@@ -1,0 +1,22 @@
+.cta {
+  color: var(--esl-color-dark-grey);
+  text-decoration: none;
+}
+
+.cta .icon {
+  color: var(--esl-color-green);
+  transition: ease-in-out 0.15s;
+  transition-property: transform;
+}
+
+.cta:hover {
+  color: var(--esl-color-green);
+}
+
+.cta:hover .icon--before {
+  transform: translateX(-0.375rem);
+}
+
+.cta:hover .icon--after {
+  transform: translateX(0.375rem);
+}

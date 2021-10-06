@@ -1,0 +1,30 @@
+{#
+/**
+ * Form - Input Pattern
+ */
+#}
+{# Establish HTML element #}
+{% set element = 'input' %}
+
+{% if attributes.type in ['button', 'reset', 'submit'] %}
+  {% set button = true %}
+{% else %}
+  {% set button = false %}
+  
+  {# Check for and optionally set placeholder text where applicable #}
+  {% if attributes.type in ['email', 'password', 'search', 'tel', 'text', 'url'] %}
+    {% if not attributes is defined %}
+      {% set attributes = {
+        placeholder: "​"
+      } %}
+    {% elseif not attributes.placeholder is defined %}
+      {% set attributes = attributes|merge({
+        placeholder: "​"
+      }) %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+
+{% extends button ? '@atoms/button.twig' : '@promissory/_macros/_element.twig' %}
+
+{% block content %}{{ content }}{% endblock content %}

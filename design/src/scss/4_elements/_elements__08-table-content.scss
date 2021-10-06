@@ -1,0 +1,31 @@
+@use "../1_settings/spacing" as *;
+
+table {
+  width: calc(100% - 2px);
+  outline: 1px solid var(--esl-color-dark-grey);
+}
+table:not(:last-child) {
+  margin-bottom: $spacing--single + 0em;
+}
+td, th {
+  padding: $spacing--1qtr + 0em $spacing--3qtr + 0em;
+}
+td:not(:first-child) {
+  border-left: 1px solid var(--esl-color-medium-grey);
+}
+th {
+  text-align: start;
+}
+thead {
+  background-color: var(--esl-color-blue);
+  color: var(--esl-color-white);
+}
+thead th {
+  padding: $spacing--half + 0em $spacing--3qtr + 0em;
+}
+th:not(:first-child) {
+  border-left: 1px solid var(--esl-color-black);
+}
+tbody tr:nth-child(odd) {
+  background-color: var(--esl-color-xlight-grey);
+}
