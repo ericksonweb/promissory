@@ -1,0 +1,20 @@
+{% set nested_list -%}
+  Lists can be nested within list items.
+  {{ include ('@atoms/list.twig', {
+    items: [
+      "This is a nested list.",
+      "This is a second list item in the nested list."
+    ]
+  }) }}
+{% endset %}
+
+{% set items = [
+  "This is a list item in an unordered list.",
+  "Typically, an unordered list is displayed as a bulleted list.",
+  nested_list,
+  "This is the last list item."
+] %}
+
+{{ include ('@atoms/list.twig', {
+  items: items
+}) }}

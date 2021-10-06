@@ -1,0 +1,415 @@
+{{ include ('@molecules/form.twig', {
+  form: [
+    {
+      fields: [
+        {
+          label: {
+            content: "Call me about visit options to see apartments and amenities.",
+            attributes: {
+              for: 'tour',
+            }
+          },
+          control: {
+            element: 'input',
+            attributes: {
+              type: 'checkbox',
+              id: 'tour',
+              name: 'request',
+              value: 'tour',
+              required: true
+            }
+          }
+        },
+        {
+          label: {
+            content: "Send me a brochure with more details.",
+            attributes: {
+              for: 'brochure',
+            }
+          },
+          control: {
+            element: 'input',
+            attributes: {
+              type: 'checkbox',
+              id: 'brochure',
+              name: 'request',
+              value: 'brochure',
+              required: true
+            }
+          }
+        },
+        {
+          label: {
+            content: "Email me about savings, promotions, events, and helpful resources.",
+            attributes: {
+              for: 'email_optin',
+            }
+          },
+          control: {
+            element: 'input',
+            attributes: {
+              type: 'checkbox',
+              id: 'email_optin',
+              name: 'email_optin',
+              value: 'email_optin',
+            }
+          }
+        },
+        {
+          label: {
+            content: "Salutation",
+            attributes: {
+              for: 'salutation',
+            }
+          },
+          control: {
+            element: 'select',
+            menu: [
+              {
+                options: [
+                  {
+                    content: "Mr.",
+                    attributes: {
+                      value: "Mr."
+                    }
+                  },
+                  {
+                    content: "Mrs.",
+                    attributes: {
+                      value: "Mrs."
+                    }
+                  },
+                  {
+                    content: "Ms.",
+                    attributes: {
+                      value: "Ms."
+                    }
+                  },
+                  {
+                    content: "Dr.",
+                    attributes: {
+                      value: "Dr."
+                    }
+                  },
+                  {
+                    content: "Prof.",
+                    attributes: {
+                      value: "Prof."
+                    }
+                  },
+                  {
+                    content: "Rev.",
+                    attributes: {
+                      value: "Rev."
+                    }
+                  },
+                ]
+              }
+            ],
+            attributes: {
+              id: 'salutation',
+            }
+          },
+          attributes: {
+            class: ['col-sm-4']
+          }
+        },
+        {
+          label: {
+            content: "First Name",
+            attributes: {
+              for: 'fname',
+            }
+          },
+          control: {
+            element: 'input',
+            attributes: {
+              type: 'text',
+              id: 'fname',
+              required: true
+            }
+          },
+          attributes: {
+            class: ['col-sm-4']
+          }
+        },
+        {
+          label: {
+            content: "Last Name",
+            attributes: {
+              for: 'lname',
+            }
+          },
+          control: {
+            element: 'input',
+            attributes: {
+              type: 'text',
+              id: 'lname',
+              required: true
+            }
+          },
+          attributes: {
+            class: ['col-sm-4']
+          }
+        },
+        {
+          label: {
+            content: "Phone",
+            attributes: {
+              for: 'phone',
+            }
+          },
+          control: {
+            element: 'input',
+            attributes: {
+              type: 'tel',
+              id: 'phone',
+              required: true
+            }
+          },
+          attributes: {
+            class: ['col-sm-6']
+          }
+        },
+        {
+          label: {
+            content: "Email",
+            attributes: {
+              for: 'email',
+            }
+          },
+          control: {
+            element: 'input',
+            attributes: {
+              type: 'email',
+              id: 'email',
+              required: true
+            }
+          },
+          attributes: {
+            class: ['col-sm-6']
+          }
+        },
+        {
+          label: {
+            content: "Address",
+            attributes: {
+              for: 'address',
+            }
+          },
+          control: {
+            element: 'input',
+            attributes: {
+              type: 'text',
+              id: 'address',
+              required: true
+            }
+          },
+        },
+        {
+          label: {
+            content: "City",
+            attributes: {
+              for: 'city',
+            }
+          },
+          control: {
+            element: 'input',
+            attributes: {
+              type: 'text',
+              id: 'city',
+              required: true
+            }
+          },
+          attributes: {
+            class: ['col-sm-4']
+          }
+        },
+        {
+          label: {
+            content: "State",
+            attributes: {
+              for: 'state',
+            }
+          },
+          control: {
+            element: 'input',
+            attributes: {
+              type: 'text',
+              id: 'state',
+              required: true
+            }
+          },
+          attributes: {
+            class: ['col-sm-4']
+          }
+        },
+        {
+          label: {
+            content: "ZIP",
+            attributes: {
+              for: 'zip',
+            }
+          },
+          control: {
+            element: 'input',
+            attributes: {
+              type: 'text',
+              id: 'zip',
+              required: true
+            }
+          },
+          attributes: {
+            class: ['col-sm-4']
+          }
+        },
+        {
+          label: {
+            content: "Select a Living Option",
+            attributes: {
+              for: 'living_option',
+            }
+          },
+          control: {
+            element: 'select',
+            menu: [
+              {
+                options: [
+                  {
+                    content: "Independent Living",
+                    attributes: {
+                      value: "il"
+                    }
+                  },
+                  {
+                    content: "Continuing Care",
+                    attributes: {
+                      value: "cc"
+                    }
+                  },
+                ]
+              }
+            ],
+            attributes: {
+              id: 'living_option',
+              required: true
+            }
+          },
+        },
+        {
+          label: {
+            content: "Inquiring For",
+            attributes: {
+              for: 'inquiring_for',
+            }
+          },
+          control: {
+            element: 'select',
+            menu: [
+              {
+                options: [
+                  {
+                    content: "Self",
+                    attributes: {
+                      value: "self"
+                    }
+                  },
+                  {
+                    content: "Client",
+                    attributes: {
+                      value: "client"
+                    }
+                  },
+                  {
+                    content: "Family Member",
+                    attributes: {
+                      value: "family_member"
+                    }
+                  },
+                  {
+                    content: "Friend",
+                    attributes: {
+                      value: "friend"
+                    }
+                  },
+                  {
+                    content: "Spouse",
+                    attributes: {
+                      value: "spouse"
+                    }
+                  },
+                ]
+              }
+            ],
+            attributes: {
+              id: 'inquiring_for',
+              required: true
+            }
+          },
+          attributes: {
+            class: ['col-sm-6'],
+          }
+        },
+        {
+          label: {
+            content: "How Did You Hear About Us?",
+            attributes: {
+              for: 'source',
+            }
+          },
+          control: {
+            element: 'select',
+            menu: [
+              {
+                options: [
+                  {
+                    content: "Direct Mail",
+                    attributes: {
+                      value: "direct_mail"
+                    }
+                  },
+                  {
+                    content: "Friend/Relative",
+                    attributes: {
+                      value: "friend_relative"
+                    }
+                  },
+                  {
+                    content: "Newspaper",
+                    attributes: {
+                      value: "newspaper"
+                    }
+                  },
+                  {
+                    content: "Search Engine",
+                    attributes: {
+                      value: "search_engine"
+                    }
+                  },
+                  {
+                    content: "Television",
+                    attributes: {
+                      value: "television"
+                    }
+                  },
+                  {
+                    content: "The Erickson Tribune",
+                    attributes: {
+                      value: "erickson_tribune"
+                    }
+                  },
+                ]
+              }
+            ],
+            attributes: {
+              id: 'source',
+            }
+          },
+          attributes: {
+            class: ['col-sm-6'],
+          }
+        },
+      ],
+    },
+  ]
+}) }}
