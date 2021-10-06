@@ -1,0 +1,26 @@
+@use "../1_settings/spacing" as *;
+@use "../2_tools/font-size";
+
+.message {
+  padding: ($spacing--half + 0rem) ($spacing--3qtr + 0rem);
+  
+  a {
+    text-decoration-color: transparent;
+  }
+  
+  &--status {
+    background-color: var(--esl-color-blue);
+    color: var(--esl-color-white);
+    
+    a,
+    a:hover {
+      color: var(--esl-color-white);
+    }
+    a:hover {
+      text-decoration-color: var(--esl-color-white);
+    }
+    a:active {
+      color: var(--esl-color-aqua-blue);
+    }
+  }
+}

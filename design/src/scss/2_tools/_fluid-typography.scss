@@ -2,6 +2,7 @@
 /// @file
 /// Calculate fluid responsive typography values.
 ///
+@use "sass:math";
 @use "../1_settings/breakpoints" as *;
 @use "../1_settings/typography";
 
@@ -26,8 +27,8 @@ $min-width--end: map-get($breakpoints, typography.$breakpoint--end);
     /// ==================================================================== \\\
     ///                                                                      \\\
     $xx: $min;
-    $yy: $min-width--start / 100;
-    $zz: 100 * ((strip-unit($max) * 16) - (strip-unit($min) * 16)) / (strip-unit($min-width--end) - strip-unit($min-width--start));
+    $yy: math.div($min-width--start, 100);
+    $zz: 100 * math.div(((strip-unit($max) * 16) - (strip-unit($min) * 16)), (strip-unit($min-width--end) - strip-unit($min-width--start)));
 
     & {
       font-size: calc(#{$xx} + ((1vw - #{$yy}) * #{$zz}));
@@ -46,7 +47,7 @@ $min-width--end: map-get($breakpoints, typography.$breakpoint--end);
 // Remove the unit from input values
 @function strip-unit($num) {
   @if type-of($num) == 'number' and not unitless($num) {
-    @return $num / ($num * 0 + 1);
+    @return math.div($num, ($num * 0 + 1));
   }
   @return $num;
 }

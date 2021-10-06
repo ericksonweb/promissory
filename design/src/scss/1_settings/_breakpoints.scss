@@ -3,11 +3,12 @@
 /// Define breakpoints.
 ///
 $breakpoints: (
-  'tiny':   320px,
-  'xsmall': 480px,
-  'small':  576px,
-  'medium': 768px,
-  'large':  992px,
-  'xlarge': 1024px,
-  'giant':  1200px,
+  '': 0,
+  'min': 320px,
+  'xs': 480px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1024px,
+  'max': 1200px,
 );

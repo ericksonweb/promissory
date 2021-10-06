@@ -105,10 +105,10 @@
         "patternSectionSubgroup": "views/partials/patternSectionSubgroup.mustache",
         "viewall": "views/viewall.mustache"
       },
-      "css": "../src/css",
-      "fonts": "../src/fonts",
-      "images": "../src/images",
-      "js": "../src/js"
+      "css": "../dist/css",
+      "fonts": "../dist/fonts",
+      "images": "../dist/images",
+      "js": "../dist/js"
     },
     "public": {
       "root": "public/",

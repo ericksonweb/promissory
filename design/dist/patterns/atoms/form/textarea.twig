@@ -1,0 +1,22 @@
+{#
+/**
+ * Form Pattern
+ */
+#}
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element #}
+{% set element = 'textarea' %}
+
+{# Check for and optionally set placeholder text #}
+{% if not attributes is defined %}
+  {% set attributes = {
+    placeholder: "​"
+  } %}
+{% elseif not attributes.placeholder is defined %}
+  {% set attributes = attributes|merge({
+    placeholder: "​"
+  }) %}
+{% endif %}
+
+{% block content %}{{ content }}{% endblock content %}

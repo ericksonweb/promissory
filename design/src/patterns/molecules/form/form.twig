@@ -1,0 +1,75 @@
+{#
+/**
+ * Form Pattern
+ */
+#}
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element #}
+{% set element = 'form' %}
+
+{# Incorporate 'needs-validation' class into 'attributes' array #}
+{% if not attributes is defined %}
+  {% set attributes = {
+    class: ['needs-validation']
+  } %}
+{% elseif attributes is defined and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: ['needs-validation']
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: ['needs-validation']|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{# Initialize a variable to keep track of the presence of required inputs. #}
+{% set form_required = false %}
+
+{# Parse through the form controls. #}
+{% set controls %}
+  {% for item in form %}
+  
+    {% if item.fieldset %}
+      {% if item.fieldset.required %}
+        {% set form_required = true %}
+      {% endif %}
+      {{ include ('@atoms/form/fieldset.twig', {
+        required: item.fieldset.required,
+        legend: item.fieldset.legend,
+        fields: item.fieldset.fields,
+        attributes: item.fieldset.attributes
+      }, with_context = false) }}
+      
+    {% elseif item.fields %}
+      {% for field in item.fields %}
+        {% if field.control.attributes.required %}
+          {% set form_required = true %}
+        {% endif %}
+        {{ include ('@molecules/form/field.twig', {
+          label: field.label,
+          control: field.control,
+          attributes: field.attributes
+        }, with_context = false) }}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+{% endset %}
+
+{# Compile the form content. #}
+{% set content %}
+  {% if form_required %}
+    <p class="mark-required font-size--small">Required fields</p>
+  {% endif %}
+  <div class="form__fields row">
+  {{ controls }}
+  </div>
+  {{ include ('@atoms/input.twig', {
+    content: "Submit",
+    attributes: {
+      type: 'submit',
+    }
+  }) }}
+{% endset %}
+
+{% block content %}{{ content }}{% endblock content %}

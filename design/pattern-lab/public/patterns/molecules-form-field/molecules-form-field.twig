@@ -1,0 +1,15 @@
+{{ include ('@molecules/form/field.twig', {
+  label: {
+    content: "First Name",
+    attributes: {
+      for: 'firstname',
+    }
+  },
+  control: {
+    element: 'input',
+    attributes: {
+      type: 'text',
+      id: 'firstname',
+    }
+  }
+}) }}

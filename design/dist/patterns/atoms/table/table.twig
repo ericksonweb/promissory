@@ -1,0 +1,72 @@
+{#
+/**
+ * Table Pattern
+ */
+#}
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element #}
+{% set element = 'table' %}
+
+{% set content %}
+  {% if caption %}
+    {{ include ('@atoms/table/caption.twig', {
+      content: caption
+    }, with_context = false) }}
+  {% endif %}
+  
+  {% if columns %}
+    {% set colgroup_wrap = true %}
+    
+    {% set column_layout %}
+      {% for column in columns %}
+        {% if "span" in column.attributes|keys %}
+          {% set colgroup_wrap = false %}
+          {# Render as 'colgroup' without nested 'col's #}
+          {{ include ('@atoms/table/colgroup.twig', {
+            attributes: column.attributes
+          }, with_context = false) }}
+        {% else %}
+          {# Render as 'col' #}
+          {{ include ('@atoms/table/col.twig', {
+            attributes: column.attributes
+          }, with_context = false) }}
+        {% endif %}
+      {% endfor %}
+    {% endset %}
+    
+    {% if colgroup_wrap == true %}
+      {{ include ('@atoms/table/colgroup.twig', {
+        content: column_layout,
+        attributes: column.attributes
+      }, with_context = false) }}
+    {% else %}
+      {{ column_layout }}
+    {% endif %}
+  {% endif %}
+  
+  {% if header %}
+    {{ include ('@atoms/table/thead.twig', {
+      rows: header.rows,
+      attributes: header.attributes
+    }, with_context = false) }}
+  {% endif %}
+  
+  {% if body %}
+    {% for tbody in body %}
+      {{ include ('@atoms/table/tbody.twig', {
+        rows: tbody.rows,
+        attributes: tbody.attributes
+      }, with_context = false) }}
+    {% endfor %}
+  {% endif %}
+  
+  {% if footer %}
+    {{ include ('@atoms/table/tfoot.twig', {
+      rows: footer.rows,
+      attributes: footer.attributes
+    }, with_context = false) }}
+  {% endif %}
+{% endset %}
+
+{% block content %}{{ content }}{% endblock content %}

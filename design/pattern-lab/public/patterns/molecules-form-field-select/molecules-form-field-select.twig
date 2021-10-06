@@ -1,0 +1,56 @@
+{{ include ('@molecules/form/field.twig', {
+  label: {
+    content: "Salutation",
+    attributes: {
+      for: 'salutation',
+    }
+  },
+  control: {
+    element: 'select',
+    menu: [
+      {
+        options: [
+          {
+            content: "Mr.",
+            attributes: {
+              value: "Mr."
+            }
+          },
+          {
+            content: "Mrs.",
+            attributes: {
+              value: "Mrs."
+            }
+          },
+          {
+            content: "Ms.",
+            attributes: {
+              value: "Ms."
+            }
+          },
+          {
+            content: "Dr.",
+            attributes: {
+              value: "Dr."
+            }
+          },
+          {
+            content: "Prof.",
+            attributes: {
+              value: "Prof."
+            }
+          },
+          {
+            content: "Rev.",
+            attributes: {
+              value: "Rev."
+            }
+          },
+        ]
+      }
+    ],
+    attributes: {
+      id: 'salutation',
+    }
+  }
+}) }}
