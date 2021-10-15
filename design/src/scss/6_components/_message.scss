@@ -2,6 +2,7 @@
 @use "../2_tools/font-size";
 
 .message {
+  position: relative;
   padding: ($spacing--half + 0rem) ($spacing--3qtr + 0rem);
   
   a {
@@ -22,5 +23,11 @@
     a:active {
       color: var(--esl-color-aqua-blue);
     }
+  }
+  
+  &__close {
+    position: absolute;
+    top: $spacing--half + 0rem;
+    right: $spacing--3qtr + 0rem;
   }
 }
