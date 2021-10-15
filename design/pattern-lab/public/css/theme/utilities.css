@@ -2,8 +2,16 @@
   display: block;
 }
 
-d-none {
+.d-none {
   display: none;
+}
+
+.font-family--serif {
+  font-family: var(--esl-font-serif);
+}
+
+.font-family--sans-serif {
+  font-family: var(--esl-font-sans-serif);
 }
 
 .font-size--xsmall:not(h1, h2, h3, h4, h5, h6) {

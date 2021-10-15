@@ -1,0 +1,45 @@
+{% extends '@promissory/_macros/_element.twig' %}
+
+{# Establish HTML element. #}
+{% set element = 'div' %}
+
+{# Incorporate 'card' classes into 'attributes' array. #}
+{% set card_classes = ['card'] %}
+{% if horizontal is defined and horizontal == true %}
+  {% set card_classes = card_classes|merge(['card--horizontal']) %}
+{% endif %}
+{% if dark is defined and dark == true %}
+  {% set card_classes = card_classes|merge(['card--dark']) %}
+{% endif %}
+
+{% if attributes is empty %}
+  {% set attributes = {
+    class: card_classes
+  } %}
+{% elseif not attributes is empty and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: card_classes
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: card_classes|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{% block content %}
+  {% if link is defined and not link is empty %}
+    {{ include ('@atoms/link.twig', {
+      attributes: {
+        href: link.href,
+        class: ['card__link']
+      },
+    }, with_context = false) }}
+  {% endif %}
+  {% if not media is empty %}
+    {% if media.flush is defined and media.flush == true %}
+      {% set media_flush = ' card__media--flush' %}
+    {% endif %}
+    <div class="card__media{{ media_flush }}">{{ media.item }}</div>
+  {% endif %}
+  <div class="card__content">{{ content }}</div>
+{% endblock %}

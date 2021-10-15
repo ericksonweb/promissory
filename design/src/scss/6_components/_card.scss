@@ -1,0 +1,93 @@
+@use "sass:color";
+@use "../1_settings/breakpoints" as *;
+@use "../1_settings/colors";
+@use "../1_settings/spacing" as *;
+@use "../1_settings/transition" as *;
+@use "../1_settings/typography" as *;
+@use "../2_tools/resets";
+
+.card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  border: 1px solid;
+  border-color: var(--esl-color-light-grey);
+  
+  &__media,
+  &__content {
+    padding: $spacing--half + 0rem;
+    
+  }
+  
+  &__media {
+    display: flex;
+    width: 100%;
+    
+    & > img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    &--flush {
+      @include resets.padding;      
+    }
+  }
+  
+  &__content {
+    min-width: 20ch;
+    flex: 10;
+    
+    a:not(.btn) {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  
+  &__link {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    z-index: 1;
+    border: 1px solid;
+    border-color: transparent;
+    transition: $transition;
+    transition-property: box-shadow, background-color, border-color;
+    
+    &:hover {
+      border-color: var(--esl-color-aqua-blue);
+      box-shadow: 0 0 ($spacing--half + 0rem) color.adjust(colors.$dark-grey, $alpha: -0.75);
+      
+      & ~ .card__content .btn {
+        background-color: var(--esl-color-aqua-blue);
+        color: var(--esl-color-white);
+      }
+    }
+  }
+      
+  &--dark {
+    border-color: transparent;
+    background-color: var(--esl-color-xlight-grey);
+    transition: $transition;
+    transition-property: background-color;
+    
+    &:hover {
+      background-color: color.adjust(colors.$light-grey, $alpha: -0.3);
+    }
+  }
+  
+  &--horizontal {
+    & .card__media {
+      width: auto;
+      flex-grow: 1;      
+    }
+    & .card__content {
+      flex: 10000;
+    }
+  }
+  
+}

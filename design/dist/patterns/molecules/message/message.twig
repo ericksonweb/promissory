@@ -23,4 +23,16 @@
   }) %}
 {% endif %}
 
-{% block content %}{{ content }}{% endblock %}
+{% block content %}
+  <div class="message__content">{{ content }}</div>
+  {{ include ('@atoms/link.twig', {
+    icon: {
+      fa_prefix: 'fas',
+      fa_name: 'times'
+    },
+    attributes: {
+      href: '#',
+      class: ['message__close']
+    },
+  }, with_context = false) }}
+{% endblock %}

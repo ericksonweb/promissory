@@ -31,7 +31,7 @@
   {%- set element_attributes = '' -%}
   {%- set global_attributes = '' -%}
   {#- Designate globally available attribute types -#}
-  {%- set global_types = ['aria', 'class', 'id', 'handlers'] -%}
+  {%- set global_types = ['aria', 'class', 'id', 'style', 'handlers'] -%}
   {%- for attribute, value in attributes -%}
     {%- if attribute not in global_types -%}
       {#- Render element-specific attributes -#}
@@ -45,7 +45,7 @@
 {# Designate void (self-closing) elements #}
 {% set void = ['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr'] %}
 {# Designate elements that should display their contents inline #}
-{% set inline = ['a', 'button', 'label', 'legend', 'option', 'span', 'textarea'] %}
+{% set inline = ['a', 'button', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'label', 'legend', 'option', 'p', 'span', 'textarea'] %}
 {# Render the element #}
 <{{ element }} {{ element_attributes }} {{- global_attributes }}>{%- if element not in void -%}{%- if element not in inline ~%}
 {% endif -%}{% block content %}{% endblock content %}{%- if element not in inline ~%}

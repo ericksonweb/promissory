@@ -73,6 +73,6 @@
     {%- import '@promissory/_macros/_content-w-icon.twig' as content_w_icon -%}
     {{- content_w_icon.render(content|default("Link"), icon.position|default('before'), icon.shape, icon.fa_prefix|default('fas'), icon.fa_name|default('circle')) -}}
   {%- else -%}
-    {{- content|default("Link") -}}
+    {{- content -}}
   {%- endif -%}
 {%- endblock content -%}
