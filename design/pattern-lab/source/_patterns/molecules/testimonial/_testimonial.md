@@ -1,4 +1,0 @@
----
-title: Testimonial
-state: inprogress
----

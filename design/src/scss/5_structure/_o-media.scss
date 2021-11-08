@@ -1,0 +1,19 @@
+@use "../2_tools/resets";
+
+.o-media {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  
+  &__media {
+    display: flex;
+    width: 100%;
+    
+    & > img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

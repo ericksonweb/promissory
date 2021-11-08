@@ -1,10 +1,12 @@
-{% extends '@promissory/_macros/_element.twig' %}
+{% if not media is empty %}
+  {% set o_media = true %}
+{% endif %}
 
-{# Establish HTML element. #}
-{% set element = 'div' %}
+{% extends o_media ? '@molecules/_o-media.twig' : '@atoms/div.twig' %}
 
 {# Incorporate 'card' classes into 'attributes' array. #}
 {% set card_classes = ['card'] %}
+
 {% if horizontal is defined and horizontal == true %}
   {% set card_classes = card_classes|merge(['card--horizontal']) %}
 {% endif %}
@@ -27,7 +29,7 @@
 {% endif %}
 
 {% block content %}
-  {% if link is defined and not link is empty %}
+  {% if not link is empty %}
     {{ include ('@atoms/link.twig', {
       attributes: {
         href: link.href,
@@ -35,11 +37,100 @@
       },
     }, with_context = false) }}
   {% endif %}
-  {% if not media is empty %}
-    {% if media.flush is defined and media.flush == true %}
-      {% set media_flush = ' card__media--flush' %}
+  
+  {# Card Media #}
+  {% block o_media %}
+    {% if not media is empty %}
+      {% set media_classes = ['card__media'] %}
+      {% if media.flush == true %}
+        {% set media_classes = media_classes|merge(['card__media--flush']) %}
+      {% endif %}
+      
+      {{ parent() }}
     {% endif %}
-    <div class="card__media{{ media_flush }}">{{ media.item }}</div>
+  {% endblock o_media %}
+  
+  {# Card Content #}
+  {% set content_classes = ['card__content'] %}
+  {% set content %}
+    {# Card Header #}
+    {% if not header is empty %}
+      {% if header.attributes is empty %}
+        {% set header_attributes = {
+          class: ['card__header']
+        } %}
+      {% elseif not header.attributes is empty and not header.attributes.class is defined %}
+        {% set header_attributes = header.attributes|merge({
+          class: ['card__header']
+        }) %}
+      {% else %}
+        {% set header_attributes = header.attributes|merge({
+          class: ['card__header']|merge(header.attributes.class)
+        }) %}
+      {% endif %}
+      
+      {{ include ('@atoms/div/div.twig', {
+        content: header.content,
+        attributes: header_attributes
+      }, with_context = false) }}
+    {% endif %}
+    
+    {# Card Body #}
+    {% if not body is empty %}
+      {% if body.attributes is empty %}
+        {% set body_attributes = {
+          class: ['card__body']
+        } %}
+      {% elseif not body.attributes is empty and not body.attributes.class is defined %}
+        {% set body_attributes = body.attributes|merge({
+          class: ['card__body']
+        }) %}
+      {% else %}
+        {% set body_attributes = body.attributes|merge({
+          class: ['card__body']|merge(body.attributes.class)
+        }) %}
+      {% endif %}
+      
+      {{ include ('@atoms/div/div.twig', {
+        content: body.content,
+        attributes: body_attributes
+      }, with_context = false) }}
+    {% endif %}
+    
+    {# Card Footer #}
+    {% if not footer is empty %}
+      {% if footer.attributes is empty %}
+        {% set footer_attributes = {
+          class: ['card__footer']
+        } %}
+      {% elseif not footer.attributes is empty and not footer.attributes.class is defined %}
+        {% set footer_attributes = footer.attributes|merge({
+          class: ['card__footer']
+        }) %}
+      {% else %}
+        {% set footer_attributes = footer.attributes|merge({
+          class: ['card__footer']|merge(footer.attributes.class)
+        }) %}
+      {% endif %}
+      
+      {{ include ('@atoms/div/div.twig', {
+        content: footer.content,
+        attributes: footer_attributes
+      }, with_context = false) }}
+    {% endif %}
+  {% endset %}
+  
+  {% if o_media == true %}
+    {% block o_content %}
+      {{ parent() }}
+    {% endblock o_content %}
+  {% else %}
+    {{ include ('@atoms/div.twig', {
+      content: content,
+      attributes: {
+        class: content_classes
+      }
+    }, with_context = false) }}
   {% endif %}
-  <div class="card__content">{{ content }}</div>
-{% endblock %}
+  
+{% endblock content %}

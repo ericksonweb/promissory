@@ -1,5 +1,5 @@
 ---
-title: 'Card - Flush Media'
-order: 3
+title: 'Card with Media (Flush)'
+order: 2
 state: inprogress
 ---

@@ -1,0 +1,52 @@
+{% extends '@molecules/_o-media.twig' %}
+
+{# Incorporate 'hero' classes into 'attributes' array. #}
+{% set hero_classes = ['hero'] %}
+
+{% if attributes is empty %}
+  {% set attributes = {
+    class: hero_classes
+  } %}
+{% elseif not attributes is empty and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: hero_classes
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: hero_classes|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{% block content %}
+  {# Hero Media #}
+  {% block o_media %}
+    {% set media_classes = ['hero__media'] %}
+    
+    {{ parent() }}
+  {% endblock o_media %}
+  
+  {# Hero Content #}
+  {% if not content is empty %}      
+    {% set content_classes = ['hero__content'] %}
+    {% for property in content.properties %}
+      {% if property in ['inset', 'contain', 'half', 'left', 'center', 'right', 'top', 'middle', 'bottom', 'light', 'dark'] %}
+        {% set content_classes = content_classes|merge(['hero__content--' ~ property]) %}
+      {% endif %}
+    {% endfor %}
+    
+    {% set content %}
+      {# Hero Body #}
+      {{ include ('@atoms/div.twig', {
+        content: content.body,
+        attributes: {
+          class: ['hero__body']
+        }
+      }, with_context = false) }}
+    {% endset %}
+    
+    {% block o_content %}
+      {{ parent() }}
+    {% endblock o_content %}
+  {% endif %}
+  
+{% endblock content %}

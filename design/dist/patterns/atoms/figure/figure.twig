@@ -8,4 +8,11 @@
 {# Establish HTML element #}
 {% set element = 'figure' %}
 
-{% block content %}{{ content }}{% endblock content %}
+{% block content %}
+  {{ content }}
+  {% if not caption is empty %}
+    {{- include ('@atoms/figcaption.twig', {
+      content: caption
+    }) }}
+  {% endif %}
+{% endblock content %}

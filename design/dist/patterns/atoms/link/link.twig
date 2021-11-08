@@ -68,7 +68,7 @@
       shape: icon.shape,
       fa_prefix: icon.fa_prefix,
       fa_name: icon.fa_name,
-    }) -}}
+    }, with_context = false) -}}
   {%- elseif content and icon -%}
     {%- import '@promissory/_macros/_content-w-icon.twig' as content_w_icon -%}
     {{- content_w_icon.render(content|default("Link"), icon.position|default('before'), icon.shape, icon.fa_prefix|default('fas'), icon.fa_name|default('circle')) -}}

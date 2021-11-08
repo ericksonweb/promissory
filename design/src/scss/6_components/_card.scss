@@ -1,9 +1,7 @@
 @use "sass:color";
-@use "../1_settings/breakpoints" as *;
 @use "../1_settings/colors";
 @use "../1_settings/spacing" as *;
 @use "../1_settings/transition" as *;
-@use "../1_settings/typography" as *;
 @use "../2_tools/resets";
 
 .card {
@@ -15,35 +13,33 @@
   border-color: var(--esl-color-light-grey);
   
   &__media,
-  &__content {
+  &__content > * {
     padding: $spacing--half + 0rem;
-    
   }
   
   &__media {
-    display: flex;
-    width: 100%;
-    
-    & > img {
-      display: block;
-      width: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-    
     &--flush {
       @include resets.padding;      
     }
   }
   
   &__content {
-    min-width: 20ch;
     flex: 10;
-    
-    a:not(.btn) {
-      position: relative;
-      z-index: 2;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  &__body {
+    min-width: 20ch;
+    flex-basis: 70%;
+    flex-grow: 1;
+  }
+  
+  &__header,
+  &__footer {
+    display: flex;
+    width: 100%;
   }
   
   &__link {
@@ -67,6 +63,18 @@
         color: var(--esl-color-white);
       }
     }
+    
+    & ~ .card__content {
+      position: relative;
+      z-index: 2;
+      pointer-events: none;
+      
+      a:not(.btn) {
+        position: relative;
+        z-index: 2;
+        pointer-events: all;
+      }
+    }
   }
       
   &--dark {
@@ -75,15 +83,17 @@
     transition: $transition;
     transition-property: background-color;
     
-    &:hover {
-      background-color: color.adjust(colors.$light-grey, $alpha: -0.3);
+    & .card__link:hover {
+      background-color: color.adjust(colors.$dark-grey, $alpha: -0.85);
     }
   }
   
   &--horizontal {
-    & .card__media {
+    & .card__media,
+    & .card__header,
+    & .card__footer {
       width: auto;
-      flex-grow: 1;      
+      flex-grow: 1;
     }
     & .card__content {
       flex: 10000;

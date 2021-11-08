@@ -1,0 +1,17 @@
+{% extends '@atoms/paragraph.twig' %}
+
+{% if not attributes is defined %}
+  {% set attributes = {
+    'class': ['callout']
+  } %}
+{% elseif attributes is defined and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    'class': ['callout']
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    'class': ['callout']|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{% block content %}{{ content }}{% endblock content %}

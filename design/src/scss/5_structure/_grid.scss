@@ -9,6 +9,14 @@
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 
+$grid-breakpoints: $breakpoints;
+$container-max-widths: $breakpoints;
+
+$container-max-widths: (
+  min: map-get($breakpoints, 'max')
+);
+
+
 @import "../node_modules/bootstrap/scss/mixins/lists";
 @import "../node_modules/bootstrap/scss/mixins/breakpoints";
 @import "../node_modules/bootstrap/scss/mixins/container";
@@ -16,8 +24,6 @@
 @import "../node_modules/bootstrap/scss/mixins/utilities";
 
 @import "../node_modules/bootstrap/scss/vendor/rfs";
-
-$grid-breakpoints: $breakpoints;
 
 @import "../node_modules/bootstrap/scss/containers";
 @import "../node_modules/bootstrap/scss/grid";

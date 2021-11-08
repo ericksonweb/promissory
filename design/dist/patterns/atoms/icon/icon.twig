@@ -8,9 +8,20 @@
 {# Establish HTML element #}
 {% set element = 'span' %}
 
-{% set attributes = {
-  class: ['icon']
-} %}
+{# Incorporate 'icon' class into 'attributes' array #}
+{% if not attributes is defined %}
+  {% set attributes = {
+    class: ['icon']
+  } %}
+{% elseif attributes is defined and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: ['icon']
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: ['icon']|merge(attributes.class)
+  }) %}
+{% endif %}
 
 {% if position %}
   {% set attributes = attributes|merge({
