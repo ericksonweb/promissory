@@ -31,3 +31,36 @@
 @mixin large-end {
   @include fluid-type(1rem, typography.$scale--end + 0rem);
 }
+
+@mixin h1 {
+  font-family: var(--esl-font-serif);
+  @include fluid-type(math.pow(typography.$scale--start, 5) + 0rem, math.pow(typography.$scale--end, 5) + 0rem);
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+@mixin h2 {
+  font-family: var(--esl-font-serif);
+  @include fluid-type(math.pow(typography.$scale--start, 4) + 0rem, math.pow(typography.$scale--end, 4) + 0rem);
+  font-weight: normal;
+  line-height: 1.18;
+}
+
+@mixin h3 {
+  @include fluid-type(math.pow(typography.$scale--start, 3) + 0rem, math.pow(typography.$scale--end, 3) + 0rem);
+  line-height: 1.26;
+}
+
+@mixin h4 {
+  @include fluid-type(math.pow(typography.$scale--start, 2) + 0rem, math.pow(typography.$scale--end, 2) + 0rem);
+  line-height: 1.34;
+}
+
+@mixin h5 {
+  @include fluid-type(typography.$scale--start + 0rem, typography.$scale--end + 0rem);
+  line-height: 1.42;
+}
+
+@mixin h6 {
+  font-size: 1rem;
+}

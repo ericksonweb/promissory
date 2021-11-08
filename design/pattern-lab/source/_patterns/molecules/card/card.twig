@@ -22,9 +22,8 @@
 
 <div class="col-sm-6 col-md-4">
   {{- include ('@molecules/card.twig', {
-    media: {
-      item: media_item,
+    body: {
+      content: content,
     },
-    content: content,
   }, with_context = false) -}}
 </div>

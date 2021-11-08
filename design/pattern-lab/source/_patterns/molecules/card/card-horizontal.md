@@ -1,5 +1,5 @@
 ---
 title: 'Card - Horizontal'
-order: 4
+order: 7
 state: inprogress
 ---

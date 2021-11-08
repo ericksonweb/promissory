@@ -1,5 +1,11 @@
+{% set callout %}
+  {{ include ('@molecules/callout.twig', {
+    content: 'I believe that selling my house and moving here when I did was the <b>best decision I ever made.</b>',
+  }) }}
+{% endset %}
+
 {{ include ('@molecules/testimonial.twig', {
-  content: '<p>I believe that selling my house and moving here when I did was the <b>best decision I ever made.</b></p>',
+  content: callout,
   author_name: "Beverly B.",
   author_desc: "A Community Resident",
 }) }}

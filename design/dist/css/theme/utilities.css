@@ -1,3 +1,7 @@
+.bg--xlight-grey {
+  background-color: var(--esl-color-xlight-grey);
+}
+
 .d-block {
   display: block;
 }
@@ -138,4 +142,97 @@
   .font-size--large-end:not(h1, h2, h3, h4, h5, h6) {
     font-size: 1.25rem;
   }
+}
+
+.h1 {
+  font-family: var(--esl-font-serif);
+  font-weight: normal;
+  line-height: 1.1;
+}
+.h1 {
+  font-size: 2.48832rem;
+}
+@media all and (min-width: 768px) {
+  .h1 {
+    font-size: calc(2.48832rem + ((1vw - 7.68px) * 2.086806713));
+  }
+}
+@media all and (min-width: 1200px) {
+  .h1 {
+    font-size: 3.0517578125rem;
+  }
+}
+
+.h2 {
+  font-family: var(--esl-font-serif);
+  font-weight: normal;
+  line-height: 1.18;
+}
+.h2 {
+  font-size: 2.0736rem;
+}
+@media all and (min-width: 768px) {
+  .h2 {
+    font-size: calc(2.0736rem + ((1vw - 7.68px) * 1.3622453704));
+  }
+}
+@media all and (min-width: 1200px) {
+  .h2 {
+    font-size: 2.44140625rem;
+  }
+}
+
+.h3 {
+  line-height: 1.26;
+}
+.h3 {
+  font-size: 1.728rem;
+}
+@media all and (min-width: 768px) {
+  .h3 {
+    font-size: calc(1.728rem + ((1vw - 7.68px) * 0.8337962963));
+  }
+}
+@media all and (min-width: 1200px) {
+  .h3 {
+    font-size: 1.953125rem;
+  }
+}
+
+.h4 {
+  line-height: 1.34;
+}
+.h4 {
+  font-size: 1.44rem;
+}
+@media all and (min-width: 768px) {
+  .h4 {
+    font-size: calc(1.44rem + ((1vw - 7.68px) * 0.4537037037));
+  }
+}
+@media all and (min-width: 1200px) {
+  .h4 {
+    font-size: 1.5625rem;
+  }
+}
+
+.h5 {
+  line-height: 1.42;
+}
+.h5 {
+  font-size: 1.2rem;
+}
+@media all and (min-width: 768px) {
+  .h5 {
+    font-size: calc(1.2rem + ((1vw - 7.68px) * 0.1851851852));
+  }
+}
+@media all and (min-width: 1200px) {
+  .h5 {
+    font-size: 1.25rem;
+  }
+}
+
+.h6 {
+  font-size: 1rem;
 }
