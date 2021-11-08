@@ -1,0 +1,14 @@
+{% set media_item %}
+  {{- include ('@atoms/image.twig', {
+    attributes: {
+      src: 'https://via.placeholder.com/1200x400?text=Image',
+      alt: "Alt text",
+    }
+  }) -}}
+{% endset %}
+
+{{ include ('@molecules/hero.twig', {
+  media: {
+    item: media_item,
+  },
+}) }}

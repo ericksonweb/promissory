@@ -1,12 +1,3 @@
-{% set media_item %}
-  {{- include ('@atoms/image.twig', {
-    attributes: {
-      src: 'https://via.placeholder.com/160x160?text=Image',
-      alt: "Alt text",
-    }
-  }) -}}
-{% endset %}
-
 {% set content %}
   {{ include ('@atoms/heading.twig', {
     content: "Lorem ipsum dolor sit amet consectetur ",
@@ -22,10 +13,9 @@
 
 <div class="col-sm-6">
   {{- include ('@molecules/card.twig', {
-    media: {
-      item: media_item,
+    body: {
+      content: content,
     },
-    content: content,
     horizontal: true
   }, with_context = false) -}}
 </div>
