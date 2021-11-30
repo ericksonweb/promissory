@@ -1,0 +1,158 @@
+{% extends '@atoms/div.twig' %}
+
+{# Create Toggler object if not already defined #}
+{% if not toggler is defined %}
+  {% set toggler = {} %}
+{% endif %}
+
+{# Incorporate 'o-' classes into 'attributes' array. #}
+{% set o_classes = ['o-collapse'] %}
+
+{% if attributes is empty %}
+  {% set attributes = {
+    class: o_classes
+  } %}
+{% elseif not attributes is empty and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: o_classes
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: o_classes|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{% block content %}
+
+  {# Toggler #}
+  {% block o_toggler %}
+    
+    {# Update toggler classes #}
+    {% if not toggler.attributes is defined %}
+      {% set toggler = toggler|merge({
+        attributes: {
+          class: ['o-collapse__toggler']
+        }
+      }) %}
+    {% elseif toggler.attributes is defined and not toggler.attributes.class is defined %}
+      {% set toggler = toggler|merge({
+        attributes: toggler.attributes|merge({
+          class: ['o-collapse__toggler']
+        })
+      }) %}
+    {% else %}
+      {% set toggler = toggler|merge({
+        attributes: toggler.attributes|merge({
+          class: ['o-collapse__toggler']|merge(toggler.attributes.class)
+        })
+      }) %}
+    {% endif %}
+    
+    {# Update toggler 'aria' #}
+    {% if not toggler.attributes is defined %}
+      {% set toggler = toggler|merge({
+        attributes: {
+          aria: {
+            expanded: 'false',
+            controls: name ~ "__collapse"
+          },
+        }
+      }) %}
+    {% elseif toggler.attributes is defined and not toggler.attributes.aria is defined %}
+      {% set toggler = toggler|merge({
+        attributes: toggler.attributes|merge({
+          aria: {
+            expanded: 'false',
+            controls: name ~ "__collapse"
+          },
+        })
+      }) %}
+    {% else %}
+      {% set toggler = toggler|merge({
+        attributes: toggler.attributes|merge({
+          aria: toggler.attributes.aria|merge({
+            expanded: 'false',
+            controls: name ~ "__collapse"
+          })
+        })
+      }) %}
+    {% endif %}
+    
+    {# Update toggler 'data' #}
+    {% if not toggler.attributes is defined %}
+      {% set toggler = toggler|merge({
+        attributes: {
+          data: {
+            toggle: 'collapse',
+            target: '#' ~ name~ "__collapse"
+          },
+        }
+      }) %}
+    {% elseif toggler.attributes is defined and not toggler.attributes.data is defined %}
+      {% set toggler = toggler|merge({
+        attributes: toggler.attributes|merge({
+          data: {
+            toggle: 'collapse',
+            target: '#' ~ name ~ "__collapse"
+          },
+        })
+      }) %}
+    {% else %}
+      {% set toggler = toggler|merge({
+        attributes: toggler.attributes|merge({
+          data: toggler.attributes.data|merge({
+            toggle: 'collapse',
+            target: '#' ~ name ~ "__collapse"
+          })
+        })
+      }) %}
+    {% endif %}
+    
+    {# Set additional Toggler properties #}
+    {% set toggler = {
+      element: toggler.element|default('button'),
+      content: toggler.content|default(
+        include ('@atoms/icon.twig', {
+          fa_name: 'blank',
+          attributes: {
+            class: ['fa-fw']
+          }
+        }, with_context = false)
+      ),
+    }|merge(toggler) %}    
+    
+    {% if toggler.element is empty or toggler.element == 'button' %}
+      {% set toggler %}
+        {{ include ('@atoms/button.twig', toggler, with_context = false) }}
+      {% endset %}
+    {% elseif toggler.element == 'a' %}
+      {% set toggler %}
+        {{ include ('@atoms/link.twig', toggler, with_context = false) }}
+      {% endset %}
+    {% endif %}
+
+    {{ toggler }}
+  {% endblock o_toggler %}
+  
+  {# Content #}
+  {% block o_content %}
+    {% if not collapse.content is empty %}
+      {% set o_content_classes = ['o-collapse__content', 'collapse'] %}
+    
+      {% if content_classes is empty %}
+        {% set content_classes = o_content_classes %}
+      {% else %}
+        {% set content_classes = o_content_classes|merge(content_classes) %}
+      {% endif %}
+      
+      {{ include('@atoms/div.twig', {
+        content: collapse.content,
+        attributes: {
+          class: content_classes,
+          id: name ~ "__collapse"
+        }
+      }, with_context = false) }}
+    {% endif %}
+  {% endblock o_content %}
+  
+{% endblock %}

@@ -1,0 +1,23 @@
+.o-collapse {
+}
+
+.o-collapse__toggler.btn {
+  padding: 0;
+  line-height: inherit;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  color: var(--esl-color-dark-grey);
+  
+  &:hover {
+    background-color: transparent;
+    color: var(--esl-color-dark-grey);
+  }
+  
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.o-collapse__content {
+}

@@ -1,11 +1,12 @@
-/*!
- * Bootstrap Grid v5.1.1 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
 .container,
 .container-fluid,
+.container-max,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xs,
 .container-min {
   width: 100%;
   padding-right: var(--bs-gutter-x, 0.75rem);
@@ -15,9 +16,44 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 0;
 }
 
+@media (min-width: 320px) {
+  .container-xs, .container {
+    max-width: 320px;
+  }
+}
+@media (min-width: 480px) {
+  .container-sm, .container-xs, .container {
+    max-width: 480px;
+  }
+}
+@media (min-width: 576px) {
+  .container-md, .container-sm, .container-xs, .container {
+    max-width: 576px;
+  }
+}
+@media (min-width: 768px) {
+  .container-lg, .container-md, .container-sm, .container-xs, .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 992px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container-xs, .container {
+    max-width: 992px;
+  }
+}
+@media (min-width: 1024px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container-xs, .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-max, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container-xs, .container {
+    max-width: 1200px;
+  }
+}
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;

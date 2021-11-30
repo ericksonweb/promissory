@@ -2,24 +2,34 @@
 @use "../1_settings/typography";
 @use "fluid-typography" as *;
 
-@mixin xsmall {
+@mixin tiny {
   @include fluid-type(math.pow(typography.$scale--start, -2) + 0rem, math.pow(typography.$scale--end, -2) + 0rem);
 }
-@mixin xsmall-start {
+@mixin tiny-start {
   @include fluid-type(math.pow(typography.$scale--start, -2) + 0rem, 1rem);
 }
-@mixin xsmall-end {
+@mixin tiny-end {
   @include fluid-type(1rem, math.pow(typography.$scale--end, -2) + 0rem);
 }
 
-@mixin small {
+@mixin xsmall {
   @include fluid-type(math.pow(typography.$scale--start, -1) + 0rem, math.pow(typography.$scale--end, -1) + 0rem);
 }
-@mixin small-start {
+@mixin xsmall-start {
   @include fluid-type(math.pow(typography.$scale--start, -1) + 0rem, 1rem);
 }
-@mixin small-end {
+@mixin xsmall-end {
   @include fluid-type(1rem, math.pow(typography.$scale--end, -1) + 0rem);
+}
+
+@mixin small {
+  @include fluid-type(math.pow(typography.$scale--start, -0.5) + 0rem, math.pow(typography.$scale--end, -0.5) + 0rem);
+}
+@mixin small-start {
+  @include fluid-type(math.pow(typography.$scale--start, -0.5) + 0rem, 1rem);
+}
+@mixin small-end {
+  @include fluid-type(1rem, math.pow(typography.$scale--end, -0.5) + 0rem);
 }
 
 @mixin large {
@@ -35,14 +45,12 @@
 @mixin h1 {
   font-family: var(--esl-font-serif);
   @include fluid-type(math.pow(typography.$scale--start, 5) + 0rem, math.pow(typography.$scale--end, 5) + 0rem);
-  font-weight: normal;
   line-height: 1.1;
 }
 
 @mixin h2 {
   font-family: var(--esl-font-serif);
   @include fluid-type(math.pow(typography.$scale--start, 4) + 0rem, math.pow(typography.$scale--end, 4) + 0rem);
-  font-weight: normal;
   line-height: 1.18;
 }
 

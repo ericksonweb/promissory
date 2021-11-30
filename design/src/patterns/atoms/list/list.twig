@@ -12,11 +12,16 @@
 {% set validElements = ['ul', 'ol', 'dl'] %}
 
 {% if element in validElements %}
-  {% set content %}  
-    {% for item, value in items %}
-      {% if element == 'ul' or element == 'ol' %}
-        <li>{{ value }}</li>
-      {% elseif element == 'dl' %}
+  {% set content %} 
+    {% if element == 'ul' or element == 'ol' %}
+      {% for item in items %}
+        {{ include ('@atoms/list/li.twig', {
+          content: item.content,
+          attributes: item.attributes
+        }) }}
+      {% endfor %}
+    {% elseif element == 'dl' %}
+      {% for item, value in items %}
         <dt>{{ item }}</dt>
         {% if value is iterable %}
           {% for definition in value %}
@@ -25,8 +30,8 @@
         {% else %}
           <dd>{{ value }}</dd>
         {% endif %}
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+    {% endif %}
   {% endset %}
   {% block content %}{{ content }}{% endblock content %}
 {% endif %}

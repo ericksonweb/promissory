@@ -1,0 +1,84 @@
+{% if not media is empty %}
+  {% set o_media = true %}
+{% endif %}
+
+{% extends o_media ? '@molecules/_o-media.twig' : '@atoms/div.twig' %}
+
+{# Incorporate 'intro' classes into 'attributes' array. #}
+{% set intro_classes = ['intro'] %}
+
+{% if dark is defined and dark == true %}
+  {% set intro_classes = intro_classes|merge(['intro--dark']) %}
+{% endif %}
+
+{% if frame is defined and frame == true %}
+  {% set intro_classes = intro_classes|merge(['esl-frame']) %}
+{% endif %}
+
+{% if attributes is empty %}
+  {% set attributes = {
+    class: intro_classes
+  } %}
+{% elseif not attributes is empty and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: intro_classes
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: intro_classes|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{% block content %}
+  {# Intro Media #}
+  {% block o_media %}
+    {% if not media is empty %}
+      {% set media_classes = ['intro__media'] %}
+      {% if media.frame == true %}
+        {% set media_classes = media_classes|merge(['esl-frame']) %}
+      {% endif %}
+      
+      {{ parent() }}
+    {% endif %}
+  {% endblock o_media %}
+  
+  {# Intro Content #}
+  {% set content_classes = ['intro__content'] %}
+  {% set content %}
+    {# Intro Body #}
+    {% if not content.body is empty %}
+      {% if content.body.attributes is empty %}
+        {% set body_attributes = {
+          class: ['intro__body']
+        } %}
+      {% elseif not content.body.attributes is empty and not content.body.attributes.class is defined %}
+        {% set body_attributes = content.body.attributes|merge({
+          class: ['intro__body']
+        }) %}
+      {% else %}
+        {% set body_attributes = content.body.attributes|merge({
+          class: ['intro__body']|merge(content.body.attributes.class)
+        }) %}
+      {% endif %}
+      
+      {{ include ('@atoms/div/div.twig', {
+        content: content.body,
+        attributes: body_attributes
+      }, with_context = false) }}
+    {% endif %}
+  {% endset %}
+  
+  {% if o_media == true %}
+    {% block o_content %}
+      {{ parent() }}
+    {% endblock o_content %}
+  {% else %}
+    {{ include ('@atoms/div.twig', {
+      content: content,
+      attributes: {
+        class: content_classes
+      }
+    }, with_context = false) }}
+  {% endif %}
+  
+{% endblock content %}

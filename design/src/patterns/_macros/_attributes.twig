@@ -16,6 +16,15 @@
     {% endfor %}
     {{ aria }}
   {% endif %}
+
+  {# 'data' attribute(s) #}
+  {% if attributes.data %}
+    {% set data = '' %}
+    {% for role, value in attributes.data %}
+      {% set data = data ~ ' data-' ~ role ~ '="' ~ value ~ '"' %}
+    {% endfor %}
+    {{ data }}
+  {% endif %}
   
   {# 'class' attribute #}
   {% if attributes.class %}

@@ -17,6 +17,7 @@ h4,
 h5,
 h6 {
   @include resets.margin;
+  font-weight: 500;
 }
 
 h1:not(:last-child),

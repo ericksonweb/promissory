@@ -5,7 +5,6 @@
 @use "../2_tools/font-size";
 
 a {
-  display: inline-block;
   outline: 0.25rem solid transparent;
   font-weight: bold;
   text-decoration-color: var(--esl-color-light-grey);
@@ -60,13 +59,13 @@ li {
 }
 dd:not(:last-child),
 li:not(:last-child) {
-  margin-bottom: $spacing--3qtr + 0em;
+  margin-bottom: $spacing--single + 0rem;
 }
 
 li > {
   ol,
   ul {
-    margin-top: $spacing--3qtr + 0em;
+    margin-top: $spacing--single + 0rem;
   }
 }
 

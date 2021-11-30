@@ -18,26 +18,68 @@
   font-family: var(--esl-font-sans-serif);
 }
 
-.font-size--xsmall:not(h1, h2, h3, h4, h5, h6) {
+.font-size--tiny:not(h1, h2, h3, h4, h5, h6) {
   font-size: 0.6944444444rem;
 }
 @media all and (min-width: 768px) {
-  .font-size--xsmall:not(h1, h2, h3, h4, h5, h6) {
+  .font-size--tiny:not(h1, h2, h3, h4, h5, h6) {
     font-size: calc(0.6944444444rem + ((1vw - 7.68px) * -0.2016460905));
   }
 }
 @media all and (min-width: 1200px) {
-  .font-size--xsmall:not(h1, h2, h3, h4, h5, h6) {
+  .font-size--tiny:not(h1, h2, h3, h4, h5, h6) {
     font-size: 0.64rem;
   }
 }
 
-.font-size--xsmall-start:not(h1, h2, h3, h4, h5, h6) {
+.font-size--tiny-start:not(h1, h2, h3, h4, h5, h6) {
   font-size: 0.6944444444rem;
 }
 @media all and (min-width: 768px) {
-  .font-size--xsmall-start:not(h1, h2, h3, h4, h5, h6) {
+  .font-size--tiny-start:not(h1, h2, h3, h4, h5, h6) {
     font-size: calc(0.6944444444rem + ((1vw - 7.68px) * 1.1316872428));
+  }
+}
+@media all and (min-width: 1200px) {
+  .font-size--tiny-start:not(h1, h2, h3, h4, h5, h6) {
+    font-size: 1rem;
+  }
+}
+
+.font-size--tiny-end:not(h1, h2, h3, h4, h5, h6) {
+  font-size: 1rem;
+}
+@media all and (min-width: 768px) {
+  .font-size--tiny-end:not(h1, h2, h3, h4, h5, h6) {
+    font-size: calc(1rem + ((1vw - 7.68px) * -1.3333333333));
+  }
+}
+@media all and (min-width: 1200px) {
+  .font-size--tiny-end:not(h1, h2, h3, h4, h5, h6) {
+    font-size: 0.64rem;
+  }
+}
+
+.font-size--xsmall:not(h1, h2, h3, h4, h5, h6) {
+  font-size: 0.8333333333rem;
+}
+@media all and (min-width: 768px) {
+  .font-size--xsmall:not(h1, h2, h3, h4, h5, h6) {
+    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * -0.1234567901));
+  }
+}
+@media all and (min-width: 1200px) {
+  .font-size--xsmall:not(h1, h2, h3, h4, h5, h6) {
+    font-size: 0.8rem;
+  }
+}
+
+.font-size--xsmall-start:not(h1, h2, h3, h4, h5, h6) {
+  font-size: 0.8333333333rem;
+}
+@media all and (min-width: 768px) {
+  .font-size--xsmall-start:not(h1, h2, h3, h4, h5, h6) {
+    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * 0.6172839506));
   }
 }
 @media all and (min-width: 1200px) {
@@ -51,35 +93,35 @@
 }
 @media all and (min-width: 768px) {
   .font-size--xsmall-end:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(1rem + ((1vw - 7.68px) * -1.3333333333));
+    font-size: calc(1rem + ((1vw - 7.68px) * -0.7407407407));
   }
 }
 @media all and (min-width: 1200px) {
   .font-size--xsmall-end:not(h1, h2, h3, h4, h5, h6) {
-    font-size: 0.64rem;
-  }
-}
-
-.font-size--small:not(h1, h2, h3, h4, h5, h6) {
-  font-size: 0.8333333333rem;
-}
-@media all and (min-width: 768px) {
-  .font-size--small:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * -0.1234567901));
-  }
-}
-@media all and (min-width: 1200px) {
-  .font-size--small:not(h1, h2, h3, h4, h5, h6) {
     font-size: 0.8rem;
   }
 }
 
+.font-size--small:not(h1, h2, h3, h4, h5, h6) {
+  font-size: 0.9128709292rem;
+}
+@media all and (min-width: 768px) {
+  .font-size--small:not(h1, h2, h3, h4, h5, h6) {
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.0683101414));
+  }
+}
+@media all and (min-width: 1200px) {
+  .font-size--small:not(h1, h2, h3, h4, h5, h6) {
+    font-size: 0.894427191rem;
+  }
+}
+
 .font-size--small-start:not(h1, h2, h3, h4, h5, h6) {
-  font-size: 0.8333333333rem;
+  font-size: 0.9128709292rem;
 }
 @media all and (min-width: 768px) {
   .font-size--small-start:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * 0.6172839506));
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * 0.3227002623));
   }
 }
 @media all and (min-width: 1200px) {
@@ -93,12 +135,12 @@
 }
 @media all and (min-width: 768px) {
   .font-size--small-end:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(1rem + ((1vw - 7.68px) * -0.7407407407));
+    font-size: calc(1rem + ((1vw - 7.68px) * -0.3910104037));
   }
 }
 @media all and (min-width: 1200px) {
   .font-size--small-end:not(h1, h2, h3, h4, h5, h6) {
-    font-size: 0.8rem;
+    font-size: 0.894427191rem;
   }
 }
 
@@ -146,7 +188,6 @@
 
 .h1 {
   font-family: var(--esl-font-serif);
-  font-weight: normal;
   line-height: 1.1;
 }
 .h1 {
@@ -165,7 +206,6 @@
 
 .h2 {
   font-family: var(--esl-font-serif);
-  font-weight: normal;
   line-height: 1.18;
 }
 .h2 {
@@ -235,4 +275,24 @@
 
 .h6 {
   font-size: 1rem;
+}
+
+.color--esl-blue {
+  color: var(--esl-color-blue);
+}
+
+.color--esl-green {
+  color: var(--esl-color-green);
+}
+
+.color--esl-aqua-blue {
+  color: var(--esl-color-aqua-blue);
+}
+
+.color--esl-medium-green {
+  color: var(--esl-color-medium-green);
+}
+
+.color--esl-dark-green {
+  color: var(--esl-color-dark-green);
 }

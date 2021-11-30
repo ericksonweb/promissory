@@ -1,0 +1,19 @@
+{% set link %}
+  {{- include ('@atoms/link.twig', {
+    content: "Click here to see available positions.",
+    attributes: {
+      href: 'https://erickson.wd5.myworkdayjobs.com/External/',
+    },
+  }) -}}
+{% endset %}
+
+{% set content %}
+  {{ include ('@atoms/paragraph.twig', {
+    content: "<b>We’re Hiring!</b> Our growing community is looking for talented people to join our team and enjoy great pay and benefits. " ~ link
+  }) }}
+{% endset %}
+
+{{ include ('@molecules/message.twig', {
+  content: content,
+  dismissible: true
+}) }}

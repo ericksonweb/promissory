@@ -1,0 +1,19 @@
+{% set link %}
+  {{- include ('@atoms/link.twig', {
+    content: "Click here.",
+    attributes: {
+      href: '#',
+    },
+  }) -}}
+{% endset %}
+
+{% set content %}
+  {{ include ('@atoms/paragraph.twig', {
+    content: "<b>Hold on!</b> Doing this might be a mistake. Make sure you want to proceed. " ~ link
+  }) }}
+{% endset %}
+
+{{ include ('@molecules/message.twig', {
+  content: content,
+  type: 'warning'
+}) }}

@@ -1,0 +1,33 @@
+///
+/// @file
+/// Configuration of custom implementation of Bootstrap 5
+///
+
+@use "../../1_settings/breakpoints" as *;
+@use "../../1_settings/transition" as *;
+
+//
+// Configuration - @import "functions";
+//
+@import "../node_modules/bootstrap/scss/functions";
+
+// Default variable overrides
+$grid-breakpoints: $breakpoints;
+$container-max-widths: $breakpoints;
+$transition-fade: opacity $transition;
+
+//
+// Configuration - @import "variables";
+//
+@import "../node_modules/bootstrap/scss/variables";
+
+//
+// Configuration - @import "mixins";
+//
+@import "../node_modules/bootstrap/scss/mixins";
+
+//
+// Configuration - @import "utilities";
+//
+@import "../node_modules/bootstrap/scss/utilities";
+
