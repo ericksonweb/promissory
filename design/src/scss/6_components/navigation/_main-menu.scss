@@ -3,11 +3,8 @@
 @use "../../1_settings/colors";
 @use "../../1_settings/spacing" as *;
 @use "../../1_settings/transition" as *;
+@use "../../2_tools/border" as *;
 @use "../../2_tools/font-size";
-
-@import "../../2_tools/bootstrap/bootstrap-configuration";
-@import "../node_modules/bootstrap/scss/nav";
-@import "../node_modules/bootstrap/scss/navbar";
 
 .main-menu {
   @include font-size.large;
@@ -150,7 +147,8 @@
           }
           
           + li {
-            border-left: 4px solid var(--esl-color-green);
+            @include border(left);
+            border-width: 4px;
           }
         }
       }
