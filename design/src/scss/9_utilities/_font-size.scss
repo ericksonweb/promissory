@@ -3,6 +3,16 @@
 @use "../2_tools/fluid-typography" as fluid;
 @use "../2_tools/font-size";
 
+.font-size--tiny:not(h1, h2, h3, h4, h5, h6) {
+  @include font-size.tiny;
+}
+.font-size--tiny-start:not(h1, h2, h3, h4, h5, h6) {
+  @include font-size.tiny-start;
+}
+.font-size--tiny-end:not(h1, h2, h3, h4, h5, h6) {
+  @include font-size.tiny-end;
+}
+
 .font-size--xsmall:not(h1, h2, h3, h4, h5, h6) {
   @include font-size.xsmall;
 }

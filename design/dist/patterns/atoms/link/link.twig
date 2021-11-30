@@ -8,17 +8,6 @@
 {# Establish HTML element #}
 {% set element = 'a' %}
 
-{# Set 'href' attribute if not defined #}
-{% if not attributes is defined %}
-  {% set attributes = {
-    href: "#"
-  } %}
-{% elseif attributes is defined and not attributes.href is defined %}
-  {% set attributes = attributes|merge({
-    href: "#"
-  }) %}
-{% endif %}
-
 {# 'cta' style - overrides all icon properties except 'position' #}
 {% if cta %}
   {% set cta_class = ['cta'] %}

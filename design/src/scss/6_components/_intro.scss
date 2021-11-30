@@ -1,0 +1,39 @@
+@use "sass:color";
+@use "../1_settings/breakpoints" as *;
+@use "../1_settings/colors";
+@use "../1_settings/spacing" as *;
+
+.intro {
+  box-shadow: 0 ($spacing--1qtr + 0rem) ($spacing--half + 0rem) (-$spacing--1qtr + 0rem) color.adjust(colors.$dark-grey, $alpha: -0.75);
+  
+  &__media {
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+  
+  &__content {
+    flex-basis: calc(#{map-get($breakpoints, lg)} / 2);
+    flex-grow: 10000;
+    width: 100%;
+    word-break: break-word;
+    margin-right: max(0px, calc((100% - #{map-get($breakpoints, max)}) / 2));
+    margin-left: 0;
+  }
+  
+  &__body {
+    padding: $spacing--double + 0rem;
+  }
+  
+  &--reversed {
+    flex-direction: row-reverse;
+    
+    .intro__content {
+      margin-right: 0;
+      margin-left: max(0px, calc((100% - #{map-get($breakpoints, max)}) / 2));
+    }
+  }
+  
+  &--dark {
+    background-color: var(--esl-color-xlight-grey);
+  }
+}

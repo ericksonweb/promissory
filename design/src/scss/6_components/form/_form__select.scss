@@ -4,9 +4,7 @@
 @use "../../2_tools/resets";
 @use "../../2_tools/forms";
 
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
+@import "../../2_tools/bootstrap/bootstrap-configuration";
 
 /*!
  * Bootstrap Dropdown

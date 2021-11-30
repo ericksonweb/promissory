@@ -1,34 +1,7 @@
-/*!
- * Bootstrap Grid v5.1.1 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
-@use "../1_settings/breakpoints" as *;
-
-@import "../node_modules/bootstrap/scss/functions";
-@import "../node_modules/bootstrap/scss/variables";
-
-$grid-breakpoints: $breakpoints;
-$container-max-widths: $breakpoints;
-
-$container-max-widths: (
-  min: map-get($breakpoints, 'max')
-);
-
-
-@import "../node_modules/bootstrap/scss/mixins/lists";
-@import "../node_modules/bootstrap/scss/mixins/breakpoints";
-@import "../node_modules/bootstrap/scss/mixins/container";
-@import "../node_modules/bootstrap/scss/mixins/grid";
-@import "../node_modules/bootstrap/scss/mixins/utilities";
-
-@import "../node_modules/bootstrap/scss/vendor/rfs";
+@import "../2_tools/bootstrap/bootstrap-configuration";
 
 @import "../node_modules/bootstrap/scss/containers";
 @import "../node_modules/bootstrap/scss/grid";
-
-@import "../node_modules/bootstrap/scss/utilities";
 
 // Only use the utilities we need
 // stylelint-disable-next-line scss/dollar-variable-default

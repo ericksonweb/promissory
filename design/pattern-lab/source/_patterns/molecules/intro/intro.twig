@@ -1,0 +1,35 @@
+{% set media_item %}
+  {{- include ('@atoms/image.twig', {
+    attributes: {
+      src: 'https://via.placeholder.com/1610x905?text=Image',
+      alt: "Alt text",
+    }
+  }) -}}
+{% endset %}
+
+{% set content_body %}
+  {{ include ('@atoms/heading.twig', {
+    content: "Lorem ipsum dolor sit amet consectetur",
+    level: 1,
+    attributes: {
+      class: ['esl-accent']
+    }
+  }) }}
+  {{ include ('@atoms/paragraph.twig') }}
+  {{ include ('@atoms/button.twig', {
+    content: "Read More",
+    attributes: {
+      href: 'https://www.ericksonseniorliving.com'
+    }
+  }) }}
+{% endset %}
+
+{{- include ('@molecules/intro.twig', {
+  media: {
+    item: media_item,
+    frame: true
+  },
+  content: {
+    body: content_body,
+  },
+}, with_context = false) -}}

@@ -15,7 +15,8 @@
   --esl-color-light-grey: #d2d2d7;
   --esl-color-xlight-grey: #ededee;
   --esl-color-white: #fff;
-  --esl-color-error: #cc0000;
+  --esl-color-error: #aa0000;
+  --esl-color-warning: #b98900;
   --esl-font-serif: 'Sutro', serif;
   --esl-font-sans-serif: 'Proxima-Nova', sans-serif;
   line-height: 1.5;
@@ -47,6 +48,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  font-weight: 500;
 }
 
 h1:not(:last-child),
@@ -60,7 +62,6 @@ h6:not(:last-child) {
 
 h1 {
   font-family: var(--esl-font-serif);
-  font-weight: normal;
   line-height: 1.1;
 }
 h1 {
@@ -79,7 +80,6 @@ h1 {
 
 h2 {
   font-family: var(--esl-font-serif);
-  font-weight: normal;
   line-height: 1.18;
 }
 h2 {
@@ -160,7 +160,6 @@ nav {
 }
 
 a {
-  display: inline-block;
   outline: 0.25rem solid transparent;
   font-weight: bold;
   text-decoration-color: var(--esl-color-light-grey);
@@ -214,12 +213,12 @@ li {
 
 dd:not(:last-child),
 li:not(:last-child) {
-  margin-bottom: 1.125em;
+  margin-bottom: 1.5rem;
 }
 
 li > ol,
 li > ul {
-  margin-top: 1.125em;
+  margin-top: 1.5rem;
 }
 
 figure img {
@@ -229,6 +228,10 @@ figure img {
 figcaption {
   padding: 0.75rem 0.375rem;
   color: var(--esl-color-medium-grey);
+}
+
+img {
+  vertical-align: text-bottom;
 }
 
 table {
@@ -280,7 +283,7 @@ input[type=submit]:not(.btn) {
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
   border-color: transparent;
   background-color: var(--esl-color-green);
-  outline: 0.25rem solid transparent;
+  outline: 0.25rem solid transparent !important;
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
@@ -305,7 +308,7 @@ button:not(.btn):focus,
 input[type=button]:not(.btn):focus,
 input[type=reset]:not(.btn):focus,
 input[type=submit]:not(.btn):focus {
-  outline-color: rgba(0, 163, 224, 0.25);
+  outline-color: rgba(0, 163, 224, 0.25) !important;
 }
 button:not(.btn):active,
 input[type=button]:not(.btn):active,
@@ -332,6 +335,7 @@ label {
   vertical-align: middle;
 }
 input + label {
+  flex-basis: calc(100% - 1.5rem - 0.75rem);
   margin-right: 0;
   margin-left: 0.75rem;
 }
@@ -363,6 +367,7 @@ input:focus {
   outline-color: rgba(0, 163, 224, 0.25);
 }
 input:is([type=checkbox], [type=radio]) {
+  align-self: flex-start;
   width: 1.5rem;
   height: 1.5rem;
   padding: 0;
@@ -489,7 +494,7 @@ input[type=file]::file-selector-button {
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
   border-color: transparent;
   background-color: var(--esl-color-green);
-  outline: 0.25rem solid transparent;
+  outline: 0.25rem solid transparent !important;
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
@@ -511,7 +516,7 @@ input[type=file]::file-selector-button:hover {
   color: var(--esl-color-white);
 }
 input[type=file]::file-selector-button:focus {
-  outline-color: rgba(0, 163, 224, 0.25);
+  outline-color: rgba(0, 163, 224, 0.25) !important;
 }
 input[type=file]::file-selector-button:active {
   background-color: var(--esl-color-blue);

@@ -6,7 +6,7 @@
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
   border-color: transparent;
   background-color: var(--esl-color-green);
-  outline: 0.25rem solid transparent;
+  outline: 0.25rem solid transparent !important;
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
@@ -25,7 +25,7 @@
   color: var(--esl-color-white);
 }
 .btn:focus {
-  outline-color: rgba(0, 163, 224, 0.25);
+  outline-color: rgba(0, 163, 224, 0.25) !important;
 }
 .btn:active {
   background-color: var(--esl-color-blue);

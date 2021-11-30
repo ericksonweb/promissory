@@ -13,7 +13,7 @@
   box-shadow: 0 3px 7px 0 color.adjust(colors.$black, $alpha: -0.75);
   border-color: transparent;
   background-color: var(--esl-color-green);
-  outline: 0.25rem solid transparent;
+  outline: 0.25rem solid transparent !important;
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
@@ -33,7 +33,7 @@
   }
   
   &:focus {
-    outline-color: color.adjust(colors.$aqua-blue, $alpha: -0.75);
+    outline-color: color.adjust(colors.$aqua-blue, $alpha: -0.75) !important;
   }
   
   &:active {

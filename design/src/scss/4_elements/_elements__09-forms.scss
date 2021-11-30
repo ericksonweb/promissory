@@ -37,6 +37,7 @@ label {
   vertical-align: middle;
   
   input + & {
+    flex-basis: calc(100% - 1.5rem - 0.75rem);
     margin-right: 0;
     margin-left: $spacing--half + 0rem;
   }
@@ -51,6 +52,7 @@ input {
   @include forms.input;
   
   &:is([type=checkbox], [type=radio]) {
+    align-self: flex-start;
     width: $spacing--single + 0rem;
     height: $spacing--single + 0rem;
     padding: 0;

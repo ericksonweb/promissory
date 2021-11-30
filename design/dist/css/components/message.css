@@ -1,23 +1,40 @@
 .message {
   position: relative;
   padding: 0.75rem 1.125rem;
+  color: var(--esl-color-white);
+}
+.message {
+  font-size: 0.9128709292rem;
+}
+@media all and (min-width: 768px) {
+  .message {
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.0683101414));
+  }
+}
+@media all and (min-width: 1200px) {
+  .message {
+    font-size: 0.894427191rem;
+  }
 }
 .message a {
+  color: var(--esl-color-white);
   text-decoration-color: transparent;
+}
+.message a:hover {
+  color: var(--esl-color-white);
+  text-decoration-color: var(--esl-color-white);
 }
 .message--status {
   background-color: var(--esl-color-blue);
-  color: var(--esl-color-white);
 }
-.message--status a,
-.message--status a:hover {
-  color: var(--esl-color-white);
+.message--warning {
+  background-color: var(--esl-color-warning);
 }
-.message--status a:hover {
-  text-decoration-color: var(--esl-color-white);
+.message--error {
+  background-color: var(--esl-color-error);
 }
-.message--status a:active {
-  color: var(--esl-color-aqua-blue);
+.message--dismissible {
+  padding-right: 3rem;
 }
 .message__close {
   position: absolute;

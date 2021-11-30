@@ -1,0 +1,5 @@
+{% extends '@atoms/nav.twig' %}
+
+{% block content %}
+  {{ include ('@atoms/list.twig', list, with_context = false) }}
+{% endblock %}

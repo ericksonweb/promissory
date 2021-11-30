@@ -1,7 +1,4 @@
-{% extends '@promissory/_macros/_element.twig' %}
-
-{# Establish HTML element. #}
-{% set element = 'div' %}
+{% extends '@atoms/div.twig' %}
 
 {# Determine message 'type' value #}
 {% if not type is defined %}
@@ -23,16 +20,30 @@
   }) %}
 {% endif %}
 
+{# Incorporate 'alert' classes into 'attributes' array if dismissible. #}
+{% if dismissible %}
+  {% set attributes = attributes|merge({
+    class: attributes.class|merge(['message--dismissible', 'alert', 'fade', 'show']),
+    role: 'alert'
+  }) %}
+{% endif %}
+
 {% block content %}
   <div class="message__content">{{ content }}</div>
-  {{ include ('@atoms/link.twig', {
-    icon: {
-      fa_prefix: 'fas',
-      fa_name: 'times'
-    },
-    attributes: {
-      href: '#',
-      class: ['message__close']
-    },
-  }, with_context = false) }}
+  {% if dismissible %}
+    {{ include ('@atoms/link.twig', {
+      icon: {
+        fa_prefix: 'fas',
+        fa_name: 'times'
+      },
+      attributes: {
+        href: '#',
+        class: ['message__close', 'btn-close'],
+        aria: {
+          label: "Close"
+        },
+        'data-dismiss': "alert",
+      },
+    }, with_context = false) }}
+  {% endif %}
 {% endblock %}

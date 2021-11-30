@@ -29,6 +29,13 @@
           ]
         },
         {
+          "id": "organisms",
+          "recursive": true,
+          "paths": [
+            "../src/patterns/organisms"
+          ]
+        },
+        {
           "id": "macros",
           "recursive": true,
           "paths": [
