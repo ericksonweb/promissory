@@ -26,20 +26,20 @@ fieldset .form__field:last-child, .field__group .form__field:last-child {
 .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):focus + .label--placeholder, .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):not(:placeholder-shown) + .label--placeholder,
 .form__field textarea:focus + .label--placeholder,
 .form__field textarea:not(:placeholder-shown) + .label--placeholder {
-  font-size: 0.8333333333rem;
+  font-size: 0.9128709292rem;
 }
 @media all and (min-width: 768px) {
   .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):focus + .label--placeholder, .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):not(:placeholder-shown) + .label--placeholder,
 .form__field textarea:focus + .label--placeholder,
 .form__field textarea:not(:placeholder-shown) + .label--placeholder {
-    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * -0.1234567901));
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.0683101414));
   }
 }
 @media all and (min-width: 1200px) {
   .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):focus + .label--placeholder, .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):not(:placeholder-shown) + .label--placeholder,
 .form__field textarea:focus + .label--placeholder,
 .form__field textarea:not(:placeholder-shown) + .label--placeholder {
-    font-size: 0.8rem;
+    font-size: 0.894427191rem;
   }
 }
 .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):focus + .label--placeholder.mark-required::before, .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):not(:placeholder-shown) + .label--placeholder.mark-required::before,
@@ -89,16 +89,16 @@ fieldset .form__field:last-child, .field__group .form__field:last-child {
   line-height: 1;
 }
 .label--eyebrow {
-  font-size: 0.8333333333rem;
+  font-size: 0.9128709292rem;
 }
 @media all and (min-width: 768px) {
   .label--eyebrow {
-    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * -0.1234567901));
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.0683101414));
   }
 }
 @media all and (min-width: 1200px) {
   .label--eyebrow {
-    font-size: 0.8rem;
+    font-size: 0.894427191rem;
   }
 }
 .label--eyebrow.mark-required::before {
@@ -821,18 +821,18 @@ input[type=checkbox] + .mark-required::before, input[type=radio] + .mark-require
   border-color: var(--esl-color-error);
 }
 .dropdown > select.is-invalid ~ .btn:focus {
-  outline-color: rgba(204, 0, 0, 0.25);
+  outline-color: rgba(170, 0, 0, 0.25);
 }
 .dropdown > select.is-invalid:focus ~ .btn {
-  outline-color: rgba(204, 0, 0, 0.25);
+  outline-color: rgba(170, 0, 0, 0.25);
 }
 .dropdown.has-invalid ~ .mark-required::before {
   color: var(--esl-color-error);
 }
 
 .form__group.has-invalid {
-  width: calc(100% - 1.5rem);
-  margin: 0 0.75rem 0.75rem;
+  width: calc(100% - (0.75rem * 2));
+  margin: 0 0.75rem 1.5rem;
   border: 1px solid;
   padding: 0.75rem 0.75rem 0;
   border-color: var(--esl-color-error);
@@ -845,7 +845,7 @@ input[type=checkbox] + .mark-required::before, input[type=radio] + .mark-require
 }
 .form__group.has-invalid:focus-within {
   outline: 0.25rem solid transparent;
-  outline-color: rgba(204, 0, 0, 0.25);
+  outline-color: rgba(170, 0, 0, 0.25);
 }
 .form__group .mark-required::before {
   content: none;
@@ -855,7 +855,7 @@ input[type=checkbox] + .mark-required::before, input[type=radio] + .mark-require
   border-color: var(--esl-color-error);
 }
 .is-invalid:focus {
-  outline-color: rgba(204, 0, 0, 0.25);
+  outline-color: rgba(170, 0, 0, 0.25);
 }
 
 .invalid-feedback {
@@ -863,16 +863,16 @@ input[type=checkbox] + .mark-required::before, input[type=radio] + .mark-require
   color: var(--esl-color-error);
 }
 .invalid-feedback {
-  font-size: 0.8333333333rem;
+  font-size: 0.9128709292rem;
 }
 @media all and (min-width: 768px) {
   .invalid-feedback {
-    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * -0.1234567901));
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.0683101414));
   }
 }
 @media all and (min-width: 1200px) {
   .invalid-feedback {
-    font-size: 0.8rem;
+    font-size: 0.894427191rem;
   }
 }
 .mark-required ~ .invalid-feedback {
