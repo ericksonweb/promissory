@@ -17,7 +17,7 @@ Promissory is comprised of two core features:
 <dd>A comprehensive library of styles, components and patterns used to build all ESL web properties.</dd>
 </dl>
 </td>
-<td><a href="https://ericksonweb.github.io/promissory">View&nbsp;the&nbsp;library&nbsp;&rsaquo;</a></td>
+<td><a href="https://ericksonweb.github.io/promissory/?p=root-home">View&nbsp;the&nbsp;library&nbsp;&rsaquo;</a></td>
 </tr>
 <tr>
 <td>
