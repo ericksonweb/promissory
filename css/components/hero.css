@@ -12,16 +12,16 @@
   margin: 1.5rem;
 }
 .hero__content--inset.hero__content--contain {
-  max-width: calc(1200px - 3rem);
+  max-width: calc(1300px - 3rem);
 }
 .hero__content--inset.hero__content--contain.hero__content--half {
-  width: clamp(min(calc((1200px / 2) - 3rem), calc(100% - 3rem)), calc(480px - 3rem), calc(100% - 3rem));
+  width: clamp(min((1300px / 2) - 3rem, 100% - 3rem), 480px - 3rem, 100% - 3rem);
 }
 .hero__content--inset.hero__content--contain.hero__content--half.hero__content--left {
-  margin-left: max(1.5rem, calc(((100% - 1200px) / 2)) + 1.5rem);
+  margin-left: max(1.5rem, calc(((100% - 1300px) / 2)) + 1.5rem);
 }
 .hero__content--inset.hero__content--contain.hero__content--half.hero__content--right {
-  margin-right: max(1.5rem, calc(((100% - 1200px) / 2)) + 1.5rem);
+  margin-right: max(1.5rem, calc(((100% - 1300px) / 2)) + 1.5rem);
 }
 .hero__content--inset.hero__content--half {
   width: clamp(50% - 3rem, 480px - 3rem, 100% - 3rem);
@@ -30,18 +30,18 @@
   margin-right: 1.5rem;
 }
 .hero__content--contain {
-  max-width: 1200px;
+  max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
 }
 .hero__content--contain.hero__content--half {
-  width: clamp(min(calc(1200px / 2), 50%), 480px, 100%);
+  width: clamp(min(calc(1300px / 2), 50%), 480px, 100%);
 }
 .hero__content--contain.hero__content--half.hero__content--left {
-  margin-left: max(0px, calc((100% - 1200px) / 2));
+  margin-left: max(0px, (100% - 1300px) / 2);
 }
 .hero__content--contain.hero__content--half.hero__content--right {
-  margin-right: max(0px, calc((100% - 1200px) / 2));
+  margin-right: max(0px, (100% - 1300px) / 2);
 }
 .hero__content--half {
   width: clamp(50%, 480px, 100%);

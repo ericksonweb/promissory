@@ -1,0 +1,11 @@
+.links {
+  list-style: none;
+}
+.links li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.links--horizontal {
+  display: flex;
+}

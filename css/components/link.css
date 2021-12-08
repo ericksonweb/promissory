@@ -4,13 +4,13 @@
 }
 
 .cta .icon {
-  color: var(--esl-color-green);
+  color: var(--color-secondary);
   transition: ease-in-out 0.15s;
   transition-property: transform;
 }
 
 .cta:hover {
-  color: var(--esl-color-green);
+  color: var(--color-secondary);
 }
 
 .cta:hover .icon--before {

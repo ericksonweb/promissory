@@ -7,7 +7,7 @@
           href: 'https://www.ericksonseniorliving.com/anns-choice/apartments',
         },
       }) ~
-      include ('@organisms/menu.twig', {
+      include ('@molecules/menu.twig', {
         submenu: true,
         name: 'apartments',
         items: [
@@ -43,7 +43,7 @@
           href: 'https://www.ericksonseniorliving.com/anns-choice/pricing',
         },
       }) ~
-      include ('@organisms/menu.twig', {
+      include ('@molecules/menu.twig', {
         submenu: true,
         name: 'pricing',
         items: [
@@ -69,7 +69,7 @@
           href: 'https://www.ericksonseniorliving.com/anns-choice/amenities',
         },
       }) ~
-      include ('@organisms/menu.twig', {
+      include ('@molecules/menu.twig', {
         submenu: true,
         name: 'amenities',
         items: [
@@ -115,7 +115,7 @@
           href: 'https://www.ericksonseniorliving.com/anns-choice/health',
         },
       }) ~
-      include ('@organisms/menu.twig', {
+      include ('@molecules/menu.twig', {
         submenu: true,
         name: 'health-services',
         items: [
@@ -175,7 +175,7 @@
   },
 ] %}
 
-{{ include ('@organisms/menu.twig', {
+{{ include ('@molecules/menu.twig', {
   name: 'main-menu',
   items: items,
 }) }}
