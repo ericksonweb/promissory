@@ -12,7 +12,7 @@
   padding: ($spacing--1qtr + 0rem) ($spacing--half + 0rem);
   box-shadow: 0 3px 7px 0 color.adjust(colors.$black, $alpha: -0.75);
   border-color: transparent;
-  background-color: var(--esl-color-green);
+  background-color: var(--color-secondary);
   outline: 0.25rem solid transparent !important;
   font-weight: bold;
   text-align: center;
@@ -21,14 +21,14 @@
   text-transform: uppercase;
   color: var(--esl-color-white);
   transition: $transition;
-  transition-property: background-color, outline-color;
+  transition-property: border, background-color, color, outline-color;
   cursor: pointer;
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
   
   &:hover {
-    background-color: var(--esl-color-aqua-blue);
+    background-color: var(--color-accent);
     color: var(--esl-color-white);
   }
   
@@ -37,7 +37,7 @@
   }
   
   &:active {
-    background-color: var(--esl-color-blue);
+    background-color: var(--color-primary);
     color: var(--esl-color-white);
   }
 }

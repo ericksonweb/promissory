@@ -10,16 +10,17 @@
   
   a {
     color: var(--esl-color-white);
-    text-decoration-color: transparent;
+    text-decoration-style: dotted;
     
     &:hover {
-      color: var(--esl-color-white);
-      text-decoration-color: var(--esl-color-white);
+      color: var(--esl-color-white) !important;
+      text-decoration-color: var(--esl-color-white) !important;
+      text-decoration-style: solid;
     }
   }
     
   &--status {
-    background-color: var(--esl-color-blue);
+    background-color: var(--color-primary);
   }
   
   &--warning {

@@ -1,0 +1,89 @@
+@use "../../1_settings/breakpoints" as *;
+@use "../../1_settings/spacing" as *;
+
+.menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+  a {
+    text-decoration: none;
+  }
+  nav {
+    ul, ol {
+      margin: 0;
+      list-style: none;
+    }
+    li {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      
+      > a {
+        z-index: 1;
+      }
+    }
+  }
+  
+  &__toggler.btn {
+    align-self: flex-end;
+    line-height: 1;
+    
+    .icon::before {
+      vertical-align: middle;
+      font-weight: 300;
+    }
+
+    &[aria-expanded="false"] {
+      & .icon::before {
+        content: '\f0c9';
+      }
+    }
+    
+    &[aria-expanded="true"] {
+      & .icon::before {
+        content: '\f00d';
+      }
+    }
+  }
+  
+  &__content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+  
+  &__submenu {
+    position: relative;
+    top: -1em;
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: -1em;
+    
+    .menu__toggler.btn {
+      
+      .icon::before {
+        font-weight: 400;
+      }
+      
+      &[aria-expanded="false"] {
+        & .icon::before {
+          content: '\f107';
+        }
+      }
+      
+      &[aria-expanded="true"] {
+        & .icon::before {
+          content: '\f106';
+        }
+      }
+    }
+    
+    .menu__content {
+      position: static;
+    }
+  }
+}

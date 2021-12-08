@@ -1,6 +1,6 @@
 @use "sass:math";
 @use "../1_settings/spacing" as *;
-@use "../2_tools/border" as *;
+@use "../2_tools/accent" as *;
 
 .esl-accent {
   position: relative;
@@ -12,6 +12,6 @@
     bottom: -($spacing--single + 0rem) - (math.div($spacing--1qtr, 2) + 0rem);
     left: 0;
     width: 100px;
-    @include border(bottom);
+    @include accent(bottom);
   }
 }

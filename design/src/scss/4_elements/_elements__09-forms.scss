@@ -65,7 +65,7 @@ input {
     &:checked {
       position: relative;
       border-color: transparent;
-      background-color: var(--esl-color-green);
+      background-color: var(--color-secondary);
       color: var(--esl-color-white);
       
       &::after {
@@ -140,7 +140,7 @@ input {
       @include border-radius.none;
       width: $spacing--3qtr + 0rem;
       height: $spacing--single + 0rem;
-      background: var(--esl-color-green);
+      background: var(--color-secondary);
       cursor: pointer;
       margin-top: -11px;
     }  
@@ -158,7 +158,7 @@ input {
       @include border-radius.none;
       width: $spacing--3qtr + 0rem;
       height: $spacing--single + 0rem;
-      background: var(--esl-color-green);
+      background: var(--color-secondary);
       cursor: pointer;
       margin-top: -11px;
     }  

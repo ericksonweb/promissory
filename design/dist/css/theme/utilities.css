@@ -23,10 +23,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--tiny:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(0.6944444444rem + ((1vw - 7.68px) * -0.2016460905));
+    font-size: calc(0.6944444444rem + ((1vw - 7.68px) * -0.1637426901));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .font-size--tiny:not(h1, h2, h3, h4, h5, h6) {
     font-size: 0.64rem;
   }
@@ -37,10 +37,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--tiny-start:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(0.6944444444rem + ((1vw - 7.68px) * 1.1316872428));
+    font-size: calc(0.6944444444rem + ((1vw - 7.68px) * 0.9189640769));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .font-size--tiny-start:not(h1, h2, h3, h4, h5, h6) {
     font-size: 1rem;
   }
@@ -51,10 +51,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--tiny-end:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(1rem + ((1vw - 7.68px) * -1.3333333333));
+    font-size: calc(1rem + ((1vw - 7.68px) * -1.0827067669));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .font-size--tiny-end:not(h1, h2, h3, h4, h5, h6) {
     font-size: 0.64rem;
   }
@@ -65,10 +65,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--xsmall:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * -0.1234567901));
+    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * -0.1002506266));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .font-size--xsmall:not(h1, h2, h3, h4, h5, h6) {
     font-size: 0.8rem;
   }
@@ -79,10 +79,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--xsmall-start:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * 0.6172839506));
+    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * 0.5012531328));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .font-size--xsmall-start:not(h1, h2, h3, h4, h5, h6) {
     font-size: 1rem;
   }
@@ -93,10 +93,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--xsmall-end:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(1rem + ((1vw - 7.68px) * -0.7407407407));
+    font-size: calc(1rem + ((1vw - 7.68px) * -0.6015037594));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .font-size--xsmall-end:not(h1, h2, h3, h4, h5, h6) {
     font-size: 0.8rem;
   }
@@ -107,10 +107,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--small:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.0683101414));
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.0554698892));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .font-size--small:not(h1, h2, h3, h4, h5, h6) {
     font-size: 0.894427191rem;
   }
@@ -121,10 +121,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--small-start:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * 0.3227002623));
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * 0.2620423183));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .font-size--small-start:not(h1, h2, h3, h4, h5, h6) {
     font-size: 1rem;
   }
@@ -135,10 +135,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--small-end:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(1rem + ((1vw - 7.68px) * -0.3910104037));
+    font-size: calc(1rem + ((1vw - 7.68px) * -0.3175122075));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .font-size--small-end:not(h1, h2, h3, h4, h5, h6) {
     font-size: 0.894427191rem;
   }
@@ -149,10 +149,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--large:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(1.2rem + ((1vw - 7.68px) * 0.1851851852));
+    font-size: calc(1.2rem + ((1vw - 7.68px) * 0.1503759398));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .font-size--large:not(h1, h2, h3, h4, h5, h6) {
     font-size: 1.25rem;
   }
@@ -163,10 +163,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--large-start:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(1.2rem + ((1vw - 7.68px) * -0.7407407407));
+    font-size: calc(1.2rem + ((1vw - 7.68px) * -0.6015037594));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .font-size--large-start:not(h1, h2, h3, h4, h5, h6) {
     font-size: 1rem;
   }
@@ -177,10 +177,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--large-end:not(h1, h2, h3, h4, h5, h6) {
-    font-size: calc(1rem + ((1vw - 7.68px) * 0.9259259259));
+    font-size: calc(1rem + ((1vw - 7.68px) * 0.7518796992));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .font-size--large-end:not(h1, h2, h3, h4, h5, h6) {
     font-size: 1.25rem;
   }
@@ -195,10 +195,10 @@
 }
 @media all and (min-width: 768px) {
   .h1 {
-    font-size: calc(2.48832rem + ((1vw - 7.68px) * 2.086806713));
+    font-size: calc(2.48832rem + ((1vw - 7.68px) * 1.694549812));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .h1 {
     font-size: 3.0517578125rem;
   }
@@ -213,10 +213,10 @@
 }
 @media all and (min-width: 768px) {
   .h2 {
-    font-size: calc(2.0736rem + ((1vw - 7.68px) * 1.3622453704));
+    font-size: calc(2.0736rem + ((1vw - 7.68px) * 1.1061842105));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .h2 {
     font-size: 2.44140625rem;
   }
@@ -230,10 +230,10 @@
 }
 @media all and (min-width: 768px) {
   .h3 {
-    font-size: calc(1.728rem + ((1vw - 7.68px) * 0.8337962963));
+    font-size: calc(1.728rem + ((1vw - 7.68px) * 0.6770676692));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .h3 {
     font-size: 1.953125rem;
   }
@@ -247,10 +247,10 @@
 }
 @media all and (min-width: 768px) {
   .h4 {
-    font-size: calc(1.44rem + ((1vw - 7.68px) * 0.4537037037));
+    font-size: calc(1.44rem + ((1vw - 7.68px) * 0.3684210526));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .h4 {
     font-size: 1.5625rem;
   }
@@ -264,10 +264,10 @@
 }
 @media all and (min-width: 768px) {
   .h5 {
-    font-size: calc(1.2rem + ((1vw - 7.68px) * 0.1851851852));
+    font-size: calc(1.2rem + ((1vw - 7.68px) * 0.1503759398));
   }
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1300px) {
   .h5 {
     font-size: 1.25rem;
   }

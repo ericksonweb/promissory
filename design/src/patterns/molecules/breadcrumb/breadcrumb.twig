@@ -1,0 +1,35 @@
+{% extends '@atoms/nav.twig' %}
+
+{% if not attributes is defined %}
+  {% set attributes = {
+    class: ['breadcrumb']
+  } %}
+{% elseif attributes is defined and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: ['breadcrumb']
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: ['breadcrumb']|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{# Update 'aria' #}
+{% if not attributes.aria is defined %}
+  {% set attributes = attributes|merge({
+    aria: {
+      label: 'Breadcrumb',
+    },
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    aria: attributes.aria|merge({
+      label: 'Breadcrumb',
+    })
+  }) %}
+{% endif %}
+
+{% set list = {
+  element: 'ol',
+  items: items,
+} %}

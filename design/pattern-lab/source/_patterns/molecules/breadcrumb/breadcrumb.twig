@@ -1,0 +1,34 @@
+{% set items = [
+  {
+    content:
+      include ('@atoms/link.twig', {
+        content: "Home",
+        attributes: {
+          href: 'https://www.ericksonseniorliving.com/anns-choice',
+        },
+      })
+    ,
+  },
+  {
+    content:
+      include ('@atoms/link.twig', {
+        content: "Apartments",
+        attributes: {
+          href: 'https://www.ericksonseniorliving.com/anns-choice/apartments',
+        },
+      })
+    ,
+  },
+  {
+    content: "Custom Interiors",
+    attributes: {
+      aria: {
+        current: 'page'
+      }
+    },
+  },
+] %}
+
+{{ include ('@molecules/breadcrumb.twig', {
+  items: items,
+}) }}

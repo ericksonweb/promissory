@@ -7,13 +7,13 @@
   text-decoration: none;
 }
 .cta .icon {
-  color: var(--esl-color-green);
+  color: var(--color-secondary);
   transition: $transition;
   transition-property: transform;
 }
 
 .cta:hover {
-  color: var(--esl-color-green);
+  color: var(--color-secondary);
 }
 .cta:hover .icon--before {
   transform: translateX((0 - $spacing--1qtr) + 0rem);

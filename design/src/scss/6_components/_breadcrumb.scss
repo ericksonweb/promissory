@@ -1,0 +1,46 @@
+@use "../1_settings/spacing" as *;
+@use "../2_tools/font-size";
+
+.breadcrumb {
+  font-weight: bold;
+  @include font-size.small;
+  text-transform: uppercase;
+  
+  > ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    
+    > li {
+      margin: 0;
+      
+      &:not(:last-child) {
+        margin: 0 $spacing--half + 0rem 0 0;
+      }
+      
+      &[aria-current=page] {
+        color: var(--color-primary);
+      }
+      
+      a {
+        color: var(--esl-color-dark-grey);
+        
+        &:hover {
+          color: var(--color-primary);
+        }
+      }
+      
+      + li {
+        &::before {
+          content: '\f054';
+          margin-right: $spacing--half + 0rem;
+          font-family: "Font Awesome 5 Pro";
+          @include font-size.tiny;
+          font-weight: 400;
+          color: var(--color-primary);
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

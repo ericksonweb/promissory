@@ -1,0 +1,83 @@
+@use "sass:color";
+@use "../1_settings/colors";
+
+body.t-pga {
+  --color-primary: var(--esl-color-pga-blue);
+  --color-secondary: var(--esl-color-pga-green);
+  --color-accent: var(--esl-color-pga-cream);
+  
+  a {
+    &:hover {
+      color: var(--color-secondary);
+    }
+    
+    &:not(.btn):hover [class*=icon--shape] {
+      background-color: var(--color-primary);
+    }
+  }
+  
+  button:not(.btn),
+  input[type=button]:not(.btn),
+  input[type=file]::file-selector-button,
+  input[type=reset]:not(.btn),
+  input[type=submit]:not(.btn),
+  .btn {
+    &:hover {
+      border: 1px solid var(--color-secondary);
+      color: var(--color-secondary);
+    }
+  }
+  
+  input,
+  select,
+  textarea {
+    &:focus {
+      outline-color: color.adjust(colors.$pga-blue, $alpha: -0.75);      
+    }
+  }
+  
+  input {
+    &::-webkit-datetime-edit-year-field,
+    &::-webkit-datetime-edit-month-field,
+    &::-webkit-datetime-edit-week-field,
+    &::-webkit-datetime-edit-day-field,
+    &::-webkit-datetime-edit-hour-field,
+    &::-webkit-datetime-edit-minute-field,
+    &::-webkit-datetime-edit-second-field,
+    &::-webkit-datetime-edit-millisecond-field,
+    &::-webkit-datetime-edit-ampm-field,
+    &::-webkit-datetime-edit-meridiem-field {
+      
+      &:focus {
+        background-color: color.adjust(colors.$pga-green, $alpha: -0.75);
+      }
+    }
+  }
+  
+  .dropdown-item {
+    &.active,
+    &:active {
+      background-color: color.adjust(colors.$pga-green, $alpha: -0.75);
+    }
+  }
+  
+  .card {
+    &__link {
+      &:hover {
+        border-color: var(--color-secondary);
+        
+        & ~ .card__content .btn {
+          background-color: var(--color-accent);
+          border: 1px solid var(--color-secondary);
+          color: var(--color-secondary);
+        }
+      }
+    }
+  }
+  
+  .mark-required {
+    &::before {
+      color: var(--color-primary);
+    }
+  }
+}
