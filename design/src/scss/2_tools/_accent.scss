@@ -1,0 +1,10 @@
+@use "../1_settings/spacing" as *;
+
+@mixin accent($position: null) {
+  $value: $spacing--1qtr + 0rem solid var(--color-secondary);
+  @if $position {
+    border-#{$position}: $value;
+  } @else {
+    border: $value;
+  } 
+}

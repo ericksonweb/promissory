@@ -1,4 +1,5 @@
 @use "sass:color";
+@use "sass:math";
 @use "../1_settings/colors";
 @use "../1_settings/spacing" as *;
 @use "../1_settings/transition" as *;
@@ -8,12 +9,13 @@ a {
   outline: 0.25rem solid transparent;
   font-weight: bold;
   text-decoration-color: var(--esl-color-light-grey);
-  color: var(--esl-color-blue);
+  text-underline-offset: math.div($spacing--1qtr + 0rem, 2);
+  color: var(--color-primary);
   transition: $transition;
   transition-property: outline-color, color, text-decoration-color;
   
   &:hover {
-    color: var(--esl-color-aqua-blue);
+    color: var(--color-accent);
   }
   
   &:focus {

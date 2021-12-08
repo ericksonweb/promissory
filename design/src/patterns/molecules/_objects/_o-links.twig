@@ -1,0 +1,20 @@
+{% extends '@atoms/list.twig' %}
+
+{% if not attributes is defined %}
+  {% set attributes = {
+    class: ['o-links']
+  } %}
+{% elseif attributes is defined and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: ['o-links']
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: ['o-links']|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{% set content %}
+{% endset %}
+
+{% block content %}{{ content }}{% endblock content %}

@@ -21,7 +21,7 @@
     
     .has-invalid &,
     .is-invalid + & {
-      color: var(--esl-color-error);
+      color: var(--esl-color-error) !important;
     }
   }
 }
@@ -29,7 +29,7 @@
 .dropdown {
   & > select.is-invalid {
     & ~ .btn {
-      border-color: var(--esl-color-error);
+      border-color: var(--esl-color-error) !important;
       
       &:focus {
         outline-color: color.adjust(colors.$error, $alpha: -0.75);
@@ -42,7 +42,7 @@
   }
   
   &.has-invalid ~ .mark-required::before {
-    color: var(--esl-color-error);
+    color: var(--esl-color-error) !important;
   }
 }
 
@@ -74,7 +74,7 @@
 }
 
 .is-invalid {
-  border-color: var(--esl-color-error);
+  border-color: var(--esl-color-error) !important;
   
   &:focus {
     outline-color: color.adjust(colors.$error, $alpha: -0.75);

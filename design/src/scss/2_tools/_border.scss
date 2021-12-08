@@ -1,5 +1,0 @@
-@use "../1_settings/spacing" as *;
-
-@mixin border($position) {
-  border-#{$position}: $spacing--1qtr + 0rem solid var(--esl-color-green);
-}

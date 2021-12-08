@@ -1,3 +1,7 @@
+.icon {
+  text-align: center;
+}
+
 .icon--before {
   margin-right: 0.375em;
 }
@@ -10,7 +14,7 @@
   width: 1.75em;
   height: 1.75em;
   padding: 0.375em;
-  background-color: var(--esl-color-green);
+  background-color: var(--color-secondary);
   color: var(--esl-color-white);
   transition: ease-in-out 0.15s;
   transition-property: background-color;
@@ -25,7 +29,7 @@
 }
 
 a:not(.btn):hover [class*=icon--shape] {
-  background-color: var(--esl-color-aqua-blue);
+  background-color: var(--color-accent);
 }
 
 a:not(.btn):active [class*=icon--shape] {

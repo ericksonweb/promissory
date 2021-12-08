@@ -8,4 +8,6 @@
 {# Establish HTML element #}
 {% set element = 'nav' %}
 
-{% block content %}{{ content }}{% endblock content %}
+{% block content %}
+  {{ include ('@atoms/list.twig', list, with_context = false) }}
+{% endblock %}

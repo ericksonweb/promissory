@@ -1,0 +1,67 @@
+{% extends '@molecules/_o-collapse.twig' %}
+
+{% set menu_class = submenu ? 'menu__submenu' : 'menu' %}
+
+{% if not attributes is defined %}
+  {% set attributes = {
+    class: [menu_class, name]
+  } %}
+{% elseif attributes is defined and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: [menu_class, name]
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: [menu_class, name]|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{% block content %}
+  {# Toggler #}
+  {% block o_toggler %}
+  
+    {% set toggler = {
+      content:
+        include ('@atoms/icon.twig', {
+          fa_name: 'blank',
+          attributes: {
+            class: ['fa-fw']
+          }
+        }, with_context = false)
+      ,
+      attributes: {
+        class: ['menu__toggler', name ~ '__toggler']
+      }
+    } %}
+  
+    {{ parent() }}
+  {% endblock o_toggler %}
+  
+  {# Content #}
+  {% block o_content %}
+    {% set content %}
+      {% if submenu %}
+        {{ include ('@atoms/list.twig', {
+          items: items,
+        }, with_context = false) }}
+      {% else %}
+        {{ include ('@atoms/nav.twig', {
+          list: {
+            items: items,
+          },
+        }, with_context = false) }}
+      {% endif %}
+    {% endset %}
+  
+    {% set collapse = {
+      content: content,
+      attributes: {
+        class: ['menu__content', name ~ '__content']
+      }
+    } %}
+    
+    {% set content_classes = collapse.attributes.class %}    
+  
+    {{ parent() }}
+  {% endblock o_content %}
+{% endblock %}

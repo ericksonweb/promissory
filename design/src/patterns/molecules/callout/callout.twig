@@ -2,15 +2,15 @@
 
 {% if not attributes is defined %}
   {% set attributes = {
-    'class': ['callout']
+    class: ['callout']
   } %}
 {% elseif attributes is defined and not attributes.class is defined %}
   {% set attributes = attributes|merge({
-    'class': ['callout']
+    class: ['callout']
   }) %}
 {% else %}
   {% set attributes = attributes|merge({
-    'class': ['callout']|merge(attributes.class)
+    class: ['callout']|merge(attributes.class)
   }) %}
 {% endif %}
 

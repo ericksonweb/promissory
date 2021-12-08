@@ -20,6 +20,7 @@
   z-index: 1;
 }
 .menu__toggler.btn {
+  align-self: flex-end;
   line-height: 1;
 }
 .menu__toggler.btn .icon::before {
@@ -40,15 +41,12 @@
 }
 .menu__submenu {
   position: relative;
-  top: -1.5em;
+  top: -1em;
   display: flex;
   flex-basis: 100%;
   flex-direction: column;
   flex-grow: 1;
-  margin-bottom: -1.5em;
-}
-.menu__submenu .menu__toggler.btn {
-  align-self: flex-end;
+  margin-bottom: -1em;
 }
 .menu__submenu .menu__toggler.btn .icon::before {
   font-weight: 400;
@@ -113,14 +111,12 @@
 .main-menu nav > ol > li > a.active:hover {
   color: var(--esl-color-green);
 }
-.main-menu .menu__toggler.btn {
+.main-menu > .menu__toggler.btn {
   font-size: 2em;
-}
-.main-menu__toggler.btn {
   align-self: flex-end;
   color: var(--esl-color-green);
 }
-.main-menu__toggler.btn:hover {
+.main-menu > .menu__toggler.btn:hover {
   color: var(--esl-color-green);
 }
 .main-menu__content {

@@ -1,7 +1,9 @@
 @use "../1_settings/spacing" as *;
 @use "../1_settings/transition" as *;
 
-.icon { }
+.icon {
+  text-align: center;
+}
 
 .icon--before {
   margin-right: $spacing--1qtr + 0em;
@@ -15,7 +17,7 @@
   width: 1.75em;
   height: 1.75em;
   padding: 0.375em;
-  background-color: var(--esl-color-green);
+  background-color: var(--color-secondary);
   color: var(--esl-color-white);
   transition: $transition;
   transition-property: background-color;
@@ -28,7 +30,7 @@
 }
 
 a:not(.btn):hover [class*="icon--shape"] {
-  background-color: var(--esl-color-aqua-blue);
+  background-color: var(--color-accent);
 }
 a:not(.btn):active [class*="icon--shape"] {
   background-color: var(--esl-color-dark-grey);
