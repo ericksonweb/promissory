@@ -1,0 +1,496 @@
+{{ include ('@atoms/list.twig', {
+  items:
+    [
+      {
+        content:
+          include ('@molecules/card.twig', {
+            header: {
+              content:
+                include ('@atoms/heading.twig', {
+                  content: "Black",
+                  level: 5,
+                  attributes: {
+                    class: ['font-family--serif']
+                  }
+                })
+              ,
+            },
+            body: {
+              content:
+                include ('@atoms/paragraph.twig', {
+                  content: '<b>#000</b><br><code class="font-size--xsmall">var(--esl-color-black)</code>'
+                }) ~
+                include ('@atoms/table.twig', {
+                  body: [
+                    {
+                      rows: [
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Class</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            },
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Property</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>bg--black</code>"
+                            },
+                            {
+                              content: '<code>background-color</code> <span class="font-size--tiny">(also applies accessible </span><code>color</code><span class="font-size--tiny"> property)</span>'
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>color--black</code>"
+                            },
+                            {
+                              content: "<code>color</code>"
+                            }
+                          ]
+                        },
+                      ],
+                    }
+                  ],
+                  attributes: {
+                    class: ['font-size--xsmall', 'table--minimal']
+                  }
+                })
+              ,
+            },
+            attributes: {
+              class: ['bg--black']
+            },
+          }, with_context = false)
+        ,
+        attributes: {
+          class: ['col-md-6', 'col-xl-4']
+        }
+      },
+      {
+        content:
+          include ('@molecules/card.twig', {
+            header: {
+              content:
+                include ('@atoms/heading.twig', {
+                  content: "Charcoal",
+                  level: 5,
+                  attributes: {
+                    class: ['font-family--serif']
+                  }
+                })
+              ,
+            },
+            body: {
+              content:
+                include ('@atoms/paragraph.twig', {
+                  content: '<b>#fbf7e8</b><br><code class="font-size--xsmall">var(--esl-color-charcoal)</code>'
+                }) ~
+                include ('@atoms/table.twig', {
+                  body: [
+                    {
+                      rows: [
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Class</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            },
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Property</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>bg--charcoal</code>"
+                            },
+                            {
+                              content: '<code>background-color</code> <span class="font-size--tiny">(also applies accessible </span><code>color</code><span class="font-size--tiny"> property)</span>'
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>color--charcoal</code>"
+                            },
+                            {
+                              content: "<code>color</code>"
+                            }
+                          ]
+                        },
+                      ],
+                    }
+                  ],
+                  attributes: {
+                    class: ['font-size--xsmall', 'table--minimal']
+                  }
+                })
+              ,
+            },
+            attributes: {
+              class: ['bg--charcoal']
+            },
+          }, with_context = false)
+        ,
+        attributes: {
+          class: ['col-md-6', 'col-xl-4']
+        }
+      },
+      {
+        content:
+          include ('@molecules/card.twig', {
+            header: {
+              content:
+                include ('@atoms/heading.twig', {
+                  content: "Dark Grey",
+                  level: 5,
+                  attributes: {
+                    class: ['font-family--serif']
+                  }
+                })
+              ,
+            },
+            body: {
+              content:
+                include ('@atoms/paragraph.twig', {
+                  content: '<b>#a8a8a8</b><br><code class="font-size--xsmall">var(--esl-color-dark-grey)</code>'
+                }) ~
+                include ('@atoms/table.twig', {
+                  body: [
+                    {
+                      rows: [
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Class</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            },
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Property</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>bg--dark-grey</code>"
+                            },
+                            {
+                              content: '<code>background-color</code> <span class="font-size--tiny">(also applies accessible </span><code>color</code><span class="font-size--tiny"> property)</span>'
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>color--dark-grey</code>"
+                            },
+                            {
+                              content: "<code>color</code>"
+                            }
+                          ]
+                        },
+                      ],
+                    }
+                  ],
+                  attributes: {
+                    class: ['font-size--xsmall', 'table--minimal']
+                  }
+                })
+              ,
+            },
+            attributes: {
+              class: ['bg--dark-grey']
+            },
+          }, with_context = false)
+        ,
+        attributes: {
+          class: ['col-md-6', 'col-xl-4']
+        }
+      },
+      {
+        content:
+          include ('@molecules/card.twig', {
+            header: {
+              content:
+                include ('@atoms/heading.twig', {
+                  content: "Medium Grey",
+                  level: 5,
+                  attributes: {
+                    class: ['font-family--serif']
+                  }
+                })
+              ,
+            },
+            body: {
+              content:
+                include ('@atoms/paragraph.twig', {
+                  content: '<b>#d2d2d7</b><br><code class="font-size--xsmall">var(--esl-color-medium-grey)</code>'
+                }) ~
+                include ('@atoms/table.twig', {
+                  body: [
+                    {
+                      rows: [
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Class</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            },
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Property</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>bg--medium-grey</code>"
+                            },
+                            {
+                              content: '<code>background-color</code> <span class="font-size--tiny">(also applies accessible </span><code>color</code><span class="font-size--tiny"> property)</span>'
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>color--medium-grey</code>"
+                            },
+                            {
+                              content: "<code>color</code>"
+                            }
+                          ]
+                        },
+                      ],
+                    }
+                  ],
+                  attributes: {
+                    class: ['font-size--xsmall', 'table--minimal']
+                  }
+                })
+              ,
+            },
+            attributes: {
+              class: ['bg--medium-grey']
+            },
+          }, with_context = false)
+        ,
+        attributes: {
+          class: ['col-md-6', 'col-xl-4']
+        }
+      },
+      {
+        content:
+          include ('@molecules/card.twig', {
+            header: {
+              content:
+                include ('@atoms/heading.twig', {
+                  content: "Light Grey",
+                  level: 5,
+                  attributes: {
+                    class: ['font-family--serif']
+                  }
+                })
+              ,
+            },
+            body: {
+              content:
+                include ('@atoms/paragraph.twig', {
+                  content: '<b>#ededee</b><br><code class="font-size--xsmall">var(--esl-color-light-grey)</code>'
+                }) ~
+                include ('@atoms/table.twig', {
+                  body: [
+                    {
+                      rows: [
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Class</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            },
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Property</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>bg--light-grey</code>"
+                            },
+                            {
+                              content: '<code>background-color</code> <span class="font-size--tiny">(also applies accessible </span><code>color</code><span class="font-size--tiny"> property)</span>'
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>color--light-grey</code>"
+                            },
+                            {
+                              content: "<code>color</code>"
+                            }
+                          ]
+                        },
+                      ],
+                    }
+                  ],
+                  attributes: {
+                    class: ['font-size--xsmall', 'table--minimal']
+                  }
+                })
+              ,
+            },
+            attributes: {
+              class: ['bg--light-grey']
+            },
+          }, with_context = false)
+        ,
+        attributes: {
+          class: ['col-md-6', 'col-xl-4']
+        }
+      },
+      {
+        content:
+          include ('@molecules/card.twig', {
+            header: {
+              content:
+                include ('@atoms/heading.twig', {
+                  content: "White",
+                  level: 5,
+                  attributes: {
+                    class: ['font-family--serif']
+                  }
+                })
+              ,
+            },
+            body: {
+              content:
+                include ('@atoms/paragraph.twig', {
+                  content: '<b>#fff</b><br><code class="font-size--xsmall">var(--esl-color-white)</code>'
+                }) ~
+                include ('@atoms/table.twig', {
+                  body: [
+                    {
+                      rows: [
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Class</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            },
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Property</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>bg--white</code>"
+                            },
+                            {
+                              content: '<code>background-color</code> <span class="font-size--tiny">(also applies accessible </span><code>color</code><span class="font-size--tiny"> property)</span>'
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>color--white</code>"
+                            },
+                            {
+                              content: "<code>color</code>"
+                            }
+                          ]
+                        },
+                      ],
+                    }
+                  ],
+                  attributes: {
+                    class: ['font-size--xsmall', 'table--minimal']
+                  }
+                })
+              ,
+            },
+            attributes: {
+              class: ['bg--white']
+            },
+          }, with_context = false)
+        ,
+        attributes: {
+          class: ['col-md-6', 'col-xl-4']
+        }
+      },      
+    ]
+  ,
+  attributes: {
+    class: ['o-switcher', 'list--style-none', 'row'],
+    style: "gap: unset; row-gap: 1.5rem;"
+  }
+}, with_context = false) }}

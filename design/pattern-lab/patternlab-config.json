@@ -65,17 +65,16 @@
     "m": false,
     "l": false,
     "full": false,
-    "random": false,
-    "disco": false,
+    "random": true,
+    "disco": true,
     "hay": true,
-    "mqs": false,
-    "find": false,
-    "views-all": false,
+    "find": true,
+    "views-all": true,
     "views-annotations": false,
     "views-code": false,
     "views-new": false,
-    "tools-all": false,
-    "tools-docs": false
+    "tools-all": true,
+    "tools-docs": true
   },
   "ishViewportRange": {
     "s": [
@@ -158,8 +157,8 @@
   ],
   "uikits": [
     {
-      "name": "uikit-workshop",
-      "package": "@pattern-lab/uikit-workshop",
+      "name": "uikit-promissory",
+      "package": "@ericksonweb/uikit-promissory",
       "outputDir": "",
       "enabled": true,
       "excludedPatternStates": [],

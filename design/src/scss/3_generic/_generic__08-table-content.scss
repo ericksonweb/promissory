@@ -4,7 +4,7 @@
 table {
   border-collapse: collapse;
   width: 100%;
-  @include resets.margin;
+  @include resets.box;
 }
 td, th {
   @include resets.padding;

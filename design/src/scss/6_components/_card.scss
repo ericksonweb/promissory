@@ -10,7 +10,7 @@
   width: 100%;
   flex-wrap: wrap;
   border: 1px solid;
-  border-color: var(--esl-color-light-grey);
+  border-color: var(--esl-color-medium-grey);
   
   &__media,
   &__content > * {
@@ -25,9 +25,10 @@
   
   &__content {
     flex: 10;
-    display: flex;
+    //display: flex;
     flex-wrap: wrap;
     align-items: center;
+    max-width: 100%;
   }
   
   &__body {
@@ -56,7 +57,7 @@
     
     &:hover {
       border-color: var(--esl-color-aqua-blue);
-      box-shadow: 0 0 ($spacing--half + 0rem) color.adjust(colors.$dark-grey, $alpha: -0.75);
+      box-shadow: 0 0 ($spacing--half + 0rem) color.adjust(colors.$charcoal, $alpha: -0.75);
       
       & ~ .card__content .btn {
         background-color: var(--esl-color-aqua-blue);
@@ -79,12 +80,12 @@
       
   &--dark {
     border-color: transparent;
-    background-color: var(--esl-color-xlight-grey);
+    background-color: var(--esl-color-light-grey);
     transition: $transition;
     transition-property: background-color;
     
     & .card__link:hover {
-      background-color: color.adjust(colors.$dark-grey, $alpha: -0.85);
+      background-color: color.adjust(colors.$charcoal, $alpha: -0.85);
     }
   }
   
@@ -96,6 +97,7 @@
       flex-grow: 1;
     }
     & .card__content {
+      display: flex;
       flex: 10000;
     }
   }

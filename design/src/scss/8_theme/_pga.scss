@@ -23,7 +23,7 @@ body.t-pga {
   input[type=submit]:not(.btn),
   .btn {
     &:hover {
-      border: 1px solid var(--color-secondary);
+      border-color: var(--color-secondary);
       color: var(--color-secondary);
     }
   }
@@ -68,7 +68,7 @@ body.t-pga {
         
         & ~ .card__content .btn {
           background-color: var(--color-accent);
-          border: 1px solid var(--color-secondary);
+          border-color: var(--color-secondary);
           color: var(--color-secondary);
         }
       }

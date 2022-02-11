@@ -1,16 +1,14 @@
-{% set content %}
-{{ include ('@atoms/image.twig', {
-  attributes: {
-    src: 'https://via.placeholder.com/320x240',
-    alt: "Alt text",
-    width: 320,
-    height: 240
-  }
-}) }}
-{% endset %}
-
 {{ include ('@atoms/link.twig', {
-  content: content,
+  content:
+    include ('@atoms/image.twig', {
+      attributes: {
+        src: 'https://via.placeholder.com/320x240',
+        alt: "Alt text",
+        width: 320,
+        height: 240
+      }
+    })
+  ,
   attributes: {
     href: 'https://www.ericksonseniorliving.com',
   }

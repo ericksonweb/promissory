@@ -3,43 +3,43 @@
 @use "../2_tools/fluid-typography" as fluid;
 @use "../2_tools/font-size";
 
-.font-size--tiny:not(h1, h2, h3, h4, h5, h6) {
+.font-size--tiny {
   @include font-size.tiny;
 }
-.font-size--tiny-start:not(h1, h2, h3, h4, h5, h6) {
+.font-size--tiny-start {
   @include font-size.tiny-start;
 }
-.font-size--tiny-end:not(h1, h2, h3, h4, h5, h6) {
+.font-size--tiny-end {
   @include font-size.tiny-end;
 }
 
-.font-size--xsmall:not(h1, h2, h3, h4, h5, h6) {
+.font-size--xsmall {
   @include font-size.xsmall;
 }
-.font-size--xsmall-start:not(h1, h2, h3, h4, h5, h6) {
+.font-size--xsmall-start {
   @include font-size.xsmall-start;
 }
-.font-size--xsmall-end:not(h1, h2, h3, h4, h5, h6) {
+.font-size--xsmall-end {
   @include font-size.xsmall-end;
 }
 
-.font-size--small:not(h1, h2, h3, h4, h5, h6) {
+.font-size--small {
   @include font-size.small;
 }
-.font-size--small-start:not(h1, h2, h3, h4, h5, h6) {
+.font-size--small-start {
   @include font-size.small-start;
 }
-.font-size--small-end:not(h1, h2, h3, h4, h5, h6) {
+.font-size--small-end {
   @include font-size.small-end;
 }
 
-.font-size--large:not(h1, h2, h3, h4, h5, h6) {
+.font-size--large {
   @include font-size.large;
 }
-.font-size--large-start:not(h1, h2, h3, h4, h5, h6) {
+.font-size--large-start {
   @include font-size.large-start;
 }
-.font-size--large-end:not(h1, h2, h3, h4, h5, h6) {
+.font-size--large-end {
   @include font-size.large-end;
 }
 

@@ -4,7 +4,6 @@
  * These styles will not be your production CSS.
  */
 #sg-patterns {
-  -webkit-box-sizing: border-box !important;
   box-sizing: border-box !important;
   max-width: 100%;
   padding: 0 0.5em;
@@ -19,36 +18,83 @@
   cursor: pointer;
 }
 
-.sg-colors {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.pl-c-main {
+  overflow-x: initial;
+}
+.pl-js-pattern-example {
+  position: relative;
+}
+
+.pl-layout .container,
+.pl-layout .row,
+.pl-layout .col,
+.pl-layout [class*='col-'] {
+}
+.pl-layout .container {
+  border: 5px dashed var(--esl-color-blue);
+}
+.pl-layout .row {
+  border: 3px dashed var(--esl-color-green);
+}
+.pl-layout .col,
+.pl-layout [class*='col-'] {
+  border: 1px dotted var(--esl-color-dark-grey);
+}
+
+.pl-breakpoints {
   display: flex;
-  -ms-flex-wrap: wrap;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
-  list-style: none !important;
-  padding: 0 !important;
+  justify-content: flex-end;
+  align-items: flex-end;
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow: scroll;
+}
+.pl-breakpoints:hover .pl-breakpoint {
+  opacity: 0.0625;
+}
+
+.pl-breakpoint {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  width: 100%;
+  height: 10rem;
   margin: 0 !important;
+  text-align: center;
+  border-style: none dotted dotted solid;
+  border-width: 0 1px 1px 4px;
+  border-color: #00395d;
+  cursor: default;
 }
-.sg-colors li {
-  -webkit-box-flex: 1;
-  -ms-flex: auto;
-  flex: auto;
-  padding: 0.3em;
-  margin: 0 0.5em 0.5em 0;
-  min-width: 5em;
-  max-width: 14em;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+.pl-breakpoint:hover {
+  border-color: #00843d;
+  border-right-style: solid;
+  border-right-width: 4px;
+  background-color: rgba(0, 132, 61, 0.125);
 }
-
-.sg-swatch {
+.pl-breakpoints:hover .pl-breakpoint:hover,
+.pl-breakpoints:hover .pl-breakpoint:hover ~ .pl-breakpoint {
+  opacity: 1;
+}
+.pl-breakpoint:hover .pl-breakpoint__label {
+  background-color: #00843d;
+}
+.pl-breakpoint > * {
+  flex-shrink: 0;
+}
+.pl-breakpoint__label {
+  position: relative;
+  padding: 0.1875rem;
+  background-color: #00395d;
+  border-radius: 0 4% 4% 0;
+  color: #fff;
+}
+.pl-breakpoint__label code {
   display: block;
-  height: 4em;
-  margin-bottom: 0.3em;
-  border-radius: 5px;
-}
-
-.sg-label {
-  font-size: 90%;
-  line-height: 1;
+  font-weight: bold;
 }

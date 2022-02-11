@@ -1,0 +1,100 @@
+{#
+/**
+ * Tabs Pattern
+ */
+#}
+{% extends '@molecules/_o-collapse.twig' %}
+
+{# Establish HTML element #}
+{% if list is defined %}
+  {% if list == false %}
+    {% set tabs_element = 'div' %}
+  {% elseif list == 'ordered' %}
+    {% set tabs_element = 'ol' %}
+  {% endif %}
+{% else %}
+  {% set tabs_element = 'ul' %}
+{% endif %}
+
+{% set tabs_classes = ['tabs', name] %}
+
+{% if not attributes is defined %}
+  {% set attributes = {
+    class: tabs_classes
+  } %}
+{% elseif attributes is defined and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: tabs_classes
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: tabs_classes|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{% block content %}
+  {# Toggler #}
+  {% block o_toggler %}
+  
+    {% set toggler = {
+      content: title|default("Tabs") ~ 
+        include ('@atoms/icon.twig', {
+          fa_name: 'blank',
+          attributes: {
+            class: ['fa-fw']
+          }
+        }, with_context = false)
+      ,
+      attributes: {
+        class: ['tabs__toggler', name ~ '__toggler']
+      }
+    } %}
+  
+  {{ parent() }}
+  {% endblock o_toggler %}
+  
+  {# Content #}
+  {% block o_collapse %}
+    {% set content %}
+      {# Validation #}
+      {% if tabs_element in ['ul', 'ol'] %}
+        {{ include ('@atoms/list.twig', {
+          element: tabs_element,
+          unstyled: true,
+          horizontal: true,
+          items: items,
+        }, with_context = false) }}
+      {% else %}
+        {% set tabs_divs %}
+          {% for item in items %}
+            {{ include ('@atoms/div.twig', {
+              content: item.content,
+              attributes: item.attributes
+            }, with_context = false) }}
+          {% endfor %}
+        {% endset %}
+        
+        {{ include ('@molecules/_o-switcher.twig', {
+          element: 'div',
+          content: tabs_divs
+        }, with_context = false) }}
+      {% endif %}
+    {% endset %}
+    
+    {% set content_classes = ['tabs__content'] %}
+    {% if justify is defined %}
+      {% set content_classes = content_classes|merge(['tabs__content--justify-' ~ justify]) %}
+    {% endif %}
+    {% set content_classes = content_classes|merge([name ~ '__content']) %}
+    
+    {% set collapse = {
+      content: content,
+      attributes: {
+        class: content_classes
+      }
+    } %}
+    
+    {{ parent() }}
+  {% endblock o_collapse %}
+    
+{% endblock content %}

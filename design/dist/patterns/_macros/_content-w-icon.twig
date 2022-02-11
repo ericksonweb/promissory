@@ -1,0 +1,26 @@
+{#-
+/**
+ * Content w/ Icon
+ *
+ * Helper macro to render an icon in conjunction with button or link content.
+ */
+-#}
+{%- macro render(content, position, shape, fa_prefix, fa_name) -%}
+  {%- if position == "before" -%}
+    {{- include ('@atoms/icon.twig', {
+      position: position,
+      shape: shape,
+      fa_prefix: fa_prefix,
+      fa_name: fa_name,
+    }) -}}
+  {%- endif -%}
+  {{- content -}}
+  {%- if position == "after" -%}
+    {{- include ('@atoms/icon.twig', {
+      position: position,
+      shape: shape,
+      fa_prefix: fa_prefix,
+      fa_name: fa_name,
+    }) -}}
+  {%- endif -%}
+{%- endmacro render -%}

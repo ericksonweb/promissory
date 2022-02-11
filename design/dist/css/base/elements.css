@@ -10,10 +10,10 @@
   --esl-color-pga-green: #6c7d31;
   --esl-color-pga-cream: #fbf7e8;
   --esl-color-black: #000;
-  --esl-color-dark-grey: #212529;
-  --esl-color-medium-grey: #a8a8a8;
-  --esl-color-light-grey: #d2d2d7;
-  --esl-color-xlight-grey: #ededee;
+  --esl-color-charcoal: #212529;
+  --esl-color-dark-grey: #a8a8a8;
+  --esl-color-medium-grey: #d2d2d7;
+  --esl-color-light-grey: #ededee;
   --esl-color-white: #fff;
   --esl-color-error: #aa0000;
   --esl-color-warning: #b98900;
@@ -39,6 +39,7 @@
 
 body {
   font-family: var(--esl-font-sans-serif);
+  color: var(--esl-color-charcoal);
   --color-primary: var(--esl-color-blue);
   --color-secondary: var(--esl-color-green);
   --color-accent: var(--esl-color-aqua-blue);
@@ -165,7 +166,7 @@ nav {
 a {
   outline: 0.25rem solid transparent;
   font-weight: bold;
-  text-decoration-color: var(--esl-color-light-grey);
+  text-decoration-color: var(--esl-color-medium-grey);
   text-underline-offset: 0.1875rem;
   color: var(--color-primary);
   transition: ease-in-out 0.15s;
@@ -178,7 +179,7 @@ a:focus {
   outline-color: rgba(0, 163, 224, 0.25);
 }
 a:active {
-  color: var(--esl-color-dark-grey);
+  color: var(--esl-color-charcoal);
 }
 
 blockquote p::before {
@@ -231,49 +232,249 @@ figure img {
 
 figcaption {
   padding: 0.75rem 0.375rem;
-  color: var(--esl-color-medium-grey);
+  color: var(--esl-color-dark-grey);
 }
 
-img {
+img,
+svg {
   vertical-align: text-bottom;
 }
 
 table {
-  width: calc(100% - 2px);
-  outline: 1px solid var(--esl-color-dark-grey);
+  display: inline-block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: top;
+  max-width: calc(100% - 2px);
+  margin-left: 1px;
+  outline: 1px solid var(--esl-color-charcoal);
+  background: radial-gradient(0.375em 50% at 0 50%, var(--esl-color-charcoal) 0, transparent 100%), radial-gradient(0.375em 50% at 100% 50%, var(--esl-color-charcoal) 0, transparent 100%);
+  background-color: var(--esl-color-white);
+  overscroll-behavior-x: none;
 }
 
 table:not(:last-child) {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 
 td, th {
+  width: 1%;
   padding: 0.375em 1.125em;
 }
+td:first-child, th:first-child {
+  background: linear-gradient(to right, var(--esl-color-white) 0.75em, rgba(255, 255, 255, 0.95) 75%);
+}
+td:last-child, th:last-child {
+  background: linear-gradient(to left, var(--esl-color-white) 0.75em, rgba(255, 255, 255, 0.95) 75%);
+}
 
+td {
+  color: var(--esl-color-charcoal);
+}
 td:not(:first-child) {
-  border-left: 1px solid var(--esl-color-medium-grey);
+  border-left: 1px solid var(--esl-color-dark-grey);
 }
 
 th {
   text-align: start;
-}
-
-thead {
-  background-color: var(--color-primary);
+  white-space: nowrap;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  background: rgba(0, 57, 93, 0.95);
   color: var(--esl-color-white);
 }
-
-thead th {
-  padding: 0.75em 1.125em;
+th:first-child {
+  background: linear-gradient(to right, var(--esl-color-blue) 0.75em, rgba(0, 57, 93, 0.95) 75%);
+}
+th:last-child {
+  background: linear-gradient(to left, var(--esl-color-blue) 0.75em, rgba(0, 57, 93, 0.95) 75%);
+}
+th[scope=row] ~ td {
+  width: auto;
 }
 
 th:not(:first-child) {
   border-left: 1px solid var(--esl-color-black);
 }
 
-tbody tr:nth-child(odd) {
-  background-color: var(--esl-color-xlight-grey);
+thead {
+  border-bottom: 1px solid var(--esl-color-black);
+}
+thead tr :first-child {
+  background: linear-gradient(to right, var(--esl-color-blue) 0.75em, rgba(0, 57, 93, 0.95) 75%);
+}
+thead tr :first-child:empty ~ th {
+  width: auto;
+}
+
+tbody tr th:first-child {
+  border-right: 1px solid var(--esl-color-black);
+}
+tbody tr th:first-child ~ td {
+  width: auto;
+}
+tbody tr th.subhead {
+  width: auto;
+  background: var(--esl-color-black);
+  text-transform: uppercase;
+}
+tbody tr td {
+  background: rgba(255, 255, 255, 0.35);
+}
+tbody tr td:first-child {
+  background: linear-gradient(to right, var(--esl-color-white) 0.75em, rgba(255, 255, 255, 0.35) 75%);
+}
+tbody tr td:last-child {
+  background: linear-gradient(to left, var(--esl-color-white) 0.75em, rgba(255, 255, 255, 0.35) 75%);
+}
+tbody tr:nth-child(odd) td {
+  background: rgba(210, 210, 215, 0.35);
+}
+tbody tr:nth-child(odd) td:first-child {
+  background: linear-gradient(to right, var(--esl-color-light-grey) 0.75em, rgba(210, 210, 215, 0.35) 75%);
+}
+tbody tr:nth-child(odd) td:last-child {
+  background: linear-gradient(to left, var(--esl-color-light-grey) 0.75em, rgba(210, 210, 215, 0.35) 75%);
+}
+tbody tr:not(:last-child) th:first-child {
+  border-bottom: 1px solid var(--esl-color-black);
+}
+
+table.table--minimal {
+  position: relative;
+  outline: none;
+  background: none;
+  background-color: transparent;
+}
+table.table--minimal td, table.table--minimal th {
+  position: relative;
+  color: currentcolor;
+}
+table.table--minimal td:first-child, table.table--minimal td:last-child, table.table--minimal th:first-child, table.table--minimal th:last-child {
+  background: none;
+}
+table.table--minimal td {
+  color: inherit;
+}
+table.table--minimal td:not(:first-child) {
+  border-left: none;
+}
+table.table--minimal td:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-left: 1px solid currentcolor;
+  opacity: 0.25;
+}
+table.table--minimal th::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: currentcolor;
+  opacity: 0.0625;
+}
+table.table--minimal th:not(:first-child) {
+  border-left: none;
+}
+table.table--minimal th:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-left: 1px solid currentcolor;
+  opacity: 0.25;
+}
+table.table--minimal thead {
+  position: relative;
+  border-bottom: none;
+}
+table.table--minimal thead::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid currentcolor;
+  opacity: 0.25;
+}
+table.table--minimal thead tr :first-child {
+  background: none;
+}
+table.table--minimal tbody {
+  position: relative;
+}
+table.table--minimal tbody tr th:first-child {
+  border-right: none;
+}
+table.table--minimal tbody tr th.subhead {
+  background: none;
+}
+table.table--minimal tbody tr th.subhead::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: currentcolor;
+  opacity: 0.125;
+}
+table.table--minimal tbody tr th.subhead:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  top: unset;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid currentcolor;
+  border-left: none;
+  opacity: 0.25;
+}
+table.table--minimal tbody tr td {
+  background: none;
+}
+table.table--minimal tbody tr td:first-child, table.table--minimal tbody tr td:last-child {
+  background: none;
+}
+table.table--minimal tbody tr:nth-child(odd) td {
+  background: none;
+}
+table.table--minimal tbody tr:nth-child(odd) td:first-child, table.table--minimal tbody tr:nth-child(odd) td:last-child {
+  background: none;
+}
+table.table--minimal tbody tr:not(:last-child) th:first-child {
+  border-bottom: none;
+}
+table.table--minimal tbody tr:not(:last-child) th:first-child::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid currentcolor;
+  opacity: 0.25;
+}
+table.table--minimal tbody tr:not(:last-child) td::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid currentcolor;
+  opacity: 0.25;
+}
+table.table--minimal tbody + tbody::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-top: 1px solid currentcolor;
+  opacity: 0.25;
 }
 
 button:not(.btn),
@@ -328,7 +529,7 @@ form:not(:last-child) {
 
 fieldset {
   padding: 0.75rem;
-  border: 1px solid var(--esl-color-xlight-grey);
+  border: 1px solid var(--esl-color-light-grey);
 }
 fieldset:not(:last-child) {
   margin-bottom: 1.5rem;
@@ -355,7 +556,7 @@ input {
   appearance: none;
   padding: 0.75rem;
   border: 1px solid;
-  border-color: var(--esl-color-medium-grey) !important;
+  border-color: var(--esl-color-dark-grey) !important;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -378,7 +579,7 @@ input:is([type=checkbox], [type=radio]) {
   background-color: var(--esl-color-white);
 }
 input:is([type=checkbox], [type=radio]):active {
-  background-color: var(--esl-color-xlight-grey);
+  background-color: var(--esl-color-light-grey);
 }
 input:is([type=checkbox], [type=radio]):checked {
   position: relative;
@@ -432,21 +633,21 @@ input[type=range] {
   width: 100%;
   height: 1.5rem;
   padding: 0;
-  border-color: transparent;
+  border: none;
 }
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 0.375rem;
   cursor: pointer;
-  background: var(--esl-color-xlight-grey);
-  border: 1px solid var(--esl-color-medium-grey);
+  background: var(--esl-color-light-grey);
+  border: 1px solid var(--esl-color-dark-grey);
 }
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
-  border: 1px solid var(--esl-color-dark-grey);
+  border: 1px solid var(--esl-color-charcoal);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -461,15 +662,15 @@ input[type=range]::-moz-range-track {
   width: 100%;
   height: 0.375rem;
   cursor: pointer;
-  background: var(--esl-color-xlight-grey);
-  border: 1px solid var(--esl-color-medium-grey);
+  background: var(--esl-color-light-grey);
+  border: 1px solid var(--esl-color-dark-grey);
 }
 input[type=range]::-moz-range-thumb {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
-  border: 1px solid var(--esl-color-dark-grey);
+  border: 1px solid var(--esl-color-charcoal);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -485,7 +686,7 @@ input[type=file] {
   overflow: visible;
   margin: 0 0 -7px -7px;
   padding: 0 7px 7px;
-  border-color: transparent;
+  border: none;
 }
 input[type=file]::file-selector-button {
   -webkit-appearance: none;
@@ -560,7 +761,7 @@ textarea {
   appearance: none;
   padding: 0.75rem;
   border: 1px solid;
-  border-color: var(--esl-color-medium-grey) !important;
+  border-color: var(--esl-color-dark-grey) !important;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;

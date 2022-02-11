@@ -1,0 +1,23 @@
+@use "../1_settings/spacing" as *;
+@use "../2_tools/accent" as *;
+
+.separator--pipe {
+  > :not(:first-child) {
+    @include accent(left);
+    border-left-width: 1px;
+  }
+}
+
+.separator--bullet {
+  > :not(:first-child) {    
+    margin-left: 0.5rem;
+    
+    &::before {
+      content: "•";
+      align-self: center;
+      margin-left: -0.5rem;
+      color: var(--color-secondary);
+      pointer-events: none;
+    }
+  }
+}

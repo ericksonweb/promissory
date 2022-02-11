@@ -25,7 +25,7 @@ form {
 
 fieldset {
   padding: $spacing--half + 0rem;
-  border: 1px solid var(--esl-color-xlight-grey);
+  border: 1px solid var(--esl-color-light-grey);
   
   &:not(:last-child) {
     margin-bottom: $spacing--single + 0rem;
@@ -59,7 +59,7 @@ input {
     background-color: var(--esl-color-white);
     
     &:active {
-      background-color: var(--esl-color-xlight-grey);
+      background-color: var(--esl-color-light-grey);
     }
     
     &:checked {
@@ -124,19 +124,19 @@ input {
     width: 100%;
     height: $spacing--single + 0rem;
     padding: 0;
-    border-color: transparent;
+    border: none;
     
     &::-webkit-slider-runnable-track {
       width: 100%;
       height: $spacing--1qtr + 0rem;
       cursor: pointer;
-      background: var(--esl-color-xlight-grey);
-      border: 1px solid var(--esl-color-medium-grey);
+      background: var(--esl-color-light-grey);
+      border: 1px solid var(--esl-color-dark-grey);
     }
     &::-webkit-slider-thumb {
       @include appearance.none;
       box-shadow: 0 3px 7px 0 color.adjust(colors.$black, $alpha: -0.75);
-      border: 1px solid var(--esl-color-dark-grey);
+      border: 1px solid var(--esl-color-charcoal);
       @include border-radius.none;
       width: $spacing--3qtr + 0rem;
       height: $spacing--single + 0rem;
@@ -148,13 +148,13 @@ input {
       width: 100%;
       height: $spacing--1qtr + 0rem;
       cursor: pointer;
-      background: var(--esl-color-xlight-grey);
-      border: 1px solid var(--esl-color-medium-grey);
+      background: var(--esl-color-light-grey);
+      border: 1px solid var(--esl-color-dark-grey);
     }
     &::-moz-range-thumb {
       @include appearance.none;
       box-shadow: 0 3px 7px 0 color.adjust(colors.$black, $alpha: -0.75);
-      border: 1px solid var(--esl-color-dark-grey);
+      border: 1px solid var(--esl-color-charcoal);
       @include border-radius.none;
       width: $spacing--3qtr + 0rem;
       height: $spacing--single + 0rem;
@@ -169,7 +169,7 @@ input {
     overflow: visible;
     margin: 0 0 -7px -7px;
     padding: 0 7px 7px;
-    border-color: transparent;
+    border: none;
     
     &::file-selector-button {
       @include appearance.none;

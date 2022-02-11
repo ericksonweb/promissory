@@ -1,6 +1,9 @@
 {{ include ('@atoms/select.twig', {
   attributes: {
-    multiple: true
+    multiple: true,
+    data: {
+      'none-selected-text': ""
+    }
   },
   menu: [
     {

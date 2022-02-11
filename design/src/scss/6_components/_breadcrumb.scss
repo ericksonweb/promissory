@@ -1,21 +1,36 @@
+@use "../1_settings/breakpoints" as *;
 @use "../1_settings/spacing" as *;
 @use "../2_tools/font-size";
 
 .breadcrumb {
   font-weight: bold;
   @include font-size.small;
+  background-color: var(--esl-color-light-grey);
   text-transform: uppercase;
   
   > ol {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    max-width: map-get($breakpoints, 'max');
+    margin: 0 auto;
+    padding: $spacing--half + 0rem;
     
     > li {
       margin: 0;
       
       &:not(:last-child) {
         margin: 0 $spacing--half + 0rem 0 0;
+        
+        &::after {
+          content: '\f054';
+          margin-left: $spacing--half + 0rem;
+          font-family: "Font Awesome 5 Pro";
+          @include font-size.tiny;
+          font-weight: 400;
+          color: var(--color-primary);
+          vertical-align: middle;
+        }
       }
       
       &[aria-current=page] {
@@ -23,13 +38,14 @@
       }
       
       a {
-        color: var(--esl-color-dark-grey);
+        color: var(--esl-color-charcoal);
         
         &:hover {
           color: var(--color-primary);
         }
       }
       
+      /*
       + li {
         &::before {
           content: '\f054';
@@ -41,6 +57,7 @@
           vertical-align: middle;
         }
       }
+      */
     }
   }
 }

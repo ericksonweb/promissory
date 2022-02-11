@@ -39,7 +39,7 @@
     right: $spacing--half + 0rem;
     font-family: "Font Awesome 5 Pro";
     font-weight: 900;
-    color: var(--esl-color-dark-grey);
+    color: var(--esl-color-charcoal);
   }
   
   &::before {
@@ -60,7 +60,7 @@
   @include resets.box;
   box-shadow: 0 3px 7px 0 color.adjust(colors.$black, $alpha: -0.75);
   border: 1px solid;
-  border-color: var(--esl-color-medium-grey);
+  border-color: var(--esl-color-dark-grey);
   background-color: var(--esl-color-white);
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
@@ -112,7 +112,7 @@
   height: 0;
   margin: $spacing--1qtr + 0rem 0;
   overflow: hidden;
-  border-top: 1px solid var(--esl-color-light-grey);
+  border-top: 1px solid var(--esl-color-medium-grey);
 }
 
 // Links, buttons, and more within the dropdown menu
@@ -145,19 +145,19 @@
 
   &:hover,
   &:focus {
-    background-color: var(--esl-color-xlight-grey);
-    color: var(--esl-color-dark-grey);
+    background-color: var(--esl-color-light-grey);
+    color: var(--esl-color-charcoal);
   }
 
   &.active,
   &:active {
     background-color: color.adjust(colors.$esl-green, $alpha: -0.75);
-    color: var(--esl-color-dark-grey);
+    color: var(--esl-color-charcoal);
   }
 
   &.disabled,
   &:disabled {
-    color: var(--esl-color-xlight-grey);
+    color: var(--esl-color-light-grey);
     pointer-events: none;
   }
 }
@@ -171,7 +171,7 @@
   display: block;
   padding: $spacing--1qtr + 0rem $spacing--single + 0rem;
   margin-bottom: 0; // for use with heading elements
-  color: var(--esl-color-light-grey);
+  color: var(--esl-color-medium-grey);
   font-weight: bold;
   white-space: nowrap; // as with > li > a
 }
@@ -271,7 +271,7 @@ select.selectpicker {
 .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-danger:active,
 .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-info:active,
 .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-dark:active {
-  color: var(--esl-color-light-grey);
+  color: var(--esl-color-medium-grey);
 }
 .bootstrap-select > select {
   position: absolute !important;

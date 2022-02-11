@@ -1,0 +1,10 @@
+.o-switcher {
+  --breakpoint: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.o-switcher > * {
+  display: flex;
+  min-width: clamp(0px, (var(--breakpoint) - 100%) * 1000, 100%);
+}

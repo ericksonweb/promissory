@@ -1,0 +1,60 @@
+@use "../1_settings/breakpoints" as *;
+@use "../1_settings/spacing" as *;
+@use "../1_settings/transition" as *;
+
+$breakpoint: map-get($breakpoints, sm); 
+
+.accordion {
+  &-item {
+    margin-bottom: $spacing--single + 0rem;
+    border: 1px solid;
+    border-color: var(--esl-color-medium-grey);
+  }
+  
+  &__toggler {
+    width: 100%;
+    
+    &.btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: $spacing--3qtr + 0em;
+      padding: $spacing--3qtr + 0rem $spacing--single + 0rem;
+      background-color: var(--esl-color-light-grey);
+      text-align: left;
+      text-transform: unset;
+      
+      &:hover {
+        background-color: var(--esl-color-medium-grey);
+      }
+      
+      & .icon::before {
+        font-size: 2em;
+        font-weight: 500;
+        color: var(--color-secondary);
+      }
+      
+      &[aria-expanded="false"] {
+        & .icon::before {
+          content: '\f107';
+        }
+      }
+      
+      &[aria-expanded="true"] {
+        & .icon::before {
+          content: '\f106';
+        }
+      }
+    }
+  }
+  
+  .o-collapse {
+    > * {
+      margin-bottom: 0;
+    }
+    
+    &__body {
+      padding: $spacing--single + 0rem;
+    }
+  }
+}

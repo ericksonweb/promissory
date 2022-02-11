@@ -1,0 +1,67 @@
+{% extends '@atoms/div.twig' %}
+
+{% if not attributes is defined %}
+  {% set attributes = {
+    class: ['accordion']
+  } %}
+{% elseif attributes is defined and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: ['accordion']
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: ['accordion']|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{% set content %}
+  {% for item in items %}
+    {% set accordion_toggler = {
+      content: item.title.content|default("Accordion Title") ~ 
+        include ('@atoms/icon.twig', {
+          fa_name: 'blank',
+          attributes: {
+            class: ['fa-fw']
+          }
+        }, with_context = false)
+      ,
+      attributes: {
+        class: ['accordion__toggler', item.name ~ '__toggler']
+      }
+    } %}
+    
+    {% if item.title.heading is defined %}
+      {% set accordion_toggler = accordion_toggler|merge({
+        heading: item.title.heading
+      }) %}
+    {% endif %}
+    
+    {% set accordion_collapse = {
+      content: item.content,
+      attributes: {
+        class: ['accordion__content', item.name ~ '__content'],
+        data: {
+          'bs-parent': '#' ~ attributes.id
+        }
+      }
+    } %}
+  
+    {% set accordion_content %}
+      {{ include ('@molecules/_o-collapse.twig', {
+        name: item.name,
+        toggler: accordion_toggler,
+        collapse: accordion_collapse
+      }, with_context = false) }}
+    {% endset %}
+    
+    {{ include ('@atoms/div.twig', {
+      content: accordion_content,
+      attributes: {
+        class: ['accordion-item']
+      }
+    }, with_context = false) }}
+  
+  {% endfor %}
+{% endset %}
+
+{% block content %}{{ content }}{% endblock content %}
