@@ -1,5 +1,6 @@
 .breadcrumb {
   font-weight: bold;
+  background-color: var(--esl-color-light-grey);
   text-transform: uppercase;
 }
 .breadcrumb {
@@ -19,40 +20,56 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0.75rem;
 }
 .breadcrumb > ol > li {
   margin: 0;
+  /*
+  + li {
+    &::before {
+      content: '\f054';
+      margin-right: $spacing--half + 0rem;
+      font-family: "Font Awesome 5 Pro";
+      @include font-size.tiny;
+      font-weight: 400;
+      color: var(--color-primary);
+      vertical-align: middle;
+    }
+  }
+  */
 }
 .breadcrumb > ol > li:not(:last-child) {
   margin: 0 0.75rem 0 0;
 }
-.breadcrumb > ol > li[aria-current=page] {
-  color: var(--color-primary);
-}
-.breadcrumb > ol > li a {
-  color: var(--esl-color-dark-grey);
-}
-.breadcrumb > ol > li a:hover {
-  color: var(--color-primary);
-}
-.breadcrumb > ol > li + li::before {
+.breadcrumb > ol > li:not(:last-child)::after {
   content: "\f054";
-  margin-right: 0.75rem;
+  margin-left: 0.75rem;
   font-family: "Font Awesome 5 Pro";
   font-weight: 400;
   color: var(--color-primary);
   vertical-align: middle;
 }
-.breadcrumb > ol > li + li::before {
+.breadcrumb > ol > li:not(:last-child)::after {
   font-size: 0.6944444444rem;
 }
 @media all and (min-width: 768px) {
-  .breadcrumb > ol > li + li::before {
+  .breadcrumb > ol > li:not(:last-child)::after {
     font-size: calc(0.6944444444rem + ((1vw - 7.68px) * -0.1637426901));
   }
 }
 @media all and (min-width: 1300px) {
-  .breadcrumb > ol > li + li::before {
+  .breadcrumb > ol > li:not(:last-child)::after {
     font-size: 0.64rem;
   }
+}
+.breadcrumb > ol > li[aria-current=page] {
+  color: var(--color-primary);
+}
+.breadcrumb > ol > li a {
+  color: var(--esl-color-charcoal);
+}
+.breadcrumb > ol > li a:hover {
+  color: var(--color-primary);
 }

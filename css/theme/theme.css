@@ -1,6 +1,9 @@
 .esl-accent {
   position: relative;
-  margin-bottom: 3rem !important;
+  margin-bottom: 1.5rem;
+}
+.esl-accent:not(:last-child) {
+  margin-bottom: 3rem;
 }
 .esl-accent::after {
   content: "";
@@ -41,7 +44,7 @@ body.t-pga input[type=file]::file-selector-button:hover,
 body.t-pga input[type=reset]:not(.btn):hover,
 body.t-pga input[type=submit]:not(.btn):hover,
 body.t-pga .btn:hover {
-  border: 1px solid var(--color-secondary);
+  border-color: var(--color-secondary);
   color: var(--color-secondary);
 }
 body.t-pga input:focus,
@@ -60,7 +63,7 @@ body.t-pga .card__link:hover {
 }
 body.t-pga .card__link:hover ~ .card__content .btn {
   background-color: var(--color-accent);
-  border: 1px solid var(--color-secondary);
+  border-color: var(--color-secondary);
   color: var(--color-secondary);
 }
 body.t-pga .mark-required::before {

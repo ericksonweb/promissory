@@ -1,0 +1,38 @@
+.accordion-item {
+  margin-bottom: 1.5rem;
+  border: 1px solid;
+  border-color: var(--esl-color-medium-grey);
+}
+.accordion__toggler {
+  width: 100%;
+}
+.accordion__toggler.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.125em;
+  padding: 1.125rem 1.5rem;
+  background-color: var(--esl-color-light-grey);
+  text-align: left;
+  text-transform: unset;
+}
+.accordion__toggler.btn:hover {
+  background-color: var(--esl-color-medium-grey);
+}
+.accordion__toggler.btn .icon::before {
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--color-secondary);
+}
+.accordion__toggler.btn[aria-expanded=false] .icon::before {
+  content: "\f107";
+}
+.accordion__toggler.btn[aria-expanded=true] .icon::before {
+  content: "\f106";
+}
+.accordion .o-collapse > * {
+  margin-bottom: 0;
+}
+.accordion .o-collapse__body {
+  padding: 1.5rem;
+}
