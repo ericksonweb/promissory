@@ -1,3 +1,73 @@
-.bg--xlight-grey {
-  background-color: var(--esl-color-xlight-grey);
+.bg--primary {
+  background-color: var(--color-primary);
+  color: var(--esl-color-white);
+}
+.bg--secondary {
+  background-color: var(--color-secondary);
+  color: var(--esl-color-white);
+}
+
+.bg--esl-blue {
+  background-color: var(--esl-color-blue);
+  color: var(--esl-color-white);
+}
+.bg--esl-green {
+  background-color: var(--esl-color-green);
+  color: var(--esl-color-white);
+}
+
+.bg--esl-aqua-blue {
+  background-color: var(--esl-color-aqua-blue);
+  color: var(--esl-color-white);
+}
+.bg--esl-medium-green {
+  background-color: var(--esl-color-medium-green);
+  color: var(--esl-color-white);
+}
+.bg--esl-dark-green {
+  background-color: var(--esl-color-dark-green);
+  color: var(--esl-color-white);
+}
+
+.bg--pga-blue {
+  background-color: var(--esl-color-pga-blue);
+  color: var(--esl-color-white);
+}
+.bg--pga-green {
+  background-color: var(--esl-color-pga-green);
+  color: var(--esl-color-white);
+}
+.bg--pga-cream {
+  background-color: var(--esl-color-pga-cream);
+}
+
+.bg--black {
+  background-color: var(--esl-color-black);
+  color: var(--esl-color-white);
+}
+.bg--charcoal {
+  background-color: var(--esl-color-charcoal);
+  color: var(--esl-color-white);
+}
+.bg--dark-grey {
+  background-color: var(--esl-color-dark-grey);
+  color: var(--esl-color-black);
+}
+.bg--medium-grey {
+  background-color: var(--esl-color-medium-grey);
+}
+.bg--light-grey {
+  background-color: var(--esl-color-light-grey);
+}
+.bg--white {
+  background-color: var(--esl-color-white);
+}
+
+.bg--error {
+  background-color: var(--esl-color-error);
+  color: var(--esl-color-white);
+}
+.bg--warning {
+  background-color: var(--esl-color-warning);
+  color: var(--esl-color-white);
 }

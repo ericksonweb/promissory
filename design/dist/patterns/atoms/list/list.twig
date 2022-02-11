@@ -3,10 +3,38 @@
  * List Pattern
  */
 #}
-{% extends '@promissory/_macros/_element.twig' %}
+{% extends horizontal ? '@molecules/_o-switcher.twig' : '@promissory/_macros/_element.twig' %}
 
 {# Establish HTML element #}
 {% set element = element|default('ul') %}
+
+{% set list_classes = [] %}
+
+{% if unstyled %}
+  {% set list_classes = list_classes|merge(['list--style-none']) %}
+{% endif %}
+
+{% if horizontal and separator %}
+  {% if separator in ['bullet', 'pipe'] %}
+    {% set list_classes = list_classes|merge(['separator--' ~ separator]) %}
+  {% endif %}
+{% endif %}
+
+{% if not list_classes is empty %}
+  {% if not attributes is defined %}
+    {% set attributes = {
+      class: list_classes
+    } %}
+  {% elseif attributes is defined and not attributes.class is defined %}
+    {% set attributes = attributes|merge({
+      class: list_classes
+    }) %}
+  {% else %}
+    {% set attributes = attributes|merge({
+      class: list_classes|merge(attributes.class)
+    }) %}
+  {% endif %}
+{% endif %}
 
 {# Validation #}
 {% set validElements = ['ul', 'ol', 'dl'] %}

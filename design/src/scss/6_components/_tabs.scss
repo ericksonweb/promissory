@@ -1,0 +1,95 @@
+@use "../1_settings/breakpoints" as *;
+@use "../1_settings/spacing" as *;
+@use "../1_settings/transition" as *;
+
+$breakpoint: map-get($breakpoints, sm);
+
+.tabs {
+  gap: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: var(--color-primary);
+  
+  &__toggler {
+    width: 100%;
+    
+    &.btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: $spacing--3qtr + 0em;
+      padding: $spacing--3qtr + 0em $spacing--half + 0em;
+      text-align: left;
+      text-transform: unset;
+      
+      &, &:hover {
+        color: var(--esl-color-white);
+      }
+      
+      &[aria-expanded="false"] {
+        & .icon::before {
+          content: '\f107';
+        }
+      }
+      
+      &[aria-expanded="true"] {
+        & .icon::before {
+          content: '\f106';
+        }
+      }
+    }
+  }
+  
+  &__content {
+    
+    .o-switcher {
+      gap: 0;
+            
+      & > * {
+        min-width: clamp(0px, (#{$breakpoint} - 100%) * 1000, 100%);
+      }
+    }
+    
+    &--justify-center {
+      .o-switcher {
+        justify-content: center;
+      }
+    }
+    
+    &--justify-end {
+      .o-switcher {
+        justify-content: flex-end;
+      }
+    }
+  }
+  
+  &__tab {
+    display: block;
+    width: 100%;
+    padding: $spacing--3qtr + 0em $spacing--half + 0em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    color: var(--esl-color-white);
+    transition: $transition;
+    transition-property: background-color, color;
+    
+    &:hover {
+      background-color: var(--color-accent);
+      color: var(--esl-color-white);
+    }
+  }
+}
+
+@media (min-width: #{$breakpoint}) {
+  .tabs {
+    &__toggler.btn {
+      display: none;
+    }
+    
+    & &__content {
+      position: static;
+      display: block;
+    }
+  }
+}

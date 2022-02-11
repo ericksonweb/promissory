@@ -4,7 +4,7 @@
 @use "../1_settings/spacing" as *;
 
 .intro {
-  box-shadow: 0 ($spacing--1qtr + 0rem) ($spacing--half + 0rem) (-$spacing--1qtr + 0rem) color.adjust(colors.$dark-grey, $alpha: -0.75);
+  box-shadow: 0 ($spacing--1qtr + 0rem) ($spacing--half + 0rem) (-$spacing--1qtr + 0rem) color.adjust(colors.$charcoal, $alpha: -0.75);
   
   &__media {
     flex-basis: 50%;
@@ -34,6 +34,6 @@
   }
   
   &--dark {
-    background-color: var(--esl-color-xlight-grey);
+    background-color: var(--esl-color-light-grey);
   }
 }

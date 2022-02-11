@@ -1,0 +1,58 @@
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+
+@import '../../../sass/scss/core.scss';
+
+pl-header {
+  z-index: 100;
+}
+@media (min-width: 1024px) {
+  pl-header header.stuck {
+    margin-top: -1.875rem;
+  }
+}
+
+/**
+* 1) Pattern Lab's header is fixed across the top of the viewport and
+*    contains the primary pattern navigation, viewport resizing items,
+*    and tools.
+* 2) Display nav and controls horizontally
+*/
+.pl-c-header {
+  display: flex; /* 2 */
+  flex-direction: row;
+  width: 100%;
+  font-family: $pl-font;
+  font-size: $pl-font-size-sm;
+  min-height: 30px; // magic number -- needed for initial skeleton screen styles used in the critical CSS
+  background-color: inherit;
+
+
+  @media all and (min-width: $pl-bp-med) {
+    .pl-c-body--theme-sidebar & {
+      flex-direction: column; /* 3 */
+      justify-content: space-between;
+    }
+  }
+}
+
+/**
+ * Nav toggle button
+ * 1) Styles for the general nav toggle button, which
+ *    only appears on small screens
+ */
+.pl-c-header__nav-toggle {
+  @include linkStyle();
+  padding: 11px 12px;
+  border: 0;
+
+  @media all and (min-width: $pl-bp-med) {
+    display: none;
+  }
+
+  &:focus {
+    outline: 1px dotted;
+    outline-offset: -1px;
+  }
+}

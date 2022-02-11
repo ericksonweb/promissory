@@ -89,11 +89,11 @@
     }
     
     &--light {
-      background-color: color.adjust(colors.$xlight-grey, $alpha: -0.3);
+      background-color: color.adjust(colors.$light-grey, $alpha: -0.3);
     }
     
     &--dark {
-      background-color: color.adjust(colors.$dark-grey, $alpha: -0.7);
+      background-color: color.adjust(colors.$charcoal, $alpha: -0.7);
     }
   }
   

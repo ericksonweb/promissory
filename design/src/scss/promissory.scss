@@ -7,8 +7,10 @@
 @import "layout/grid";
 @import "layout/o-collapse";
 @import "layout/o-media";
+@import "layout/o-switcher";
 
 // Components
+@import "components/accordion";
 @import "components/breadcrumb";
 @import "components/button";
 @import "components/callout";
@@ -18,10 +20,10 @@
 @import "components/icon";
 @import "components/intro";
 @import "components/link";
-@import "components/links";
 @import "components/menu";
 @import "components/message";
 @import "components/site-header";
+@import "components/tabs";
 @import "components/testimonial";
 
 // Theme

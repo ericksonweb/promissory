@@ -6,5 +6,7 @@
 @use "../2_tools/resets";
 
 body {
+  position: relative;
   @include resets.box;
+  overflow-anchor: none;
 }

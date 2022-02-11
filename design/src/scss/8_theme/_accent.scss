@@ -4,7 +4,11 @@
 
 .esl-accent {
   position: relative;
-  margin-bottom: $spacing--double + 0rem !important;
+  margin-bottom: $spacing--single + 0rem;
+  
+  &:not(:last-child) {
+    margin-bottom: $spacing--double + 0rem;
+  }
   
   &::after {
     content: '';

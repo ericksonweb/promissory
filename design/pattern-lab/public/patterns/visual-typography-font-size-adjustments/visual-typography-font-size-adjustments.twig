@@ -1,0 +1,368 @@
+{{ include ('@atoms/table.twig', {
+  header: {
+    rows: [
+      {
+        cells: [
+          {
+            element: 'td',
+          },
+          {
+            content: "Start",
+          },
+          {
+            content: "End",
+          },
+        ]
+      },
+    ],
+  },
+  body: [
+    {
+      rows: [
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "Breakpoint",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<code><b>lg</b></code> <span class="font-size--xsmall">(768px and below)</span>',
+            },
+            {
+              content: '<code><b>max</b></code> <span class="font-size--xsmall">(1300px and above)</span>',
+            },
+          ]
+        },
+      ],
+    },
+    {
+      rows: [
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "CSS Classes",
+              attributes: {
+                colspan: 3,
+                class: ['subhead', 'font-size--xsmall']
+              }
+            }
+          ]
+        },
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='font-size--tiny'>.font-size--tiny</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>0.6944444444rem</b> <span class="font-size--xsmall">(11.11111068725586px)</span>',
+            },
+            {
+              content: '<b>0.64rem</b> <span class="font-size--xsmall">(11.520000457763672px)</span>',
+            },
+          ]
+        },
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='font-size--tiny-start'>.font-size--tiny-start</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>0.6944444444rem</b> <span class="font-size--xsmall">(11.11111068725586px)</span>',
+            },
+            {
+              content: '<b>1rem</b> <span class="font-size--xsmall">(18px)</span>',
+            },
+          ]
+        },
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='font-size--tiny-end'>.font-size--tiny-end</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>1rem</b> <span class="font-size--xsmall">(16px)</span>',
+            },
+            {
+              content: '<b>0.64rem</b> <span class="font-size--xsmall">(11.520000457763672px)</span>',
+            },
+          ]
+        },
+        
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='font-size--xsmall'>.font-size--xsmall</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>0.8333333333rem</b> <span class="font-size--xsmall">(13.333333015441895px)</span>',
+            },
+            {
+              content: '<b>0.8rem</b> <span class="font-size--xsmall">(14.399999618530273px)</span>',
+            },
+          ]
+        },
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='font-size--xsmall-start'>.font-size--xsmall-start</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>0.8333333333rem</b> <span class="font-size--xsmall">(13.333333015441895px)</span>',
+            },
+            {
+              content: '<b>1rem</b> <span class="font-size--xsmall">(18px)</span>',
+            },
+          ]
+        },
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='font-size--xsmall-end'>.font-size--xsmall-end</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>1rem</b> <span class="font-size--xsmall">(16px)</span>',
+            },
+            {
+              content: '<b>0.8rem</b> <span class="font-size--xsmall">(14.399999618530273px)</span>',
+            },
+          ]
+        },
+        
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='font-size--small'>.font-size--small</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>0.9128709292rem</b> <span class="font-size--xsmall">(14.605935096740723px)</span>',
+            },
+            {
+              content: '<b>0.894427191rem</b> <span class="font-size--xsmall">(16.099689483642578px)</span>',
+            },
+          ]
+        },
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='font-size--small-start'>.font-size--small-start</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>0.9128709292rem</b> <span class="font-size--xsmall">(14.605935096740723px)</span>',
+            },
+            {
+              content: '<b>1rem</b> <span class="font-size--xsmall">(18px)</span>',
+            },
+          ]
+        },
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='font-size--small-end'>.font-size--small-end</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>1rem</b> <span class="font-size--xsmall">(16px)</span>',
+            },
+            {
+              content: '<b>0.894427191rem</b> <span class="font-size--xsmall">(16.099689483642578px)</span>',
+            },
+          ]
+        },
+        
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='font-size--large'>.font-size--large</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>1.2rem</b> <span class="font-size--xsmall">(19.200000762939453px)</span>',
+            },
+            {
+              content: '<b>1.25rem</b> <span class="font-size--xsmall">(22.5px)</span>',
+            },
+          ]
+        },
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='font-size--large-start'>.font-size--large-start</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>1.2rem</b> <span class="font-size--xsmall">(19.200000762939453px)</span>',
+            },
+            {
+              content: '<b>1rem</b> <span class="font-size--xsmall">(18px)</span>',
+            },
+          ]
+        },
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='font-size--large-end'>.font-size--large-end</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>1rem</b> <span class="font-size--xsmall">(16px)</span>',
+            },
+            {
+              content: '<b>1.25rem</b> <span class="font-size--xsmall">(22.5px)</span>',
+            },
+          ]
+        },
+        
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='h1'>.h1</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>2.48832rem</b> <span class="font-size--xsmall">(39.8131217956543px)</span>',
+            },
+            {
+              content: '<b>3.0517578125rem</b> <span class="font-size--xsmall">(54.931640625px)</span>',
+            },
+          ]
+        },
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='h2'>.h2</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>2.0736rem</b> <span class="font-size--xsmall">(33.1776008605957px)</span>',
+            },
+            {
+              content: '<b>2.44140625rem</b> <span class="font-size--xsmall">(43.9453125px)</span>',
+            },
+          ]
+        },
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='h3'>.h3</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>1.728rem</b> <span class="font-size--xsmall">(27.648000717163086px)</span>',
+            },
+            {
+              content: '<b>1.953125rem</b> <span class="font-size--xsmall">(35.15625px)</span>',
+            },
+          ]
+        },
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='h4'>.h4</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>1.44rem</b> <span class="font-size--xsmall">(23.040000915527344px)</span>',
+            },
+            {
+              content: '<b>1.5625rem</b> <span class="font-size--xsmall">(28.125px)</span>',
+            },
+          ]
+        },
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='h5'>.h5</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>1.2rem</b> <span class="font-size--xsmall">(19.200000762939453px)</span>',
+            },
+            {
+              content: '<b>1.25rem</b> <span class="font-size--xsmall">(22.5px)</span>',
+            },
+          ]
+        },
+        {
+          cells: [
+            {
+              element: 'th',
+              content: "<code class='h6'>.h6</code>",
+              attributes: {
+                scope: 'row'
+              }
+            },
+            {
+              content: '<b>1rem</b> <span class="font-size--xsmall">(16px)</span>',
+            },
+            {
+              content: '<b>1rem</b> <span class="font-size--xsmall">(18px)</span>',
+            },
+          ]
+        },
+      ]
+    }
+  ],
+}) }}

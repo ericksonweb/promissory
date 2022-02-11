@@ -1,0 +1,15 @@
+@use "../1_settings/breakpoints" as *;
+@use "../1_settings/spacing" as *;
+
+.o-switcher {
+  --breakpoint: #{map-get($breakpoints, min)};
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing--single + 0rem;
+  
+  > * {
+    display: flex;
+    min-width: clamp(0px, (var(--breakpoint) - 100%) * 1000, 100%);
+  }
+}

@@ -4,11 +4,11 @@
   box-shadow: none;
   border: none;
   background-color: transparent;
-  color: var(--esl-color-dark-grey);
+  color: var(--esl-color-charcoal);
 }
 .o-collapse__toggler.btn:hover {
   background-color: transparent;
-  color: var(--esl-color-dark-grey);
+  color: var(--esl-color-charcoal);
 }
 .o-collapse__toggler.btn:focus {
   box-shadow: none;

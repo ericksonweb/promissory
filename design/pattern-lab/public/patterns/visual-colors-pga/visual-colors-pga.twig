@@ -1,0 +1,254 @@
+{{ include ('@atoms/list.twig', {
+	items:
+		[
+      {
+        content:
+          include ('@molecules/card.twig', {
+            header: {
+              content:
+                include ('@atoms/heading.twig', {
+                  content: "PGA Blue",
+                  level: 5,
+                  attributes: {
+                    class: ['font-family--serif']
+                  }
+                })
+              ,
+            },
+            body: {
+              content:
+                include ('@atoms/paragraph.twig', {
+                  content: '<b>#00819e</b><br><code class="font-size--xsmall">var(--esl-color-pga-blue)</code>'
+                }) ~
+                include ('@atoms/table.twig', {
+                  body: [
+                    {
+                      rows: [
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Class</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            },
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Property</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>bg--pga-blue</code>"
+                            },
+                            {
+                              content: '<code>background-color</code> <span class="font-size--tiny">(also applies accessible </span><code>color</code><span class="font-size--tiny"> property)</span>'
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>color--pga-blue</code>"
+                            },
+                            {
+                              content: "<code>color</code>"
+                            }
+                          ]
+                        },
+                      ],
+                    }
+                  ],
+                  attributes: {
+                    class: ['font-size--xsmall', 'table--minimal']
+                  }
+                })
+              ,
+            },
+            attributes: {
+              class: ['bg--pga-blue']
+            },
+          }, with_context = false)
+        ,
+        attributes: {
+          class: ['col-md-6', 'col-xl-4']
+        }
+      },
+      {
+        content:
+          include ('@molecules/card.twig', {
+            header: {
+              content:
+                include ('@atoms/heading.twig', {
+                  content: "PGA Green",
+                  level: 5,
+                  attributes: {
+                    class: ['font-family--serif']
+                  }
+                })
+              ,
+            },
+            body: {
+              content:
+                include ('@atoms/paragraph.twig', {
+                  content: '<b>#6c7d31</b><br><code class="font-size--xsmall">var(--esl-color-pga-green)</code>'
+                }) ~
+                include ('@atoms/table.twig', {
+                  body: [
+                    {
+                      rows: [
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Class</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            },
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Property</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>bg--pga-green</code>"
+                            },
+                            {
+                              content: '<code>background-color</code> <span class="font-size--tiny">(also applies accessible </span><code>color</code><span class="font-size--tiny"> property)</span>'
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>color--pga-green</code>"
+                            },
+                            {
+                              content: "<code>color</code>"
+                            }
+                          ]
+                        },
+                      ],
+                    }
+                  ],
+                  attributes: {
+                    class: ['font-size--xsmall', 'table--minimal']
+                  }
+                })
+              ,
+            },
+            attributes: {
+              class: ['bg--pga-green']
+            },
+          }, with_context = false)
+        ,
+        attributes: {
+          class: ['col-md-6', 'col-xl-4']
+        }
+      },
+
+      {
+        content:
+          include ('@molecules/card.twig', {
+            header: {
+              content:
+                include ('@atoms/heading.twig', {
+                  content: "PGA Cream",
+                  level: 5,
+                  attributes: {
+                    class: ['font-family--serif']
+                  }
+                })
+              ,
+            },
+            body: {
+              content:
+                include ('@atoms/paragraph.twig', {
+                  content: '<b>#fbf7e8</b><br><code class="font-size--xsmall">var(--esl-color-pga-cream)</code>'
+                }) ~
+                include ('@atoms/table.twig', {
+                  body: [
+                    {
+                      rows: [
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Class</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            },
+                            {
+                              element: 'th',
+                              content: '<span class="font-size--tiny">CSS Property</span>',
+                              attributes: {
+                                class: ['subhead']
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>bg--pga-cream</code>"
+                            },
+                            {
+                              content: '<code>background-color</code> <span class="font-size--tiny">(also applies accessible </span><code>color</code><span class="font-size--tiny"> property)</span>'
+                            }
+                          ]
+                        },
+                        {
+                          cells: [
+                            {
+                              element: 'th',
+                              content: "<code>color--pga-cream</code>"
+                            },
+                            {
+                              content: "<code>color</code>"
+                            }
+                          ]
+                        },
+                      ],
+                    }
+                  ],
+                  attributes: {
+                    class: ['font-size--xsmall', 'table--minimal']
+                  }
+                })
+              ,
+            },
+            attributes: {
+              class: ['bg--pga-cream']
+            },
+          }, with_context = false)
+        ,
+        attributes: {
+          class: ['col-md-6', 'col-xl-4']
+        }
+      },
+		]
+	,
+  attributes: {
+    class: ['o-switcher', 'list--style-none', 'row'],
+    style: "gap: unset; row-gap: 1.5rem;"
+  }
+}, with_context = false) }}

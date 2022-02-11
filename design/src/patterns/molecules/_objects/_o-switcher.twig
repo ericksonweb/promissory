@@ -1,0 +1,24 @@
+{#
+/**
+ * 'Switcher' Object
+ * See: https://every-layout.dev/layouts/switcher/
+ * See: https://heydonworks.com/article/the-flexbox-holy-albatross-reincarnated/
+ */
+#}
+{% extends '@promissory/_macros/_element.twig' %}
+
+{% if not attributes is defined %}
+  {% set attributes = {
+    class: ['o-switcher']
+  } %}
+{% elseif attributes is defined and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: ['o-switcher']
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: ['o-switcher']|merge(attributes.class)
+  }) %}
+{% endif %}
+
+{% block content %}{{ content }}{% endblock content %}

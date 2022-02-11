@@ -1,23 +1,32 @@
 {% extends '@molecules/_o-collapse.twig' %}
 
-{% set menu_class = submenu ? 'menu__submenu' : 'menu' %}
+{% if submenu %}
+  {% set menu_class = ['menu__submenu'] %}
+{% else %}
+  {% set menu_class = ['menu'] %}
+  {% set menu_class = style.bar ? menu_class|merge(['menu--bar']) : menu_class %}
+{% endif %}
+
+{# set menu_class = submenu ? 'menu__submenu' : 'menu' #}
 
 {% if not attributes is defined %}
   {% set attributes = {
-    class: [menu_class, name]
+    class: menu_class|merge([name])
   } %}
 {% elseif attributes is defined and not attributes.class is defined %}
   {% set attributes = attributes|merge({
-    class: [menu_class, name]
+    class: menu_class|merge([name])
   }) %}
 {% else %}
   {% set attributes = attributes|merge({
-    class: [menu_class, name]|merge(attributes.class)
+    class: menu_class|merge([name])|merge(attributes.class)
   }) %}
 {% endif %}
 
 {% block content %}
-  {# Toggler #}
+  {##
+   # Toggler
+   #}
   {% block o_toggler %}
   
     {% set toggler = {
@@ -37,8 +46,10 @@
     {{ parent() }}
   {% endblock o_toggler %}
   
-  {# Content #}
-  {% block o_content %}
+  {##
+   # Content
+   #}
+  {% block o_collapse %}
     {% set content %}
       {% if submenu %}
         {{ include ('@atoms/list.twig', {
@@ -48,6 +59,8 @@
         {{ include ('@atoms/nav.twig', {
           list: {
             items: items,
+            horizontal: true,
+            separator: style.separator
           },
         }, with_context = false) }}
       {% endif %}
@@ -60,8 +73,8 @@
       }
     } %}
     
-    {% set content_classes = collapse.attributes.class %}    
+    {% set content_classes = collapse.attributes.class %}
   
     {{ parent() }}
-  {% endblock o_content %}
+  {% endblock o_collapse %}
 {% endblock %}

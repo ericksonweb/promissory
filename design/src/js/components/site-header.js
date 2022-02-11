@@ -1,28 +1,26 @@
-$(document).ready(function() {
-  let menu = document.querySelector('#site-header .menu');
-  let breakpoint = getComputedStyle(menu).getPropertyValue('--breakpoint');
-  
-  const moveContact = () => {
-    matchMedia('(max-width: ' + breakpoint + ')').addEventListener("change", moveContact, { once: true });
-    if (window.matchMedia('(max-width: ' + breakpoint + ')').matches) {
-      $('#site-header .site-header__contact').insertAfter('#site-header');
+$(document).ready(function () {
+  $('.site-header').each(function () {
+    const stickHeader = () => {
+      let stickyPos = parseInt($(this).css('top'));
+      if ($(this).offset().top - $(window).scrollTop() <= stickyPos) {
+        $(this).addClass('stuck');
+      } else {
+        $(this).removeClass('stuck');
+      }
     }
-    else {
-      $('#site-header + .site-header__contact').appendTo('#site-header');
+    $(document).scroll(stickHeader);
+    
+    let menu = $(this).children('.menu');
+    let breakpoint = menu.css('--breakpoint');
+    const moveAddl = () => {
+      matchMedia('(max-width: ' + breakpoint + ')').addEventListener("change", moveAddl, { once: true });
+      if (window.matchMedia('(max-width: ' + breakpoint + ')').matches) {
+        $(this).children('.site-header__addl').insertAfter($(this));
+      }
+      else {
+        $(this).next('.site-header__addl').appendTo($(this));
+      }
     }
-  }
-  
-  moveContact();
-  
-  let stickyHeader = parseInt($("#site-header").css('top'));
-  console.log(stickyHeader);
-  $(window).scroll(function() {
-    console.log((0 - $(window).scrollTop()));
-
-    if ((0 - $(window).scrollTop()) < stickyHeader) {
-      $('#site-header').addClass('stuck');
-    } else {
-      $('#site-header').removeClass('stuck');
-    }
-  });
+    moveAddl();
+  });  
 });

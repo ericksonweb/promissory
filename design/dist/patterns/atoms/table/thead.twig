@@ -12,9 +12,11 @@
   {% for row in rows %}
     {% set cells = [] %}
     {% for cell in row.cells %}
-      {% set cell = cell|merge({
-        element: 'th'
-      }) %}
+      {% if not cell.element is defined %}
+        {% set cell = cell|merge({
+          element: 'th'
+        }) %}
+      {% endif %}
       {% set cells = cells|merge([cell]) %}
     {% endfor %}
             

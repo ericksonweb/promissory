@@ -1,0 +1,52 @@
+{% set tabs = [
+  {
+    content:
+      include ('@atoms/link.twig', {
+        content: "Tab 1",
+        attributes: {
+          href: '#',
+          class: ['tabs__tab']
+        },
+      })
+    ,
+  },
+  {
+    content:
+      include ('@atoms/link.twig', {
+        content: "Tab 2",
+        attributes: {
+          href: '#',
+          class: ['tabs__tab']
+        },
+      })
+    ,
+  },
+  {
+    content:
+      include ('@atoms/link.twig', {
+        content: "Tab 3",
+        attributes: {
+          href: '#',
+          class: ['tabs__tab']
+        },
+      })
+    ,
+  },
+  {
+    content:
+      include ('@atoms/link.twig', {
+        content: "Tab 4",
+        attributes: {
+          href: '#',
+          class: ['tabs__tab']
+        },
+      })
+    ,
+  },
+] %}
+
+{{ include ('@molecules/tabs.twig', {
+  name: 'tabs-example',
+  title: "Choose a Tab",
+  items: tabs,
+}) }}

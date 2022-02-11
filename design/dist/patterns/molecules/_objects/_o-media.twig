@@ -1,0 +1,66 @@
+{% extends '@atoms/div.twig' %}
+
+{# Incorporate 'o-' classes into 'attributes' array. #}
+{% set o_classes = ['o-media'] %}
+
+{% if horizontal is defined and horizontal == true %}
+  {% set o_classes = o_classes|merge(['o-media--horizontal']) %}
+{% endif %}
+
+{% if attributes is empty %}
+  {% set attributes = {
+    class: o_classes
+  } %}
+{% elseif not attributes is empty and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    class: o_classes
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    class: attributes.class|merge(o_classes)
+  }) %}
+{% endif %}
+
+{% block content %}
+
+  {# Media #}
+  {% block o_media %}
+    {% set o_media_classes = ['o-media__media'] %}
+    {% if media.flush == true %}
+      {% set o_media_classes = o_media_classes|merge(['o-media__media--flush']) %}
+    {% endif %}
+  
+    {% if media_classes is empty %}
+      {% set media_classes = o_media_classes %}
+    {% else %}
+      {% set media_classes = media_classes|merge(o_media_classes) %}
+    {% endif %}
+  
+    {{ include ('@atoms/div.twig', {
+      content: media.item,
+      attributes: {
+        class: media_classes
+      }
+    }, with_context = false) }}
+  {% endblock o_media %}
+  
+  {# Content #}
+  {% block o_content %}
+    {% if not content is empty %}      
+      {% set o_content_classes = ['o-media__content'] %}
+    
+      {% if content_classes is empty %}
+        {% set content_classes = o_content_classes %}
+      {% else %}
+        {% set content_classes = content_classes|merge(o_content_classes) %}
+      {% endif %}
+    
+      {{ include ('@atoms/div.twig', {
+        content: content,
+        attributes: {
+          class: content_classes
+        }
+      }, with_context = false) }}
+    {% endif %}
+  {% endblock o_content %}
+{% endblock content %}

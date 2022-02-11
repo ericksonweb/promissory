@@ -4,7 +4,7 @@
   width: 100%;
   flex-wrap: wrap;
   border: 1px solid;
-  border-color: var(--esl-color-light-grey);
+  border-color: var(--esl-color-medium-grey);
 }
 .card__media, .card__content > * {
   padding: 0.75rem;
@@ -14,9 +14,9 @@
 }
 .card__content {
   flex: 10;
-  display: flex;
   flex-wrap: wrap;
   align-items: center;
+  max-width: 100%;
 }
 .card__body {
   min-width: 20ch;
@@ -59,7 +59,7 @@
 }
 .card--dark {
   border-color: transparent;
-  background-color: var(--esl-color-xlight-grey);
+  background-color: var(--esl-color-light-grey);
   transition: ease-in-out 0.15s;
   transition-property: background-color;
 }
@@ -71,5 +71,6 @@
   flex-grow: 1;
 }
 .card--horizontal .card__content {
+  display: flex;
   flex: 10000;
 }

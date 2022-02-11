@@ -18,11 +18,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@pattern-lab/cli": "^5.15.0",
-    "@pattern-lab/core": "^5.15.0",
-    "@pattern-lab/engine-twig-php": "^5.15.0",
-    "@pattern-lab/starterkit-twig-demo": "^5.14.2",
-    "@pattern-lab/uikit-workshop": "^5.15.0",
-    "jquery": "^3.6.0"
+    "@ericksonweb/uikit-promissory": "file:source/_uikit",
+    "@pattern-lab/cli": "^5.15.5",
+    "@pattern-lab/core": "^5.15.5",
+    "@pattern-lab/engine-twig-php": "^5.15.5",
+    "@pattern-lab/uikit-bare": "0.0.1",
+    "@pattern-lab/uikit-workshop": "^5.15.7"
   }
 }
