@@ -10,10 +10,10 @@
 }
 @media all and (min-width: 768px) {
   .menu {
-    font-size: calc(1rem + ((1vw - 7.68px) * 0.7518796992));
+    font-size: calc(1rem + ((1vw - 7.68px) * 0.6329113924));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .menu {
     font-size: 1.25rem;
   }

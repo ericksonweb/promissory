@@ -15,7 +15,7 @@ a {
   transition-property: outline-color, color, text-decoration-color;
   
   &:hover {
-    color: var(--color-accent);
+    color: var(--color-tertiary);
   }
   
   &:focus {
@@ -23,7 +23,7 @@ a {
   }
   
   &:active {
-    color: var(--esl-color-charcoal);
+    color: currentcolor;
   }
 }
 
@@ -64,18 +64,33 @@ li:not(:last-child) {
   margin-bottom: $spacing--single + 0rem;
 }
 
-li > {
-  ol,
-  ul {
-    margin-top: $spacing--single + 0rem;
-  }
-}
-
 figure {}
 figure img {
   display: block;
 }
 figcaption {
   padding: $spacing--half + 0rem $spacing--1qtr + 0rem;
-  color: var(--esl-color-dark-grey);
+  color: currentcolor;
+}
+
+hr {
+  position: relative;
+  height: 1px;
+  border: none;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    border-top: 1px solid currentcolor;
+    opacity: 0.1;
+  }
+}
+
+li > {
+  ol,
+  ul {
+    margin-top: $spacing--single + 0rem;
+  }
 }

@@ -96,32 +96,17 @@
   }) }}
 {% endset %}
 
-{# Establish control 'name' attribute if not defined (required for validation). #}
-{% if control.attributes is empty %}
-  {% set control = control|merge({
-    attributes: {
-      name: 'field'
-    }
-  }) %}
-{% elseif not control.attributes is empty and not control.attributes.name is defined %}
-  {% if control.attributes.id is defined %}
-    {% set control = control|merge({
-      attributes: control.attributes|merge({
-        name: control.attributes.id
-      })
-    }) %}
-  {% else %}
-    {% set control = control|merge({
-      attributes: control.attributes|merge({
-        name: 'field'
-      })
-    }) %}
-  {% endif %}
-{% endif %}
-
 {# Render the control. #}
 {% set control %}
-  {% if control.element == 'input' %}
+  {% if control.element == 'button' %}
+    {{ include ('@atoms/button.twig', {
+      content: control.content,
+      icon: control.icon,
+      wide: control.wide,
+      large: control.large,
+      attributes: control.attributes
+    }) }}
+  {% elseif control.element == 'input' %}
     {{ include ('@atoms/input.twig', {
       attributes: control.attributes
     }) }}

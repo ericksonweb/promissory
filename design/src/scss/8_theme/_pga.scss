@@ -1,10 +1,10 @@
 @use "sass:color";
 @use "../1_settings/colors";
 
-body.t-pga {
+.t-pga {
   --color-primary: var(--esl-color-pga-blue);
   --color-secondary: var(--esl-color-pga-green);
-  --color-accent: var(--esl-color-pga-cream);
+  --color-tertiary: var(--esl-color-pga-cream);
   
   a {
     &:hover {
@@ -25,6 +25,10 @@ body.t-pga {
     &:hover {
       border-color: var(--color-secondary);
       color: var(--color-secondary);
+    }
+    &:active {
+      border-color: transparent;
+      color: var(--esl-color-white);
     }
   }
   
@@ -67,7 +71,7 @@ body.t-pga {
         border-color: var(--color-secondary);
         
         & ~ .card__content .btn {
-          background-color: var(--color-accent);
+          background-color: var(--color-tertiary);
           border-color: var(--color-secondary);
           color: var(--color-secondary);
         }

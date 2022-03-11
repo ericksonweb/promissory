@@ -14,7 +14,7 @@
     list-style: none;
     max-width: map-get($breakpoints, 'max');
     margin: 0 auto;
-    padding: $spacing--half + 0rem;
+    padding: $spacing--half + 0rem $spacing--single + 0rem;
     
     > li {
       margin: 0;
@@ -44,20 +44,6 @@
           color: var(--color-primary);
         }
       }
-      
-      /*
-      + li {
-        &::before {
-          content: '\f054';
-          margin-right: $spacing--half + 0rem;
-          font-family: "Font Awesome 5 Pro";
-          @include font-size.tiny;
-          font-weight: 400;
-          color: var(--color-primary);
-          vertical-align: middle;
-        }
-      }
-      */
     }
   }
 }

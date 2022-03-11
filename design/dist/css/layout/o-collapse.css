@@ -1,15 +1,21 @@
 .o-collapse__toggler.btn {
-  padding: 0;
+  padding: 0.375rem 0.75rem;
   line-height: inherit;
   box-shadow: none;
   border: none;
   background-color: transparent;
-  color: var(--esl-color-charcoal);
+  color: currentcolor;
 }
 .o-collapse__toggler.btn:hover {
   background-color: transparent;
-  color: var(--esl-color-charcoal);
+  color: var(--color-secondary);
 }
 .o-collapse__toggler.btn:focus {
   box-shadow: none;
+}
+.o-collapse__toggler.btn[aria-expanded=false] .icon::before {
+  content: "\f107";
+}
+.o-collapse__toggler.btn[aria-expanded=true] .icon::before {
+  content: "\f106";
 }

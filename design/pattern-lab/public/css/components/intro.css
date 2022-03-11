@@ -10,7 +10,7 @@
   flex-grow: 10000;
   width: 100%;
   word-break: break-word;
-  margin-right: max(0px, (100% - 1300px) / 2);
+  margin-right: max(0px, (100% - 1700px) / 2);
   margin-left: 0;
 }
 .intro__body {
@@ -21,7 +21,7 @@
 }
 .intro--reversed .intro__content {
   margin-right: 0;
-  margin-left: max(0px, (100% - 1300px) / 2);
+  margin-left: max(0px, (100% - 1700px) / 2);
 }
 .intro--dark {
   background-color: var(--esl-color-light-grey);

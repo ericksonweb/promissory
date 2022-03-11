@@ -62,11 +62,11 @@ code {
   font-family: monospace, monospace;
   font-size: 1em;
   font-weight: normal;
+  white-space: nowrap;
 }
 
 table {
   border-collapse: collapse;
-  width: 100%;
   margin: 0;
   padding: 0;
 }

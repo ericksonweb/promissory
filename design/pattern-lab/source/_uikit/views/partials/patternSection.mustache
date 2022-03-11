@@ -1,47 +1,72 @@
 <div id="{{ patternPartial }}" class="pl-c-pattern">
 
 	<div class="pl-c-pattern__header">
-
-		<h3 class="pl-c-pattern__title">
-
-			<a href="../../patterns/{{ patternLink }}" class="pl-c-pattern__title-link patternLink" data-patternpartial="{{ patternPartial }}" title="Link to Pattern">
-				{{ patternName }}
-
-				{{# patternState }}
-				<span class="pl-c-pattern-state pl-c-pattern-state--{{ patternState }}" title="{{ patternState }}"></span>
-				{{/ patternState }}
-
-			</a><!--end pl-c-pattern__title-link-->
-
+		<h3 class="pl-c-pattern__title h5">
+			{{ patternName }}
+			
+			{{# patternState }}
+			<span class="pl-c-pattern-state pl-c-pattern-state--{{ patternState }}" title="{{ patternState }}"></span>
+			{{/ patternState }}
 		</h3><!--end pl-c-pattern__title-->
-
-		<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-{{ patternPartial }}" data-patternpartial="{{ patternPartial }}" title="View Pattern Info">
-			<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
-			<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
-			<div class="pl-c-pattern__toggle-icon-wrapper" aria-hidden="true">
-				<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
-					<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
-					<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
-				</svg>
-
-				<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
-					<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
-					<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
-					<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
-				</svg>
-			</div>
-		</button>
-
+		
+		{{# patternDescExists }}
+    	{{{ patternDesc }}}
+			{{# patternDescAdditions }}
+			{{{ patternDescAdditions }}}
+    	{{/ patternDescAdditions }}
+  	{{/ patternDescExists }}
+		
+		{{# annotationExists }}
+  	<div class="pl-c-annotations pl-c-text-passage pl-js-annotations">
+    	<h2 class="pl-c-annotations__title">Annotations</h2>
+    	<ol class="pl-c-annotations__list">
+      	{{# annotations }}
+      	<li class="pl-c-annotations__item">
+        	<h3 class="pl-c-annotations__item-title">{{ title }}</h3>
+	
+        	<div class="pl-c-annotations__item-body">{{{ comment }}}</div>
+        	<!--end pl-c-annotations__item-body-->
+      	</li>
+      	<!--end pl-c-annotations__item-->
+      	{{/ annotations }}
+    	</ol>
+    	<!--end pl-c-annotations__list-->
+  	</div>
+  	<!--end pl-c-annotations-->
+  	{{/ annotationExists }}
+		
 	</div><!--end pl-c-pattern__header-->
-
-	<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-{{ patternPartial }}"></div><!--end pl-c-pattern__extra-->
-
-	<div class="pl-js-pattern-example">
+	
+	<div class="o-collapse pl-c-pattern__extra">
+		<button class="btn o-collapse__toggler pl-c-pattern__extra__toggler pl-c-pattern__extra--{{ patternPartial }}__toggler pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-{{ patternPartial }}" aria-expanded="false" aria-controls="pl-c-pattern__extra--{{ patternPartial }}__collapse" data-bs-toggle="collapse" data-bs-target="#pl-c-pattern__extra--{{ patternPartial }}__collapse" data-patternpartial="{{ patternPartial }}"><span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Show</span><span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Hide</span> Code<span class="icon icon--after fa-fw fas fa-blank"></span></button>
+		<div class="o-collapse__content collapse pl-c-pattern__extra__content pl-c-pattern__extra--{{ patternPartial }}__content" id="pl-c-pattern__extra--{{ patternPartial }}__collapse">
+			<div class="o-collapse__body">
+				<div class="pl-js-pattern-extra" id="pl-pattern-extra-{{ patternPartial }}"></div><!--end pl-c-pattern__extra-->
+			</div>
+		</div>
+	</div>
+	
+	<div class="pl-c-pattern__example pl-js-pattern-example">
 	{{{ patternPartialCode }}}
 	</div><!--end pl-js-pattern-example-->
 
 	<script type="text/json" id="pl-pattern-data-{{patternPartial}}" class="pl-js-pattern-data">
 	{{{ patternData }}}
 	</script>
-
+	
+	<script>
+		var data = JSON.parse($("#pl-pattern-data-{{patternPartial}}").html());
+		if (data.extraOutput.flush) {
+			$('#{{ patternPartial }} .pl-c-pattern__example').addClass('pl-c-pattern__example--flush');
+		}
+		if (data.extraOutput.hideCode) {
+			$('#{{ patternPartial }} .pl-c-pattern__extra').remove();
+		}
+		$( document ).ready(function() {
+			if ($('.pl-c-pattern__title').length == 1) {
+				$('.pl-c-pattern__title').remove();
+			}
+		});
+	</script>
+	
 </div><!--end pl-c-pattern-->

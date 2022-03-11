@@ -75,8 +75,14 @@ $breakpoint: map-get($breakpoints, sm);
     transition-property: background-color, color;
     
     &:hover {
-      background-color: var(--color-accent);
+      background-color: var(--color-tertiary);
       color: var(--esl-color-white);
+    }
+    
+    &:active,
+    &[class*="active"] {
+      background-color: var(--esl-color-white);
+      color: var(--color-primary);
     }
   }
 }

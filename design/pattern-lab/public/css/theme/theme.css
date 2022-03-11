@@ -8,7 +8,7 @@
 .esl-accent::after {
   content: "";
   position: absolute;
-  bottom: -1.6875rem;
+  bottom: -1.5rem;
   left: 0;
   width: 100px;
   border-bottom: 0.375rem solid var(--color-secondary);
@@ -27,45 +27,54 @@
   border: 0.375rem solid rgba(237, 237, 238, 0.7);
 }
 
-body.t-pga {
+.t-pga {
   --color-primary: var(--esl-color-pga-blue);
   --color-secondary: var(--esl-color-pga-green);
-  --color-accent: var(--esl-color-pga-cream);
+  --color-tertiary: var(--esl-color-pga-cream);
 }
-body.t-pga a:hover {
+.t-pga a:hover {
   color: var(--color-secondary);
 }
-body.t-pga a:not(.btn):hover [class*=icon--shape] {
+.t-pga a:not(.btn):hover [class*=icon--shape] {
   background-color: var(--color-primary);
 }
-body.t-pga button:not(.btn):hover,
-body.t-pga input[type=button]:not(.btn):hover,
-body.t-pga input[type=file]::file-selector-button:hover,
-body.t-pga input[type=reset]:not(.btn):hover,
-body.t-pga input[type=submit]:not(.btn):hover,
-body.t-pga .btn:hover {
+.t-pga button:not(.btn):hover,
+.t-pga input[type=button]:not(.btn):hover,
+.t-pga input[type=file]::file-selector-button:hover,
+.t-pga input[type=reset]:not(.btn):hover,
+.t-pga input[type=submit]:not(.btn):hover,
+.t-pga .btn:hover {
   border-color: var(--color-secondary);
   color: var(--color-secondary);
 }
-body.t-pga input:focus,
-body.t-pga select:focus,
-body.t-pga textarea:focus {
+.t-pga button:not(.btn):active,
+.t-pga input[type=button]:not(.btn):active,
+.t-pga input[type=file]::file-selector-button:active,
+.t-pga input[type=reset]:not(.btn):active,
+.t-pga input[type=submit]:not(.btn):active,
+.t-pga .btn:active {
+  border-color: transparent;
+  color: var(--esl-color-white);
+}
+.t-pga input:focus,
+.t-pga select:focus,
+.t-pga textarea:focus {
   outline-color: rgba(0, 129, 158, 0.25);
 }
-body.t-pga input::-webkit-datetime-edit-year-field:focus, body.t-pga input::-webkit-datetime-edit-month-field:focus, body.t-pga input::-webkit-datetime-edit-week-field:focus, body.t-pga input::-webkit-datetime-edit-day-field:focus, body.t-pga input::-webkit-datetime-edit-hour-field:focus, body.t-pga input::-webkit-datetime-edit-minute-field:focus, body.t-pga input::-webkit-datetime-edit-second-field:focus, body.t-pga input::-webkit-datetime-edit-millisecond-field:focus, body.t-pga input::-webkit-datetime-edit-ampm-field:focus, body.t-pga input::-webkit-datetime-edit-meridiem-field:focus {
+.t-pga input::-webkit-datetime-edit-year-field:focus, .t-pga input::-webkit-datetime-edit-month-field:focus, .t-pga input::-webkit-datetime-edit-week-field:focus, .t-pga input::-webkit-datetime-edit-day-field:focus, .t-pga input::-webkit-datetime-edit-hour-field:focus, .t-pga input::-webkit-datetime-edit-minute-field:focus, .t-pga input::-webkit-datetime-edit-second-field:focus, .t-pga input::-webkit-datetime-edit-millisecond-field:focus, .t-pga input::-webkit-datetime-edit-ampm-field:focus, .t-pga input::-webkit-datetime-edit-meridiem-field:focus {
   background-color: rgba(108, 125, 49, 0.25);
 }
-body.t-pga .dropdown-item.active, body.t-pga .dropdown-item:active {
+.t-pga .dropdown-item.active, .t-pga .dropdown-item:active {
   background-color: rgba(108, 125, 49, 0.25);
 }
-body.t-pga .card__link:hover {
+.t-pga .card__link:hover {
   border-color: var(--color-secondary);
 }
-body.t-pga .card__link:hover ~ .card__content .btn {
-  background-color: var(--color-accent);
+.t-pga .card__link:hover ~ .card__content .btn {
+  background-color: var(--color-tertiary);
   border-color: var(--color-secondary);
   color: var(--color-secondary);
 }
-body.t-pga .mark-required::before {
+.t-pga .mark-required::before {
   color: var(--color-primary);
 }

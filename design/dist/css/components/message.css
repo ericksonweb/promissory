@@ -8,10 +8,10 @@
 }
 @media all and (min-width: 768px) {
   .message {
-    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.0554698892));
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.046693008));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .message {
     font-size: 0.894427191rem;
   }

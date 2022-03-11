@@ -123,11 +123,11 @@
     
     {% set toggler %}
       {% set toggler_content %}
-        {% if toggler.element is empty or toggler.element == 'button' %}
+        {%- if toggler.element is empty or toggler.element == 'button' -%}
           {{ include ('@atoms/button.twig', toggler, with_context = false) }}
-        {% elseif toggler.element == 'a' %}
+        {%- elseif toggler.element == 'a' -%}
           {{ include ('@atoms/link.twig', toggler, with_context = false) }}
-        {% endif %}
+        {%- endif -%}
       {% endset %}
       
       {% if toggler.heading is defined %}

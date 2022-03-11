@@ -1,17 +1,31 @@
+@use "../1_settings/spacing" as *;
+
 .o-collapse__toggler.btn {
-  padding: 0;
+  padding: $spacing--1qtr + 0rem $spacing--half + 0rem;
   line-height: inherit;
   box-shadow: none;
   border: none;
   background-color: transparent;
-  color: var(--esl-color-charcoal);
+  color: currentcolor;
   
   &:hover {
     background-color: transparent;
-    color: var(--esl-color-charcoal);
+    color: var(--color-secondary);
   }
   
   &:focus {
     box-shadow: none;
+  }
+  
+  &[aria-expanded="false"] {
+    & .icon::before {
+      content: '\f107';
+    }
+  }
+  
+  &[aria-expanded="true"] {
+    & .icon::before {
+      content: '\f106';
+    }
   }
 }

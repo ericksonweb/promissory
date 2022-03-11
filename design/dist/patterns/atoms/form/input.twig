@@ -11,6 +11,23 @@
 {% else %}
   {% set button = false %}
   
+  {# Establish control 'name' attribute if not defined (required for validation). #}
+  {% if attributes is empty %}
+    {% set attributes = {
+      name: 'field'
+    } %}
+  {% elseif not attributes is empty and not attributes.name is defined %}
+    {% if attributes.id is defined %}
+      {% set attributes = attributes|merge({
+        name: attributes.id
+      }) %}
+    {% else %}
+      {% set attributes = attributes|merge({
+        name: 'field'
+      }) %}
+    {% endif %}
+  {% endif %}
+  
   {# Check for and optionally set placeholder text where applicable #}
   {% if attributes.type in ['email', 'password', 'search', 'tel', 'text', 'url'] %}
     {% if not attributes is defined %}

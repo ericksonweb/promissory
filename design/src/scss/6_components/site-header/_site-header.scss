@@ -9,6 +9,7 @@
 .site-header {
   position: sticky;
   top: 0;
+  z-index: 1;
   display: grid;
   grid-template-columns: calc((100vw - #{map-get($breakpoints, max)}) / 2) minmax(140px, 30%) auto calc((100vw - #{map-get($breakpoints, max)}) / 2);
   grid-template-rows: minmax(0, 1fr);
@@ -29,7 +30,9 @@
   &__logo {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px;
+    max-height: 120px;
   }
   
   &__menu {
@@ -95,7 +98,6 @@
     &__logo {
       grid-row-end: 3;
       align-self: center;
-      max-height: 100%;
     }
     
     &__menu {

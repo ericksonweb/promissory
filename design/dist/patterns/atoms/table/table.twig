@@ -8,6 +8,20 @@
 {# Establish HTML element #}
 {% set element = 'table' %}
 
+{% if not attributes is defined %}
+  {% set attributes = {
+    role: "table"
+  } %}
+{% elseif attributes is defined and not attributes.class is defined %}
+  {% set attributes = attributes|merge({
+    role: "table"
+  }) %}
+{% else %}
+  {% set attributes = attributes|merge({
+    role: "table"
+  }) %}
+{% endif %}
+
 {% set content %}
   {% if caption %}
     {{ include ('@atoms/table/caption.twig', {
