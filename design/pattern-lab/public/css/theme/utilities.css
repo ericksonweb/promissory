@@ -49,11 +49,13 @@
 }
 
 .bg--black {
+  --color-primary: var(--color-secondary);
   background-color: var(--esl-color-black);
   color: var(--esl-color-white);
 }
 
 .bg--charcoal {
+  --color-primary: var(--color-secondary);
   background-color: var(--esl-color-charcoal);
   color: var(--esl-color-white);
 }
@@ -85,14 +87,6 @@
   color: var(--esl-color-white);
 }
 
-.d-block {
-  display: block;
-}
-
-.d-none {
-  display: none;
-}
-
 .font-family--serif {
   font-family: var(--esl-font-serif);
 }
@@ -106,10 +100,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--tiny {
-    font-size: calc(0.6944444444rem + ((1vw - 7.68px) * -0.1637426901));
+    font-size: calc(0.6944444444rem + ((1vw - 7.68px) * -0.1378340366));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .font-size--tiny {
     font-size: 0.64rem;
   }
@@ -120,10 +114,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--tiny-start {
-    font-size: calc(0.6944444444rem + ((1vw - 7.68px) * 0.9189640769));
+    font-size: calc(0.6944444444rem + ((1vw - 7.68px) * 0.7735583685));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .font-size--tiny-start {
     font-size: 1rem;
   }
@@ -134,10 +128,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--tiny-end {
-    font-size: calc(1rem + ((1vw - 7.68px) * -1.0827067669));
+    font-size: calc(1rem + ((1vw - 7.68px) * -0.9113924051));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .font-size--tiny-end {
     font-size: 0.64rem;
   }
@@ -148,10 +142,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--xsmall {
-    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * -0.1002506266));
+    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * -0.0843881857));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .font-size--xsmall {
     font-size: 0.8rem;
   }
@@ -162,10 +156,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--xsmall-start {
-    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * 0.5012531328));
+    font-size: calc(0.8333333333rem + ((1vw - 7.68px) * 0.4219409283));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .font-size--xsmall-start {
     font-size: 1rem;
   }
@@ -176,10 +170,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--xsmall-end {
-    font-size: calc(1rem + ((1vw - 7.68px) * -0.6015037594));
+    font-size: calc(1rem + ((1vw - 7.68px) * -0.5063291139));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .font-size--xsmall-end {
     font-size: 0.8rem;
   }
@@ -190,10 +184,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--small {
-    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.0554698892));
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.046693008));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .font-size--small {
     font-size: 0.894427191rem;
   }
@@ -204,10 +198,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--small-start {
-    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * 0.2620423183));
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * 0.2205799261));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .font-size--small-start {
     font-size: 1rem;
   }
@@ -218,10 +212,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--small-end {
-    font-size: calc(1rem + ((1vw - 7.68px) * -0.3175122075));
+    font-size: calc(1rem + ((1vw - 7.68px) * -0.2672729342));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .font-size--small-end {
     font-size: 0.894427191rem;
   }
@@ -232,10 +226,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--large {
-    font-size: calc(1.2rem + ((1vw - 7.68px) * 0.1503759398));
+    font-size: calc(1.2rem + ((1vw - 7.68px) * 0.1265822785));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .font-size--large {
     font-size: 1.25rem;
   }
@@ -246,10 +240,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--large-start {
-    font-size: calc(1.2rem + ((1vw - 7.68px) * -0.6015037594));
+    font-size: calc(1.2rem + ((1vw - 7.68px) * -0.5063291139));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .font-size--large-start {
     font-size: 1rem;
   }
@@ -260,10 +254,10 @@
 }
 @media all and (min-width: 768px) {
   .font-size--large-end {
-    font-size: calc(1rem + ((1vw - 7.68px) * 0.7518796992));
+    font-size: calc(1rem + ((1vw - 7.68px) * 0.6329113924));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .font-size--large-end {
     font-size: 1.25rem;
   }
@@ -278,10 +272,10 @@
 }
 @media all and (min-width: 768px) {
   .h1 {
-    font-size: calc(2.48832rem + ((1vw - 7.68px) * 1.694549812));
+    font-size: calc(2.48832rem + ((1vw - 7.68px) * 1.4264248418));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .h1 {
     font-size: 3.0517578125rem;
   }
@@ -296,10 +290,10 @@
 }
 @media all and (min-width: 768px) {
   .h2 {
-    font-size: calc(2.0736rem + ((1vw - 7.68px) * 1.1061842105));
+    font-size: calc(2.0736rem + ((1vw - 7.68px) * 0.9311550633));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .h2 {
     font-size: 2.44140625rem;
   }
@@ -313,10 +307,10 @@
 }
 @media all and (min-width: 768px) {
   .h3 {
-    font-size: calc(1.728rem + ((1vw - 7.68px) * 0.6770676692));
+    font-size: calc(1.728rem + ((1vw - 7.68px) * 0.5699367089));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .h3 {
     font-size: 1.953125rem;
   }
@@ -330,10 +324,10 @@
 }
 @media all and (min-width: 768px) {
   .h4 {
-    font-size: calc(1.44rem + ((1vw - 7.68px) * 0.3684210526));
+    font-size: calc(1.44rem + ((1vw - 7.68px) * 0.3101265823));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .h4 {
     font-size: 1.5625rem;
   }
@@ -347,10 +341,10 @@
 }
 @media all and (min-width: 768px) {
   .h5 {
-    font-size: calc(1.2rem + ((1vw - 7.68px) * 0.1503759398));
+    font-size: calc(1.2rem + ((1vw - 7.68px) * 0.1265822785));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .h5 {
     font-size: 1.25rem;
   }
@@ -364,8 +358,12 @@
   font-weight: normal;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1, .h2 {
   font-weight: 500;
+}
+
+.h3, .h4, .h5, .h6 {
+  font-weight: bold;
 }
 
 .list--style-none {

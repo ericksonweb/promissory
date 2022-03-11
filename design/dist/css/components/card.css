@@ -40,11 +40,11 @@
   transition-property: box-shadow, background-color, border-color;
 }
 .card__link:hover {
-  border-color: var(--esl-color-aqua-blue);
+  border-color: var(--color-tertiary);
   box-shadow: 0 0 0.75rem rgba(33, 37, 41, 0.25);
 }
 .card__link:hover ~ .card__content .btn {
-  background-color: var(--esl-color-aqua-blue);
+  background-color: var(--color-tertiary);
   color: var(--esl-color-white);
 }
 .card__link ~ .card__content {

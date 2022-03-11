@@ -73,28 +73,28 @@
 {% endif %}
 
 {% block content %}
-  {% if logo is defined %}
-    {{ include ('@atoms/link.twig', {
+  {%- if logo is defined -%}
+    {{- include ('@atoms/link.twig', {
       content: logo.content,
       attributes: logo.attributes
-    }, with_context = false) }}
-  {% endif %}
+    }, with_context = false) -}}
+  {%- endif -%}
   
-  {% if menu is defined %}
-    {{ include ('@molecules/menu.twig', {
+  {%- if menu is defined -%}
+    {{- include ('@molecules/menu.twig', {
       name: menu.content.name,
       items: menu.content.items,
       style: menu.content.style,
       attributes: menu.content.attributes
-    }, with_context = false) }}
-  {% endif %}
+    }, with_context = false) -}}
+  {%- endif -%}
   
-  {% if addl is defined %}
-    {{ include ('@atoms/div.twig', {
+  {%- if addl is defined -%}
+    {{- include ('@atoms/div.twig', {
       content: addl.content,
       attributes: {
         class: ['site-header__addl']
       }
-    }, with_context = false) }}
-  {% endif %}
+    }, with_context = false) -}}
+  {%- endif -%}
 {% endblock content %}

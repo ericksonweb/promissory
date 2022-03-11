@@ -9,22 +9,15 @@
 * 2) The category contains a title and optional description
 */
 .pl-c-category {
-  margin-top: 6rem;
-  font-family: $pl-font !important;
-
-  &:first-of-type {
-    margin-top: 2rem;
-  }
-
-  & + & {
-    margin-top: 2rem;
-  }
+  padding: 1.5rem;
+  border-bottom: 0.375rem solid var(--esl-color-dark-grey);
 }
 
 /**
 * Pattern Category Title
 */
 .pl-c-category__title {
+  /*
   font-size: 1.4rem !important;
   color: $pl-color-gray-87 !important;
   margin: 0 0 0.2rem;
@@ -33,6 +26,7 @@
   &:hover {
     color: $pl-color-gray-70 !important;
   }
+  */
 }
 
 /**

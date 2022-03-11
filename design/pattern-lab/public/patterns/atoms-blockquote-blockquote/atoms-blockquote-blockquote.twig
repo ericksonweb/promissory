@@ -1,3 +1,5 @@
 {{ include ('@atoms/blockquote.twig', {
-  content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur gravida vitae dolor sit amet porttitor.</p>',
+  content:
+    include ('@atoms/paragraph.twig')
+  ,
 }) }}

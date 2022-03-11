@@ -1,8 +1,9 @@
 .site-header {
   position: sticky;
   top: 0;
+  z-index: 1;
   display: grid;
-  grid-template-columns: calc((100vw - 1300px) / 2) minmax(140px, 30%) auto calc((100vw - 1300px) / 2);
+  grid-template-columns: calc((100vw - 1700px) / 2) minmax(140px, 30%) auto calc((100vw - 1700px) / 2);
   grid-template-rows: minmax(0, 1fr);
   column-gap: 0.75rem;
   row-gap: 0.375rem;
@@ -19,7 +20,9 @@
 .site-header__logo {
   grid-column: 2/3;
   grid-row: 1/2;
-  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
+  max-height: 120px;
 }
 .site-header__menu {
   position: static;
@@ -73,7 +76,6 @@
   .site-header__logo {
     grid-row-end: 3;
     align-self: center;
-    max-height: 100%;
   }
   .site-header__menu {
     grid-column: 1/5;
@@ -100,7 +102,7 @@
     margin-top: 0;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1400px) {
   .site-header {
     top: -1.875rem;
   }
@@ -116,31 +118,31 @@
     font-size: 0.9128709292rem;
   }
 }
-@media (min-width: 1024px) and (min-width: 768px) {
+@media (min-width: 1400px) and (min-width: 768px) {
   .site-header.stuck {
-    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.0554698892));
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.046693008));
   }
 }
-@media (min-width: 1024px) and (min-width: 1300px) {
+@media (min-width: 1400px) and (min-width: 1400px) {
   .site-header.stuck {
     font-size: 0.894427191rem;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1400px) {
   .site-header.stuck .site-header__logo {
     grid-column: 2/3;
     grid-row: 1/1;
     margin: 1.125rem 0;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1400px) {
   .site-header.stuck .site-header__menu,
 .site-header.stuck .site-header__addl {
     align-self: center;
     font-size: inherit;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1400px) {
   .site-header.stuck .site-header__menu {
     grid-column: 4/5;
     grid-row: 1/1;
@@ -150,7 +152,7 @@
     font-size: inherit;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1400px) {
   .site-header.stuck .site-header__addl {
     grid-column: 3/4;
     grid-row: 1/1;
@@ -159,7 +161,7 @@
     margin: 0;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1400px) {
   .site-header.stuck .site-header__contact {
     font-size: inherit;
   }

@@ -8,10 +8,10 @@
 }
 @media all and (min-width: 768px) {
   .breadcrumb {
-    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.0554698892));
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.046693008));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .breadcrumb {
     font-size: 0.894427191rem;
   }
@@ -20,25 +20,12 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  max-width: 1300px;
+  max-width: 1700px;
   margin: 0 auto;
-  padding: 0.75rem;
+  padding: 0.75rem 1.5rem;
 }
 .breadcrumb > ol > li {
   margin: 0;
-  /*
-  + li {
-    &::before {
-      content: '\f054';
-      margin-right: $spacing--half + 0rem;
-      font-family: "Font Awesome 5 Pro";
-      @include font-size.tiny;
-      font-weight: 400;
-      color: var(--color-primary);
-      vertical-align: middle;
-    }
-  }
-  */
 }
 .breadcrumb > ol > li:not(:last-child) {
   margin: 0 0.75rem 0 0;
@@ -56,10 +43,10 @@
 }
 @media all and (min-width: 768px) {
   .breadcrumb > ol > li:not(:last-child)::after {
-    font-size: calc(0.6944444444rem + ((1vw - 7.68px) * -0.1637426901));
+    font-size: calc(0.6944444444rem + ((1vw - 7.68px) * -0.1378340366));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .breadcrumb > ol > li:not(:last-child)::after {
     font-size: 0.64rem;
   }

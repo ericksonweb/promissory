@@ -8,29 +8,67 @@ table {
   overflow-x: auto;
   overflow-y: hidden;
   vertical-align: top;
+  width: 100%;
   max-width: calc(100% - 2px);
   margin-left: 1px;
   outline: 1px solid var(--esl-color-charcoal);
-  background: radial-gradient(0.375em 50% at 0 50%, var(--esl-color-charcoal) 0, transparent 100%), radial-gradient(0.375em 50% at 100% 50%, var(--esl-color-charcoal) 0, transparent 100%);
+  background: radial-gradient(0.375em 50% at 0 50%, var(--esl-color-charcoal) 0, rgba(255,255,255,0) 100%), radial-gradient(0.375em 50% at 100% 50%, var(--esl-color-charcoal) 0, rgba(255,255,255,0) 100%);
   background-color: var(--esl-color-white);
   overscroll-behavior-x: none;  
 }
 table:not(:last-child) {
   margin-bottom: $spacing--single + 0rem;
+  
+  + * {
+    margin-top: 0;
+  }
 }
 td, th {
-  width: 1%;
+  position: relative;
   padding: $spacing--1qtr + 0em $spacing--3qtr + 0em;
+  
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  &::before {
+    background-color: var(--esl-color-white);
+    opacity: 0.35;
+  }
     
   &:first-child {
-    background: linear-gradient(to right, var(--esl-color-white) $spacing--half + 0em, color.adjust(colors.$white, $alpha: -0.05) 75%);
+    &::before {
+      background-color: var(--esl-color-white);
+      opacity: 0.95;
+    }
+    &::after {
+      background: linear-gradient(to right, var(--esl-color-white) $spacing--half + 0em, rgba(255,255,255,0) 75%);
+    }
   }
   
   &:last-child {
-    background: linear-gradient(to left, var(--esl-color-white) $spacing--half + 0em, color.adjust(colors.$white, $alpha: -0.05) 75%);
+    &::before {
+      background-color: var(--esl-color-white);
+      opacity: 0.95;
+    }
+    &::after {
+      background: linear-gradient(to left, var(--esl-color-white) $spacing--half + 0em, rgba(255,255,255,0) 75%);
+    }
+  }
+  
+  > * {
+    position: relative;
+    z-index: 1;
   }
 }
 td {
+  width: 1%;
   color: var(--esl-color-charcoal);
   
   &:not(:first-child) {
@@ -43,15 +81,31 @@ th {
   
   padding-top: $spacing--half + 0em;
   padding-bottom: $spacing--half + 0em;
-  background: color.adjust(colors.$esl-blue, $alpha: -0.05);
   color: var(--esl-color-white);
   
+  &::before {
+    background-color: var(--color-primary);
+    opacity: 0.95;
+  }
+  
   &:first-child {
-    background: linear-gradient(to right, var(--esl-color-blue) $spacing--half + 0em, color.adjust(colors.$esl-blue, $alpha: -0.05) 75%);
+    &::before {
+      background-color: var(--color-primary);
+      opacity: 0.95;
+    }
+    &::after {
+      background: linear-gradient(to right, var(--color-primary) $spacing--half + 0em, rgba(255,255,255,0) 75%);
+    }
   }
   
   &:last-child {
-    background: linear-gradient(to left, var(--esl-color-blue) $spacing--half + 0em, color.adjust(colors.$esl-blue, $alpha: -0.05) 75%);
+    &::before {
+      background-color: var(--color-primary);
+      opacity: 0.95;
+    }
+    &::after {
+      background: linear-gradient(to left, var(--color-primary) $spacing--half + 0em, rgba(255,255,255,0) 75%);
+    }
   }
   
   &[scope=row] ~ td {
@@ -65,10 +119,28 @@ thead {
   border-bottom: 1px solid var(--esl-color-black);
   
   tr {
-    :first-child {
-      background: linear-gradient(to right, var(--esl-color-blue) $spacing--half + 0em, color.adjust(colors.$esl-blue, $alpha: -0.05) 75%);
+    > :first-child {
+      &::before {
+        background-color: var(--color-primary);
+        opacity: 0.95;
+      }
+      &::after {
+        background: linear-gradient(to right, var(--color-primary) $spacing--half + 0em, rgba(255,255,255,0) 75%);
+      }
       
       &:empty ~ th {
+        width: auto;
+      }
+    }
+  }
+  
+  th {
+    width: 1%;
+  }
+  
+  ~ tbody {
+    > tr {
+      > td {
         width: auto;
       }
     }
@@ -87,32 +159,68 @@ tbody {
       
       &.subhead {
         width: auto;
-        background: var(--esl-color-black);
         text-transform: uppercase;
+        
+        &::before {
+          background-color: var(--esl-color-charcoal);
+        }
+        &::after {
+          background: none;
+        }
       }
     }
     td {
-      background: color.adjust(colors.$white, $alpha: -0.65);
+      &::before {
+        background-color: var(--esl-color-white);
+        opacity: 0.35;
+      }
       
       &:first-child {
-        background: linear-gradient(to right, var(--esl-color-white) $spacing--half + 0em, color.adjust(colors.$white, $alpha: -0.65) 75%);
+        &::before {
+          background-color: var(--esl-color-white);
+          opacity: 0.35;
+        }
+        &::after {
+          background: linear-gradient(to right, var(--esl-color-white) $spacing--half + 0em, rgba(255,255,255,0) 75%);
+        }
       }
       
       &:last-child {
-        background: linear-gradient(to left, var(--esl-color-white) $spacing--half + 0em, color.adjust(colors.$white, $alpha: -0.65) 75%);
+        &::before {
+          background-color: var(--esl-color-white);
+          opacity: 0.35;
+        }
+        &::after {
+          background: linear-gradient(to left, var(--esl-color-white) $spacing--half + 0em, rgba(255,255,255,0) 75%);
+        }
       }
     }
     
     &:nth-child(odd) {
       td {
-        background: color.adjust(colors.$medium-grey, $alpha: -0.65);
+        &::before {
+          background-color: var(--esl-color-medium-grey);
+          opacity: 0.35;
+        }
         
         &:first-child {
-          background: linear-gradient(to right, var(--esl-color-light-grey) $spacing--half + 0em, color.adjust(colors.$medium-grey, $alpha: -0.65) 75%);
+          &::before {
+            background-color: var(--esl-color-medium-grey);
+            opacity: 0.35;
+          }
+          &::after {
+            background: linear-gradient(to right, var(--esl-color-light-grey) $spacing--half + 0em, rgba(255,255,255,0) 75%);
+          }
         }
         
         &:last-child {
-          background: linear-gradient(to left, var(--esl-color-light-grey) $spacing--half + 0em, color.adjust(colors.$medium-grey, $alpha: -0.65) 75%);
+          &::before {
+            background-color: var(--esl-color-medium-grey);
+            opacity: 0.35;
+          }
+          &::after {
+            background: linear-gradient(to left, var(--esl-color-light-grey) $spacing--half + 0em, rgba(255,255,255,0) 75%);
+          }
         }
       }
     }
@@ -134,18 +242,10 @@ table.table--minimal {
   background-color: transparent;
   
   td, th {
-    position: relative;
     color: currentcolor;
-    
-    &:first-child,
-    &:last-child {
-      background: none;
-    }
   }
   
   td {
-    color: inherit;
-    
     &:not(:first-child) {
       border-left: none;
       
@@ -170,7 +270,10 @@ table.table--minimal {
       bottom: 0;
       left: 0;
       background-color: currentcolor;
-      opacity: 0.0625;
+      opacity: 0.05;
+    }
+    &::after {
+      background: none;
     }
     
     &:not(:first-child) {
@@ -249,20 +352,16 @@ table.table--minimal {
       }
       
       td {
-        background: none;
-        
-        &:first-child,
-        &:last-child {
+        &::before,
+        &::after {
           background: none;
-        }
+        }        
       }
       
       &:nth-child(odd) {
         td {
-          background: none;
-          
-          &:first-child,
-          &:last-child {
+          &::before,
+          &::after {
             background: none;
           }
         }

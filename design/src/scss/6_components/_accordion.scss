@@ -6,26 +6,33 @@ $breakpoint: map-get($breakpoints, sm);
 
 .accordion {
   &-item {
-    margin-bottom: $spacing--single + 0rem;
     border: 1px solid;
     border-color: var(--esl-color-medium-grey);
+    
+    &:not(:last-child) {
+      margin-bottom: $spacing--single + 0rem;
+    }
   }
   
   &__toggler {
     width: 100%;
     
     &.btn {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: $spacing--3qtr + 0em;
-      padding: $spacing--3qtr + 0rem $spacing--single + 0rem;
+      padding: $spacing--half + 0rem $spacing--single + 0rem;
       background-color: var(--esl-color-light-grey);
       text-align: left;
       text-transform: unset;
+      font-size: 1.25rem;
+      color: var(--esl-color-charcoal);
       
       &:hover {
         background-color: var(--esl-color-medium-grey);
+      color: var(--esl-color-charcoal);
       }
       
       & .icon::before {
@@ -48,12 +55,17 @@ $breakpoint: map-get($breakpoints, sm);
     }
   }
   
+  &__content {
+    background-color: var(--esl-color-white);
+    color: var(--esl-color-charcoal);
+  }
+  
   .o-collapse {
     > * {
       margin-bottom: 0;
     }
     
-    &__body {
+    &__body:not(.o-collapse__body--flush) {
       padding: $spacing--single + 0rem;
     }
   }

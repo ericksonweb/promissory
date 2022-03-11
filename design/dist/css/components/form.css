@@ -32,10 +32,10 @@ fieldset .form__field:last-child, .field__group .form__field:last-child {
   .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):focus + .label--placeholder, .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):not(:placeholder-shown) + .label--placeholder,
 .form__field textarea:focus + .label--placeholder,
 .form__field textarea:not(:placeholder-shown) + .label--placeholder {
-    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.0554698892));
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.046693008));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):focus + .label--placeholder, .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):not(:placeholder-shown) + .label--placeholder,
 .form__field textarea:focus + .label--placeholder,
 .form__field textarea:not(:placeholder-shown) + .label--placeholder {
@@ -93,10 +93,10 @@ fieldset .form__field:last-child, .field__group .form__field:last-child {
 }
 @media all and (min-width: 768px) {
   .label--eyebrow {
-    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.0554698892));
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.046693008));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .label--eyebrow {
     font-size: 0.894427191rem;
   }
@@ -838,7 +838,7 @@ input[type=checkbox] + .mark-required::before, input[type=radio] + .mark-require
   border-color: var(--esl-color-error);
 }
 .form__group.has-invalid input {
-  border-color: var(--esl-color-dark-grey);
+  border-color: var(--esl-color-dark-grey) !important;
 }
 .form__group.has-invalid input:focus {
   outline-color: transparent;
@@ -867,10 +867,10 @@ input[type=checkbox] + .mark-required::before, input[type=radio] + .mark-require
 }
 @media all and (min-width: 768px) {
   .invalid-feedback {
-    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.0554698892));
+    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.046693008));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .invalid-feedback {
     font-size: 0.894427191rem;
   }

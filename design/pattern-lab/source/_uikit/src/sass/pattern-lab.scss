@@ -55,27 +55,11 @@
 @import 'scss/04-components/text-passage';
 
 .pl-c-code-copy-btn {
-  display: inline-block;
   position: absolute;
-  top: 0.4rem;
-  right: 0.5rem;
-  padding: 0.2rem 0.4rem;
-  background-color: $pl-color-gray-07;
-  color: $pl-color-gray-87;
-  border: 1px solid $pl-color-gray-13;
-  border-radius: $pl-border-radius-med;
-  font-family: $pl-font;
-  font-size: $pl-font-size-norm;
-  text-transform: lowercase;
-  line-height: 1;
-  cursor: pointer;
+  top: 0.75rem;
+  right: 0.75rem;
   z-index: 2;
-  transition: background-color $pl-animate-quick ease-out;
 
-  &:hover,
-  &:focus {
-    background-color: $pl-color-gray-20;
-  }
 }
 
 .pl-c-code-copy-btn__icon {

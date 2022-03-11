@@ -1,4 +1,4 @@
 ---
-title: Icon (Square)
+title: Square Icon
 order: 1
 ---

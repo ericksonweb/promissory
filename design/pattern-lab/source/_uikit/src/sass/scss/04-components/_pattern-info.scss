@@ -53,7 +53,6 @@
  *    Right side contains pattern code
  */
 .pl-c-pattern-info__panel {
-  padding: .5rem;
   flex-shrink: 0; // prevent panel from collapsing in height (especially on smaller screens like iPhone)
   display: flex;
   flex-direction: column;
@@ -65,7 +64,6 @@
   @media all and (min-width: $pl-bp-large) {
     flex-basis: 50%;
     flex-grow: 1;
-    padding: 1.5rem;
   }
 }
 

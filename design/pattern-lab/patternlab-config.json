@@ -112,8 +112,8 @@
         "viewall": "views/viewall.mustache"
       },
       "css": "../dist/css",
-      "fonts": "../dist/fonts",
-      "images": "../dist/images",
+      "fonts": "./source/fonts",
+      "images": "./source/images",
       "js": "../dist/js"
     },
     "public": {

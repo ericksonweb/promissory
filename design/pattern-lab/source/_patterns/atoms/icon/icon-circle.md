@@ -1,4 +1,4 @@
 ---
-title: Icon (Circle)
+title: Circle Icon
 order: 2
 ---

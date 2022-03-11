@@ -30,7 +30,7 @@
 }
 
 a:not(.btn):hover [class*="icon--shape"] {
-  background-color: var(--color-accent);
+  background-color: var(--color-tertiary);
 }
 a:not(.btn):active [class*="icon--shape"] {
   background-color: var(--esl-color-charcoal);

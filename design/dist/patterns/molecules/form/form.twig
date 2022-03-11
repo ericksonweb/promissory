@@ -64,12 +64,12 @@
   <div class="form__fields row">
   {{ controls }}
   </div>
-  {{ include ('@atoms/input.twig', {
+  {{ include ('@atoms/button.twig', {
     content: "Submit",
     attributes: {
       type: 'submit',
     }
-  }) }}
+  }, with_context = false) }}
 {% endset %}
 
 {% block content %}{{ content }}{% endblock content %}

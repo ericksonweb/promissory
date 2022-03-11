@@ -39,28 +39,27 @@
 
 {# Validation #}
 {% set validElements = ['a', 'button', 'input'] %}
-{% set validTypes = ['button', 'reset', 'submit'] %}
 
-{% if element in validElements %}
-  {% if element == 'input' %}
-    {# Set <input> 'value' attribute #}
-    {% if not attributes is defined %}
-      {% set attributes = {
+{%- if element in validElements -%}
+  {%- if element == 'input' -%}
+    {#- Set <input> 'value' attribute -#}
+    {%- if not attributes is defined -%}
+      {%- set attributes = {
         value: content|default("Input")
-      } %}
-    {% elseif attributes is defined and not attributes.value is defined %}
-      {% set attributes = attributes|merge({
+      } -%}
+    {%- elseif attributes is defined and not attributes.value is defined -%}
+      {%- set attributes = attributes|merge({
         value: content|default("Input")
-      }) %}
-    {% endif %}
-  {% else %}
-    {% block content %}
+      }) -%}
+    {%- endif -%}
+  {%- else -%}
+    {%- block content -%}
       {%- if icon -%}
         {%- import '@promissory/_macros/_content-w-icon.twig' as content_w_icon -%}
         {{- content_w_icon.render(content|default("Button"), icon.position|default('before'), icon.shape, icon.fa_prefix|default('fas'), icon.fa_name|default('circle')) -}}
-      {% else %}
+      {%- else -%}
         {{- content|default("Button") -}}
-      {% endif -%}
-    {% endblock content %}
-  {% endif %}
-{% endif %}
+      {%- endif -%}
+    {%- endblock content -%}
+  {%- endif -%}
+{%- endif -%}

@@ -1,4 +1,5 @@
 ---
-order: 3
 title: Messages
+order: 3
+hideCode: true
 ---

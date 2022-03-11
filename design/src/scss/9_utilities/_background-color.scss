@@ -42,10 +42,12 @@
 }
 
 .bg--black {
+  --color-primary: var(--color-secondary);
   background-color: var(--esl-color-black);
   color: var(--esl-color-white);
 }
 .bg--charcoal {
+  --color-primary: var(--color-secondary);
   background-color: var(--esl-color-charcoal);
   color: var(--esl-color-white);
 }

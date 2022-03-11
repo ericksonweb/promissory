@@ -21,7 +21,7 @@
   user-select: none;
 }
 .btn:hover {
-  background-color: var(--color-accent);
+  background-color: var(--color-tertiary);
   color: var(--esl-color-white);
 }
 .btn:focus {
@@ -40,10 +40,10 @@
 }
 @media all and (min-width: 768px) {
   .btn--large {
-    font-size: calc(1.2rem + ((1vw - 7.68px) * 0.1503759398));
+    font-size: calc(1.2rem + ((1vw - 7.68px) * 0.1265822785));
   }
 }
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1400px) {
   .btn--large {
     font-size: 1.25rem;
   }

@@ -56,11 +56,11 @@
     transition-property: box-shadow, background-color, border-color;
     
     &:hover {
-      border-color: var(--esl-color-aqua-blue);
+      border-color: var(--color-tertiary);
       box-shadow: 0 0 ($spacing--half + 0rem) color.adjust(colors.$charcoal, $alpha: -0.75);
       
       & ~ .card__content .btn {
-        background-color: var(--esl-color-aqua-blue);
+        background-color: var(--color-tertiary);
         color: var(--esl-color-white);
       }
     }

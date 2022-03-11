@@ -49,8 +49,12 @@
   transition-property: background-color, color;
 }
 .tabs__tab:hover {
-  background-color: var(--color-accent);
+  background-color: var(--color-tertiary);
   color: var(--esl-color-white);
+}
+.tabs__tab:active, .tabs__tab[class*=active] {
+  background-color: var(--esl-color-white);
+  color: var(--color-primary);
 }
 
 @media (min-width: 480px) {

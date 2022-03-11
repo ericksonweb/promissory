@@ -61,7 +61,7 @@
         }) %}
       {% endif %}
       
-      {{ include ('@atoms/div/div.twig', {
+      {{ include ('@atoms/div.twig', {
         content: content.body,
         attributes: body_attributes
       }, with_context = false) }}

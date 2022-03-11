@@ -9,8 +9,6 @@
 {% if level in range(1, 6) %}
   {% set element = 'h' ~ level|default('1') %}
   
-  {% block content %}
-    {{- content|default("Heading Level " ~ level|default('1')) -}}
-  {% endblock %}
+  {% block content %}{{ content|default("Heading Level " ~ level|default('1')) }}{% endblock %}
     
 {% endif %}
