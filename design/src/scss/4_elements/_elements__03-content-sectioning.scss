@@ -31,7 +31,7 @@ h6:not(:last-child) {
 h1, h2 {
   font-weight: 500;
 }
-h3, h4, h5, h6 {
+h3:not(.font-family--serif), h4:not(.font-family--serif), h5:not(.font-family--serif), h6:not(.font-family--serif) {
   font-weight: bold;
 }
 

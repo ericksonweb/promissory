@@ -13,10 +13,7 @@
   // Global CSS custom properties
   --esl-color-blue: #{colors.$esl-blue};
   --esl-color-green: #{colors.$esl-green};
-  
-  --esl-color-aqua-blue: #{colors.$aqua-blue};
-  --esl-color-medium-green: #{colors.$medium-green};
-  --esl-color-dark-green: #{colors.$dark-green};
+  --esl-color-aqua: #{colors.$esl-aqua};
   
   --esl-color-pga-blue: #{colors.$pga-blue};
   --esl-color-pga-green: #{colors.$pga-green};
@@ -25,12 +22,11 @@
   --esl-color-black: #{colors.$black};
   --esl-color-charcoal: #{colors.$charcoal};
   --esl-color-dark-grey: #{colors.$dark-grey};
-  --esl-color-medium-grey: #{colors.$medium-grey};
   --esl-color-light-grey: #{colors.$light-grey};
   --esl-color-white: #{colors.$white};
   
-  --esl-color-error: #{colors.$error};
-  --esl-color-warning: #{colors.$warning};
+  --esl-color-error: var(--esl-color-green);
+  --esl-color-warning: var(--esl-color-aqua);
   
   --esl-font-serif: #{fonts.$serif};
   --esl-font-sans-serif: #{fonts.$sans-serif};

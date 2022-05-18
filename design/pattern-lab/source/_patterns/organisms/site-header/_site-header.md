@@ -16,6 +16,13 @@ ___
   </thead>
   <tbody>
     <tr>
+      <td><pre><code>corporate</code></pre></td>
+      <td>boolean</td>
+      <td>Applies alternate "Corporate" styling to the Site Header, featuring an Erickson Blue background and block Menu style. Use of the Corporate style is intended for single-level navigation only and will disable any dropdown submenus, which will need to be recreated elsewhere.</td>
+      <td><code>true</code></td>
+      <td class="text-nowrap">site-header--corporate</td>
+    </tr>
+    <tr>
       <td><code>logo</code></td>
       <td>object</td>
       <td colspan="4">A logo image, typically linked to the homepage of the site.</td>
@@ -52,13 +59,6 @@ ___
       <td class="text-nowrap">site-header__menu</td>
     </tr>
     <tr>
-      <td><pre>&nbsp;&nbsp;<code>inline</code></pre></td>
-      <td>boolean</td>
-      <td>Position the Menu inline with the logo, instead of below.</td>
-      <td><code>true</code></td>
-      <td class="text-nowrap">site-header__menu--inline</td>
-    </tr>
-    <tr>
       <td><code>addl</code></td>
       <td>object</td>
       <td colspan="4">
@@ -68,7 +68,14 @@ ___
       <td>mixed</td>
       <td>Additional content to display in the top-right of the header.</td>
       <td>-</td>
-      <td>site-header__addl</td>
+      <td class="text-nowrap">site-header__addl</td>
+    </tr>
+    <tr>
+      <td><pre>&nbsp;&nbsp;<code>hide</code></pre></td>
+      <td>boolean</td>
+      <td>Hides the additional content when the Site Header is "stuck" to the top of the viewport and/or when the viewport width falls below the <code>lg</code> breakpoint.</td>
+      <td><code>true</code></td>
+      <td class="text-nowrap">site-header__addl--hide</td>
     </tr>
   </tbody>
 </table>

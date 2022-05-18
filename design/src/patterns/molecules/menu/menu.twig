@@ -4,7 +4,6 @@
   {% set menu_class = ['menu__submenu'] %}
 {% else %}
   {% set menu_class = ['menu'] %}
-  {% set menu_class = style.bar ? menu_class|merge(['menu--bar']) : menu_class %}
 {% endif %}
 
 {# set menu_class = submenu ? 'menu__submenu' : 'menu' #}
@@ -60,7 +59,7 @@
           list: {
             items: items,
             horizontal: true,
-            separator: style.separator
+            separator: 'pipe'
           },
         }, with_context = false) }}
       {% endif %}

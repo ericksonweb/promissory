@@ -199,13 +199,13 @@ tbody {
     &:nth-child(odd) {
       td {
         &::before {
-          background-color: var(--esl-color-medium-grey);
+          background-color: var(--esl-color-dark-grey);
           opacity: 0.35;
         }
         
         &:first-child {
           &::before {
-            background-color: var(--esl-color-medium-grey);
+            background-color: var(--esl-color-dark-grey);
             opacity: 0.35;
           }
           &::after {
@@ -215,7 +215,7 @@ tbody {
         
         &:last-child {
           &::before {
-            background-color: var(--esl-color-medium-grey);
+            background-color: var(--esl-color-dark-grey);
             opacity: 0.35;
           }
           &::after {

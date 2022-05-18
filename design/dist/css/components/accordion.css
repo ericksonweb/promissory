@@ -1,6 +1,6 @@
 .accordion-item {
   border: 1px solid;
-  border-color: var(--esl-color-medium-grey);
+  border-color: var(--esl-color-dark-grey);
 }
 .accordion-item:not(:last-child) {
   margin-bottom: 1.5rem;
@@ -22,7 +22,7 @@
   color: var(--esl-color-charcoal);
 }
 .accordion__toggler.btn:hover {
-  background-color: var(--esl-color-medium-grey);
+  background-color: var(--esl-color-dark-grey);
   color: var(--esl-color-charcoal);
 }
 .accordion__toggler.btn .icon::before {

@@ -7,17 +7,3 @@
     border-left-width: 1px;
   }
 }
-
-.separator--bullet {
-  > :not(:first-child) {    
-    margin-left: 0.5rem;
-    
-    &::before {
-      content: "•";
-      align-self: center;
-      margin-left: -0.5rem;
-      color: var(--color-secondary);
-      pointer-events: none;
-    }
-  }
-}

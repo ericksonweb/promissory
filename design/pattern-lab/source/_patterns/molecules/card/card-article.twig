@@ -1,0 +1,49 @@
+<div class="col-md-6 col-lg-4">
+  {{ include ('@molecules/card.twig', {
+    media: {
+      item:
+        include ('@atoms/image.twig', {
+          attributes: {
+            src: '/images/card-article.jpg',
+            width: 1610,
+            height: 906,
+            alt: "Two Ann's Choice residents sitting in chairs.",
+          }
+        })
+      ,
+      flush: true
+    },
+    body: {
+      content:
+        include ('@atoms/heading.twig', {
+          content: "Choosing a Worry-Free Retirement at Ann's Choice",
+          level: 4,
+          attributes: {
+            class: ['font-family--serif', 'color--primary']
+          }
+        }) ~
+        include ('@atoms/paragraph.twig', {
+          content: "The financial structure and superior value plus the abundance of amenities and services make Ann's Choice a standout in the marketplace.",
+        }) ~
+        include ('@atoms/paragraph.twig', {
+          content:
+            include ('@atoms/button.twig', {
+              content: "Read More",
+              attributes: {
+                href: 'https://www.ericksonseniorliving.com/anns-choice/amenities/stories/choosing-worry-free-retirement-anns-choice',
+              },
+              wide: true
+            })
+          ,
+          attributes: {
+            class: ['text-align--center']
+          }
+        })
+      ,
+    },
+    link: {
+      href: 'https://www.ericksonseniorliving.com/anns-choice/amenities/stories/choosing-worry-free-retirement-anns-choice'
+    },
+    dark: true
+  }, with_context = false) }}
+</div>

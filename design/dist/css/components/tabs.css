@@ -54,7 +54,7 @@
 }
 .tabs__tab:active, .tabs__tab[class*=active] {
   background-color: var(--esl-color-white);
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 @media (min-width: 480px) {

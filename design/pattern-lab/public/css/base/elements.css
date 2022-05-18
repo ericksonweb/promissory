@@ -3,20 +3,17 @@
 :root {
   --esl-color-blue: #00395d;
   --esl-color-green: #00843d;
-  --esl-color-aqua-blue: #00a3e0;
-  --esl-color-medium-green: #02833d;
-  --esl-color-dark-green: #015126;
+  --esl-color-aqua: #00a3e0;
   --esl-color-pga-blue: #00819e;
   --esl-color-pga-green: #6c7d31;
   --esl-color-pga-cream: #fbf7e8;
   --esl-color-black: #000;
   --esl-color-charcoal: #212529;
-  --esl-color-dark-grey: #a8a8a8;
-  --esl-color-medium-grey: #d2d2d7;
+  --esl-color-dark-grey: #d2d2d7;
   --esl-color-light-grey: #ededee;
   --esl-color-white: #fff;
-  --esl-color-error: #aa0000;
-  --esl-color-warning: #b98900;
+  --esl-color-error: var(--esl-color-green);
+  --esl-color-warning: var(--esl-color-aqua);
   --esl-font-serif: 'Sutro', serif;
   --esl-font-sans-serif: 'Proxima-Nova', sans-serif;
   line-height: 1.5;
@@ -42,7 +39,7 @@ body {
   color: var(--esl-color-charcoal);
   --color-primary: var(--esl-color-blue);
   --color-secondary: var(--esl-color-green);
-  --color-tertiary: var(--esl-color-aqua-blue);
+  --color-tertiary: var(--esl-color-aqua);
 }
 
 h1,
@@ -67,7 +64,7 @@ h1, h2 {
   font-weight: 500;
 }
 
-h3, h4, h5, h6 {
+h3:not(.font-family--serif), h4:not(.font-family--serif), h5:not(.font-family--serif), h6:not(.font-family--serif) {
   font-weight: bold;
 }
 
@@ -173,7 +170,7 @@ nav {
 a {
   outline: 0.25rem solid transparent;
   font-weight: bold;
-  text-decoration-color: var(--esl-color-medium-grey);
+  text-decoration-color: var(--esl-color-dark-grey);
   text-underline-offset: 0.1875rem;
   color: var(--color-primary);
   transition: ease-in-out 0.15s;
@@ -413,18 +410,18 @@ tbody tr td:last-child::after {
   background: linear-gradient(to left, var(--esl-color-white) 0.75em, rgba(255, 255, 255, 0) 75%);
 }
 tbody tr:nth-child(odd) td::before {
-  background-color: var(--esl-color-medium-grey);
+  background-color: var(--esl-color-dark-grey);
   opacity: 0.35;
 }
 tbody tr:nth-child(odd) td:first-child::before {
-  background-color: var(--esl-color-medium-grey);
+  background-color: var(--esl-color-dark-grey);
   opacity: 0.35;
 }
 tbody tr:nth-child(odd) td:first-child::after {
   background: linear-gradient(to right, var(--esl-color-light-grey) 0.75em, rgba(255, 255, 255, 0) 75%);
 }
 tbody tr:nth-child(odd) td:last-child::before {
-  background-color: var(--esl-color-medium-grey);
+  background-color: var(--esl-color-dark-grey);
   opacity: 0.35;
 }
 tbody tr:nth-child(odd) td:last-child::after {

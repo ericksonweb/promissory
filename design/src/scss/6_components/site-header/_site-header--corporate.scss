@@ -1,0 +1,83 @@
+@use "sass:color";
+@use "sass:math";
+@use "../../1_settings/breakpoints" as *;
+@use "../../1_settings/colors";
+@use "../../1_settings/spacing" as *;
+@use "../../1_settings/transition" as *;
+@use "../../2_tools/font-size";
+
+.site-header--corporate {
+  background-color: var(--esl-color-blue);
+  color: var(--esl-color-white);
+  
+  .site-header__menu {
+    text-transform: uppercase;
+    
+    nav {
+      a {
+        color: var(--esl-color-white);
+        
+        &:hover {
+          color: var(--esl-color-white);
+        }
+      }
+      
+      > ul,
+      > ol {
+        > :not(:first-child) {
+          border-left: none;
+        }
+      }
+    }
+  }
+  
+  .menu__submenu {
+    display: none;
+  }
+}
+
+@media (max-width: (map-get($breakpoints, lg) - 1)) {
+  .site-header--corporate {
+  }
+}
+
+@media (min-width: map-get($breakpoints, lg)) {
+  .site-header--corporate {
+    .site-header__menu {
+      grid-column: 1/5;
+      grid-row: 5;
+      margin-right: unset;
+      margin-bottom: -$spacing--half + 0rem;
+      justify-self: auto;
+      
+      nav {
+        > ul,
+        > ol {
+          > li {
+            position: relative;
+            
+            &:hover {
+              background-color: var(--esl-color-white);
+              
+              a {
+                text-decoration: none;
+                color: var(--color-primary);
+              }            
+            }
+            
+            > a {
+              display: block;
+              padding-top: $spacing--half + 0rem;
+              padding-bottom: $spacing--half + 0rem;
+              text-transform: uppercase;
+              transition-property: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: map-get($breakpoints, xxl)) {
+}

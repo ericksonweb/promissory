@@ -8,7 +8,7 @@ ___
   <div class="accordion-item">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler form-label__toggler" aria-expanded="false" aria-controls="form-label__collapse" data-bs-toggle="collapse" data-bs-target="#form-label__collapse">label<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content form-label__content bg--charcoal" data-bs-parent="#form-schema" id="form-label__collapse">
+      <div class="o-collapse__content collapse accordion__content form-label__content bg--esl-blue" data-bs-parent="#form-schema" id="form-label__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>
@@ -45,7 +45,7 @@ ___
   <div class="accordion-item">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler form-input__toggler" aria-expanded="false" aria-controls="form-input__collapse" data-bs-toggle="collapse" data-bs-target="#form-input__collapse">input<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content form-input__content bg--charcoal" data-bs-parent="#form-schema" id="form-input__collapse">
+      <div class="o-collapse__content collapse accordion__content form-input__content bg--esl-blue" data-bs-parent="#form-schema" id="form-input__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>
@@ -119,7 +119,7 @@ ___
   <div class="accordion-item">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler form-select__toggler" aria-expanded="false" aria-controls="form-select__collapse" data-bs-toggle="collapse" data-bs-target="#form-select__collapse">select<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content form-select__content bg--charcoal" data-bs-parent="#form-schema" id="form-select__collapse">
+      <div class="o-collapse__content collapse accordion__content form-select__content bg--esl-blue" data-bs-parent="#form-schema" id="form-select__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>
@@ -253,7 +253,7 @@ ___
   <div class="accordion-item">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler form-textarea__toggler" aria-expanded="false" aria-controls="form-textarea__collapse" data-bs-toggle="collapse" data-bs-target="#form-textarea__collapse">textarea<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content form-textarea__content bg--charcoal" data-bs-parent="#form-schema" id="form-textarea__collapse">
+      <div class="o-collapse__content collapse accordion__content form-textarea__content bg--esl-blue" data-bs-parent="#form-schema" id="form-textarea__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>

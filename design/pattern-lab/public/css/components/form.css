@@ -219,7 +219,7 @@ input:not([placeholder=​]):placeholder-shown + .label--eyebrow {
   height: 0;
   margin: 0.375rem 0;
   overflow: hidden;
-  border-top: 1px solid var(--esl-color-medium-grey);
+  border-top: 1px solid var(--esl-color-dark-grey);
 }
 
 .dropdown-item {
@@ -256,7 +256,7 @@ input:not([placeholder=​]):placeholder-shown + .label--eyebrow {
   display: block;
   padding: 0.375rem 1.5rem;
   margin-bottom: 0;
-  color: var(--esl-color-medium-grey);
+  color: var(--esl-color-dark-grey);
   font-weight: bold;
   white-space: nowrap;
 }
@@ -359,7 +359,7 @@ select.selectpicker {
 .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-danger:active,
 .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-info:active,
 .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-dark:active {
-  color: var(--esl-color-medium-grey);
+  color: var(--esl-color-dark-grey);
 }
 
 .bootstrap-select > select {
@@ -808,7 +808,7 @@ select.selectpicker {
   font-size: 1rem;
   font-weight: bold;
   vertical-align: top;
-  color: var(--esl-color-aqua-blue);
+  color: var(--esl-color-error);
 }
 input[type=checkbox] + .mark-required::before, input[type=radio] + .mark-required::before {
   margin-left: -0.375rem;
@@ -821,10 +821,10 @@ input[type=checkbox] + .mark-required::before, input[type=radio] + .mark-require
   border-color: var(--esl-color-error) !important;
 }
 .dropdown > select.is-invalid ~ .btn:focus {
-  outline-color: rgba(170, 0, 0, 0.25);
+  outline-color: rgba(0, 132, 61, 0.25);
 }
 .dropdown > select.is-invalid:focus ~ .btn {
-  outline-color: rgba(170, 0, 0, 0.25);
+  outline-color: rgba(0, 132, 61, 0.25);
 }
 .dropdown.has-invalid ~ .mark-required::before {
   color: var(--esl-color-error) !important;
@@ -845,7 +845,7 @@ input[type=checkbox] + .mark-required::before, input[type=radio] + .mark-require
 }
 .form__group.has-invalid:focus-within {
   outline: 0.25rem solid transparent;
-  outline-color: rgba(170, 0, 0, 0.25);
+  outline-color: rgba(0, 132, 61, 0.25);
 }
 .form__group .mark-required::before {
   content: none;
@@ -855,7 +855,7 @@ input[type=checkbox] + .mark-required::before, input[type=radio] + .mark-require
   border-color: var(--esl-color-error) !important;
 }
 .is-invalid:focus {
-  outline-color: rgba(170, 0, 0, 0.25);
+  outline-color: rgba(0, 132, 61, 0.25);
 }
 
 .invalid-feedback {

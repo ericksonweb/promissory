@@ -8,7 +8,7 @@
 a {
   outline: 0.25rem solid transparent;
   font-weight: bold;
-  text-decoration-color: var(--esl-color-medium-grey);
+  text-decoration-color: var(--esl-color-dark-grey);
   text-underline-offset: math.div($spacing--1qtr + 0rem, 2);
   color: var(--color-primary);
   transition: $transition;
@@ -19,7 +19,7 @@ a {
   }
   
   &:focus {
-    outline-color: color.adjust(colors.$aqua-blue, $alpha: -0.75);
+    outline-color: color.adjust(colors.$esl-aqua, $alpha: -0.75);
   }
   
   &:active {

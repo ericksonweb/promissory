@@ -15,7 +15,7 @@
 {% endif %}
 
 {% if horizontal and separator %}
-  {% if separator in ['bullet', 'pipe'] %}
+  {% if separator in ['pipe'] %}
     {% set list_classes = list_classes|merge(['separator--' ~ separator]) %}
   {% endif %}
 {% endif %}

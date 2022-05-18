@@ -32,7 +32,7 @@ ___
   <div class="accordion-item" id="hero-content">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler hero-content__toggler" aria-expanded="false" aria-controls="hero-content__collapse" data-bs-toggle="collapse" data-bs-target="#hero-content__collapse">content<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content hero-content__content bg--charcoal" data-bs-parent="#hero-schema" id="hero-content__collapse">
+      <div class="o-collapse__content collapse accordion__content hero-content__content bg--esl-blue" data-bs-parent="#hero-schema" id="hero-content__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>
