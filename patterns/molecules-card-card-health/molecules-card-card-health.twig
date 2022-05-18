@@ -1,0 +1,47 @@
+<div class="col-sm-6 col-lg-4">
+  {{ include ('@molecules/card.twig', {
+    body: {
+      content:
+        include ('@atoms/heading.twig', {
+          content: "What is Assisted Living?",
+          level: 4,
+          attributes: {
+            class: ['font-family--serif', 'color--primary', 'esl-accent']
+          }
+        }) ~
+        include ('@atoms/paragraph.twig', {
+          content: 'Assisted living is an ideal choice for those who value their independence, but could benefit from regular support with everyday tasks like dressing and grooming, managing medications, meal preparation, and more.',
+        })
+      ,
+    },
+    footer: {
+      content:
+        include ('@atoms/paragraph.twig', {
+          content: '<b>Is assisted living right for your loved one?</b>',
+          attributes: {
+            class: ['color--primary']
+          }
+        }) ~
+        include ('@atoms/paragraph.twig', {
+          content:
+            include ('@atoms/icon.twig', {
+              fa_name: 'file'
+            })
+          ,
+          attributes: {
+            class: ['h1', 'color--esl-green']
+          }
+        }) ~
+        include ('@atoms/paragraph.twig', {
+          content: 'Click here to view our assisted living assessment.'
+        })
+      ,
+      attributes: {
+        class: ['bg--light-grey', 'text-align--center']
+      }
+    },
+    link: {
+      href: 'https://media.ericksonliving.com/cc/checklist/assistant-care-checklist.pdf'
+    }
+  }, with_context = false) }}
+</div>

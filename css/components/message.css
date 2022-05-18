@@ -29,10 +29,10 @@
   background-color: var(--color-primary);
 }
 .message--warning {
-  background-color: var(--esl-color-warning);
+  background-color: var(--color-tertiary);
 }
 .message--error {
-  background-color: var(--esl-color-error);
+  background-color: var(--color-secondary);
 }
 .message--dismissible {
   padding-right: 3rem;
