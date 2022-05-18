@@ -82,7 +82,7 @@ $breakpoint: map-get($breakpoints, sm);
     &:active,
     &[class*="active"] {
       background-color: var(--esl-color-white);
-      color: var(--color-primary);
+      color: var(--color-secondary);
     }
   }
 }

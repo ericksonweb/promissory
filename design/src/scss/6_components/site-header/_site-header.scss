@@ -11,7 +11,7 @@
   top: 0;
   z-index: 1;
   display: grid;
-  grid-template-columns: calc((100vw - #{map-get($breakpoints, max)}) / 2) minmax(140px, 30%) auto calc((100vw - #{map-get($breakpoints, max)}) / 2);
+  grid-template-columns: calc((100vw - #{map-get($breakpoints, xxl)}) / 2) minmax(140px, 30%) auto calc((100vw - #{map-get($breakpoints, xxl)}) / 2);
   grid-template-rows: minmax(0, 1fr);
   column-gap: $spacing--half + 0rem;
   row-gap: $spacing--1qtr + 0rem;
@@ -57,7 +57,7 @@
 
 @media (max-width: (map-get($breakpoints, lg) - 1)) {
   .site-header {
-    padding-bottom: $spacing--half + 0rem;
+    /*padding-bottom: $spacing--half + 0rem;*/
 
     &__menu {
       margin-top: -3rem;
@@ -85,6 +85,10 @@
         color: var(--esl-color-white);
         text-decoration-color: color.adjust(colors.$white, $alpha: -0.75);
       }
+      
+      &--hide {
+        display: none;
+      }
     }
   }
 }
@@ -101,23 +105,13 @@
     }
     
     &__menu {
-      grid-column: 1/5;
-      grid-row: 6;
-      margin-right: unset;
-      
-      &.menu--bar {
-        margin-bottom: -$spacing--single + 0rem;
-      }
-      
+      grid-column: 3/4;
+      grid-row-start: 2;
+      justify-self: end;
+      margin-right: -$spacing--3qtr + 0rem;
+
       .o-switcher {
         --breakpoint: #{map-get($breakpoints, min)};
-      }
-      
-      &--inline {
-        grid-column: 3/4;
-        grid-row-start: 2;
-        justify-self: end;
-        margin-right: -$spacing--3qtr + 0rem;
       }
     }
     
@@ -127,7 +121,7 @@
       justify-self: end;
       align-self: center;
       margin-top: 0;
-    }    
+    }
   }
 }
 
@@ -172,6 +166,10 @@
         justify-self: center;
         align-self: center;
         margin: 0;
+        
+        &--hide {
+          display: none;
+        }
       }
       
       .site-header__contact {
@@ -180,3 +178,5 @@
     }
   }
 }
+
+@import "site-header--corporate";

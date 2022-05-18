@@ -15,6 +15,7 @@
 $grid-breakpoints: $breakpoints;
 $container-max-widths: $breakpoints;
 $transition-fade: opacity $transition;
+$enable-negative-margins: true;
 
 //
 // Configuration - @import "variables";

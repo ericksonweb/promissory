@@ -33,7 +33,7 @@
   }
   
   &:focus {
-    outline-color: color.adjust(colors.$aqua-blue, $alpha: -0.75) !important;
+    outline-color: color.adjust(colors.$esl-aqua, $alpha: -0.75) !important;
   }
   
   &:active {

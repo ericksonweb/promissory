@@ -112,7 +112,7 @@
   height: 0;
   margin: $spacing--1qtr + 0rem 0;
   overflow: hidden;
-  border-top: 1px solid var(--esl-color-medium-grey);
+  border-top: 1px solid var(--esl-color-dark-grey);
 }
 
 // Links, buttons, and more within the dropdown menu
@@ -171,7 +171,7 @@
   display: block;
   padding: $spacing--1qtr + 0rem $spacing--single + 0rem;
   margin-bottom: 0; // for use with heading elements
-  color: var(--esl-color-medium-grey);
+  color: var(--esl-color-dark-grey);
   font-weight: bold;
   white-space: nowrap; // as with > li > a
 }
@@ -271,7 +271,7 @@ select.selectpicker {
 .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-danger:active,
 .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-info:active,
 .bootstrap-select > .dropdown-toggle.bs-placeholder.btn-dark:active {
-  color: var(--esl-color-medium-grey);
+  color: var(--esl-color-dark-grey);
 }
 .bootstrap-select > select {
   position: absolute !important;

@@ -62,7 +62,7 @@ ___
   <div class="accordion-item" id="card-header">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler card-header__toggler" aria-expanded="false" aria-controls="card-header__collapse" data-bs-toggle="collapse" data-bs-target="#card-header__collapse">header<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content card-header__content bg--charcoal" data-bs-parent="#card-schema" id="card-header__collapse">
+      <div class="o-collapse__content collapse accordion__content card-header__content bg--esl-blue" data-bs-parent="#card-schema" id="card-header__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>
@@ -87,7 +87,7 @@ ___
   <div class="accordion-item" id="card-media">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler card-media__toggler" aria-expanded="false" aria-controls="card-media__collapse" data-bs-toggle="collapse" data-bs-target="#card-media__collapse">media<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content card-media__content bg--charcoal" data-bs-parent="#card-schema" id="card-media__collapse">
+      <div class="o-collapse__content collapse accordion__content card-media__content bg--esl-blue" data-bs-parent="#card-schema" id="card-media__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>
@@ -120,7 +120,7 @@ ___
   <div class="accordion-item" id="card-body">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler card-body__toggler" aria-expanded="false" aria-controls="card-body__collapse" data-bs-toggle="collapse" data-bs-target="#card-body__collapse">body<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content card-body__content bg--charcoal" data-bs-parent="#card-schema" id="card-body__collapse">
+      <div class="o-collapse__content collapse accordion__content card-body__content bg--esl-blue" data-bs-parent="#card-schema" id="card-body__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>
@@ -145,7 +145,7 @@ ___
   <div class="accordion-item" id="card-footer">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler card-footer__toggler" aria-expanded="false" aria-controls="card-footer__collapse" data-bs-toggle="collapse" data-bs-target="#card-footer__collapse">footer<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content card-footer__content bg--charcoal" data-bs-parent="#card-schema" id="card-footer__collapse">
+      <div class="o-collapse__content collapse accordion__content card-footer__content bg--esl-blue" data-bs-parent="#card-schema" id="card-footer__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>
@@ -170,7 +170,7 @@ ___
   <div class="accordion-item" id="card-link">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler card-link__toggler" aria-expanded="false" aria-controls="card-link__collapse" data-bs-toggle="collapse" data-bs-target="#card-link__collapse">link<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content card-link__content bg--charcoal" data-bs-parent="#card-schema" id="card-link__collapse">
+      <div class="o-collapse__content collapse accordion__content card-link__content bg--esl-blue" data-bs-parent="#card-schema" id="card-link__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>

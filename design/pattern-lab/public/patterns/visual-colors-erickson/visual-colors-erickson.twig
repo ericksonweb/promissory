@@ -79,7 +79,7 @@
           }, with_context = false)
         ,
         attributes: {
-          class: ['col-md-6']
+          class: ['col-md-6', 'col-xl-4']
         }
       },
       {
@@ -160,98 +160,6 @@
           }, with_context = false)
         ,
         attributes: {
-          class: ['col-md-6']
-        }
-      },
-    ]
-  ,
-  attributes: {
-    class: ['o-switcher', 'list--style-none', 'row'],
-    style: "gap: unset; row-gap: 1.5rem;"
-  }
-}, with_context = false) }}
-
-{{ include ('@atoms/list.twig', {
-  items:
-    [
-      {
-        content:
-          include ('@molecules/card.twig', {
-            header: {
-              content:
-                include ('@atoms/heading.twig', {
-                  content: "Aqua Blue",
-                  level: 5,
-                  attributes: {
-                    class: ['font-family--serif']
-                  }
-                })
-              ,
-            },
-            body: {
-              content:
-                include ('@atoms/paragraph.twig', {
-                  content: '<b>#00a3e0</b><br><code class="font-size--xsmall">var(--esl-color-aqua-blue)</code>'
-                }) ~
-                include ('@atoms/table.twig', {
-                  body: [
-                    {
-                      rows: [
-                        {
-                          cells: [
-                            {
-                              element: 'th',
-                              content: '<span class="font-size--tiny">CSS Class</span>',
-                              attributes: {
-                                class: ['subhead']
-                              }
-                            },
-                            {
-                              element: 'th',
-                              content: '<span class="font-size--tiny">CSS Property</span>',
-                              attributes: {
-                                class: ['subhead']
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          cells: [
-                            {
-                              element: 'th',
-                              content: "<code>bg--esl-aqua-blue</code>"
-                            },
-                            {
-                              content: '<code>background-color</code> <span class="font-size--tiny">(also applies accessible </span><code>color</code><span class="font-size--tiny"> property)</span>'
-                            }
-                          ]
-                        },
-                        {
-                          cells: [
-                            {
-                              element: 'th',
-                              content: "<code>color--esl-aqua-blue</code>"
-                            },
-                            {
-                              content: "<code>color</code>"
-                            }
-                          ]
-                        },
-                      ],
-                    }
-                  ],
-                  attributes: {
-                    class: ['font-size--xsmall', 'table--minimal']
-                  }
-                })
-              ,
-            },
-            attributes: {
-              class: ['bg--esl-aqua-blue']
-            },
-          }, with_context = false)
-        ,
-        attributes: {
           class: ['col-md-6', 'col-xl-4']
         }
       },
@@ -261,7 +169,7 @@
             header: {
               content:
                 include ('@atoms/heading.twig', {
-                  content: "Medium Green",
+                  content: "Erickson Aqua",
                   level: 5,
                   attributes: {
                     class: ['font-family--serif']
@@ -272,7 +180,7 @@
             body: {
               content:
                 include ('@atoms/paragraph.twig', {
-                  content: '<b>#02833d</b><br><code class="font-size--xsmall">var(--esl-color-medium-green)</code>'
+                  content: '<b>#00a3e0</b><br><code class="font-size--xsmall">var(--esl-color-aqua)</code>'
                 }) ~
                 include ('@atoms/table.twig', {
                   body: [
@@ -300,7 +208,7 @@
                           cells: [
                             {
                               element: 'th',
-                              content: "<code>bg--esl-medium-green</code>"
+                              content: "<code>bg--esl-aqua</code>"
                             },
                             {
                               content: '<code>background-color</code> <span class="font-size--tiny">(also applies accessible </span><code>color</code><span class="font-size--tiny"> property)</span>'
@@ -311,7 +219,7 @@
                           cells: [
                             {
                               element: 'th',
-                              content: "<code>color--esl-medium-green</code>"
+                              content: "<code>color--esl-aqua</code>"
                             },
                             {
                               content: "<code>color</code>"
@@ -328,88 +236,7 @@
               ,
             },
             attributes: {
-              class: ['bg--esl-medium-green']
-            },
-          }, with_context = false)
-        ,
-        attributes: {
-          class: ['col-md-6', 'col-xl-4']
-        }
-      },
-      {
-        content:
-          include ('@molecules/card.twig', {
-            header: {
-              content:
-                include ('@atoms/heading.twig', {
-                  content: "Dark Green",
-                  level: 5,
-                  attributes: {
-                    class: ['font-family--serif']
-                  }
-                })
-              ,
-            },
-            body: {
-              content:
-                include ('@atoms/paragraph.twig', {
-                  content: '<b>#015126</b><br><code class="font-size--xsmall">var(--esl-color-dark-green)</code>'
-                }) ~
-                include ('@atoms/table.twig', {
-                  body: [
-                    {
-                      rows: [
-                        {
-                          cells: [
-                            {
-                              element: 'th',
-                              content: '<span class="font-size--tiny">CSS Class</span>',
-                              attributes: {
-                                class: ['subhead']
-                              }
-                            },
-                            {
-                              element: 'th',
-                              content: '<span class="font-size--tiny">CSS Property</span>',
-                              attributes: {
-                                class: ['subhead']
-                              }
-                            }
-                          ]
-                        },
-                        {
-                          cells: [
-                            {
-                              element: 'th',
-                              content: "<code>bg--esl-dark-green</code>"
-                            },
-                            {
-                              content: '<code>background-color</code> <span class="font-size--tiny">(also applies accessible </span><code>color</code><span class="font-size--tiny"> property)</span>'
-                            }
-                          ]
-                        },
-                        {
-                          cells: [
-                            {
-                              element: 'th',
-                              content: "<code>color--esl-dark-green</code>"
-                            },
-                            {
-                              content: "<code>color</code>"
-                            }
-                          ]
-                        },
-                      ],
-                    }
-                  ],
-                  attributes: {
-                    class: ['font-size--xsmall', 'table--minimal']
-                  }
-                })
-              ,
-            },
-            attributes: {
-              class: ['bg--esl-dark-green']
+              class: ['bg--esl-aqua']
             },
           }, with_context = false)
         ,

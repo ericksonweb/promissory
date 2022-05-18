@@ -1,0 +1,62 @@
+<div class="col-md-6 col-lg-4">
+  {{ include ('@molecules/card.twig', {
+    media: {
+      item:
+        include ('@atoms/image.twig', {
+          attributes: {
+            src: '/images/card-apartment.jpg',
+            width: 540,
+            height: 380,
+            alt: "Image of the Glenmont dining room.",
+          }
+        })
+      ,
+      flush: true
+    },
+    header: {
+      content:
+        include ('@atoms/paragraph.twig', {
+          content: 'Extra large 1 bedroom',
+          attributes: {
+            class: ['color--primary']
+          }
+        })
+      ,
+      attributes: {
+        class: ['bg--light-grey', 'text-align--center']
+      }
+    },
+    body: {
+      content:
+        include ('@atoms/paragraph.twig', {
+          content: '<b>1.5 Bath | Den</b>',
+          attributes: {
+            class: ['text-align--center']
+          }
+        })
+      ,
+      attributes: {
+        class: ['bg--white', 'pb-3']
+      }
+    },
+    footer: {
+      content:
+        include ('@atoms/button.twig', {
+          content: "The Glenmont",
+          attributes: {
+            href: 'https://www.ericksonseniorliving.com/anns-choice/apartments/glenmont',
+            class: ['mt-n2', 'mb-n4']
+          },
+          wide: true
+        })
+      ,
+      attributes: {
+        class: ['bg--white', 'text-align--center', 'p-0']
+      }
+    },
+    link: {
+      href: 'https://www.ericksonseniorliving.com/anns-choice/apartments/glenmont'
+    },
+    dark: true
+  }, with_context = false) }}
+</div>

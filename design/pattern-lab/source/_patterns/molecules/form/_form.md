@@ -72,7 +72,7 @@ ___
   <div class="accordion-item" id="form-field">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler form-field__toggler" aria-expanded="false" aria-controls="form-field__collapse" data-bs-toggle="collapse" data-bs-target="#form-field__collapse">field<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content form-field__content bg--charcoal" data-bs-parent="#form-schema" id="form-field__collapse">
+      <div class="o-collapse__content collapse accordion__content form-field__content bg--esl-blue" data-bs-parent="#form-schema" id="form-field__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>

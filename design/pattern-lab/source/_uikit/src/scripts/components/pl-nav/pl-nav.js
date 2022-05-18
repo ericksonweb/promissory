@@ -249,7 +249,7 @@ class Nav extends BaseComponent {
 
     return (
       <nav className={`pl-js-nav-target pl-js-nav-container ${this.isActive ? 'pl-is-active' : ''}`} role="navigation">
-        <ul className={`o-switcher separator--bullet`}>
+        <ul className={`o-switcher separator--pipe`}>
           {patternGroups.map((item, i) => {
             const patternItems = item.patternItems;
   

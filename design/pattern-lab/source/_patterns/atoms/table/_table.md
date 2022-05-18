@@ -50,7 +50,7 @@ ___
   <div class="accordion-item" id="table-columns">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler table-columns__toggler" aria-expanded="false" aria-controls="table-columns__collapse" data-bs-toggle="collapse" data-bs-target="#table-columns__collapse">columns<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content table-columns__content bg--charcoal" data-bs-parent="#table-schema" id="table-columns__collapse">
+      <div class="o-collapse__content collapse accordion__content table-columns__content bg--esl-blue" data-bs-parent="#table-schema" id="table-columns__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>
@@ -82,7 +82,7 @@ ___
   <div class="accordion-item" id="table-header">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler table-header__toggler" aria-expanded="false" aria-controls="table-header__collapse" data-bs-toggle="collapse" data-bs-target="#table-header__collapse">header<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content table-header__content bg--charcoal" data-bs-parent="#table-schema" id="table-header__collapse">
+      <div class="o-collapse__content collapse accordion__content table-header__content bg--esl-blue" data-bs-parent="#table-schema" id="table-header__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>
@@ -109,7 +109,7 @@ ___
   <div class="accordion-item" id="table-body">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler table-body__toggler" aria-expanded="false" aria-controls="table-body__collapse" data-bs-toggle="collapse" data-bs-target="#table-body__collapse">body<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content table-body__content bg--charcoal" data-bs-parent="#table-schema" id="table-body__collapse">
+      <div class="o-collapse__content collapse accordion__content table-body__content bg--esl-blue" data-bs-parent="#table-schema" id="table-body__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>
@@ -136,7 +136,7 @@ ___
   <div class="accordion-item" id="table-footer">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler table-footer__toggler" aria-expanded="false" aria-controls="table-footer__collapse" data-bs-toggle="collapse" data-bs-target="#table-footer__collapse">footer<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content table-footer__content bg--charcoal" data-bs-parent="#table-schema" id="table-footer__collapse">
+      <div class="o-collapse__content collapse accordion__content table-footer__content bg--esl-blue" data-bs-parent="#table-schema" id="table-footer__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>
@@ -163,7 +163,7 @@ ___
   <div class="accordion-item" id="table-row">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler table-row__toggler" aria-expanded="false" aria-controls="table-row__collapse" data-bs-toggle="collapse" data-bs-target="#table-row__collapse">row<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content table-row__content bg--charcoal" data-bs-parent="#table-schema" id="table-row__collapse">
+      <div class="o-collapse__content collapse accordion__content table-row__content bg--esl-blue" data-bs-parent="#table-schema" id="table-row__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>
@@ -190,7 +190,7 @@ ___
   <div class="accordion-item" id="table-cell">
     <div class="o-collapse">
       <h3><button class="btn o-collapse__toggler accordion__toggler table-cell__toggler" aria-expanded="false" aria-controls="table-cell__collapse" data-bs-toggle="collapse" data-bs-target="#table-cell__collapse">cell<span class="icon fa-fw fas fa-blank"></span></button></h3>
-      <div class="o-collapse__content collapse accordion__content table-cell__content bg--charcoal" data-bs-parent="#table-schema" id="table-cell__collapse">
+      <div class="o-collapse__content collapse accordion__content table-cell__content bg--esl-blue" data-bs-parent="#table-schema" id="table-cell__collapse">
         <div class="o-collapse__body o-collapse__body--flush">
           <table class="table--minimal font-size--xsmall">
             <thead>

@@ -7,7 +7,7 @@ $breakpoint: map-get($breakpoints, sm);
 .accordion {
   &-item {
     border: 1px solid;
-    border-color: var(--esl-color-medium-grey);
+    border-color: var(--esl-color-dark-grey);
     
     &:not(:last-child) {
       margin-bottom: $spacing--single + 0rem;
@@ -31,7 +31,7 @@ $breakpoint: map-get($breakpoints, sm);
       color: var(--esl-color-charcoal);
       
       &:hover {
-        background-color: var(--esl-color-medium-grey);
+        background-color: var(--esl-color-dark-grey);
       color: var(--esl-color-charcoal);
       }
       

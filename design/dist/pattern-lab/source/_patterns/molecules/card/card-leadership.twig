@@ -1,0 +1,63 @@
+{% set content %}
+  {{ include ('@atoms/heading.twig', {
+    content: "Lorem ipsum dolor sit amet consectetur ",
+    level: 4,
+    attributes: {
+      class: ['font-family--serif']
+    }
+  }) }}
+  {{ include ('@atoms/paragraph.twig', {
+    content: 'Adipisicing elit, <a href="https://www.ericksonseniorliving.com">sed do eiusmod</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.',
+  }) }}
+{% endset %}
+
+<div class="col-sm-6">
+  {{ include ('@molecules/card.twig', {
+    media: {
+      item:
+        include ('@atoms/image.twig', {
+          attributes: {
+            src: '/images/card-leadership.jpg',
+            width: 220,
+            height: 320,
+            alt: "R. Alan Butler portrait photo.",
+          }
+        })
+      ,
+    },
+    body: {
+      content:
+        include ('@atoms/heading.twig', {
+          content: "R. Alan Butler",
+          level: 4,
+          attributes: {
+            class: ['h3', 'color--primary', 'mb-0']
+          }
+        }) ~
+        include ('@atoms/paragraph.twig', {
+          content: "Chief Executive Officer",
+          attributes: {
+            class: ['esl-accent', 'mt-0']
+          }
+        }) ~
+        include ('@atoms/paragraph.twig', {
+          content: "Alan leads the organization in its development and management of 21 campus-style communities in 11 states, which are home to more than 28,000 residents and employ nearly 15,000 dedicated staff members.",
+        }) ~
+        include ('@atoms/paragraph.twig', {
+          content:
+            include ('@atoms/button.twig', {
+              content: "Read More",
+            })
+          ,
+        })
+      ,
+    },
+    horizontal: true,
+    link: {
+      href: '#'
+    },
+    attributes: {
+      class: ['bg--light-grey']
+    }
+  }, with_context = false) }}
+</div>

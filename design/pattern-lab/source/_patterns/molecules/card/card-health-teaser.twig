@@ -1,0 +1,41 @@
+
+{{ include ('@molecules/card.twig', {
+  body: {
+    content:
+      include ('@atoms/heading.twig', {
+        content: "Assisted Living",
+        level: 4,
+        attributes: {
+          class: ['mb-2']
+        }
+      }) ~
+      include ('@atoms/paragraph.twig', {
+        content: "Enjoy the independent life you&rsquo;re used to while receiving extra support with meals, medications, and other daily tasks.",
+        attributes: {
+          class: ['mt-0']
+        }
+      })
+    ,
+  },
+  footer: {
+    content:
+      include ('@atoms/paragraph.twig', {
+        content:
+          include ('@atoms/button.twig', {
+            content: "Learn More",
+            attributes: {
+              href: 'https://www.ericksonseniorliving.com/anns-choice/health/assisted-living',
+            },
+          })
+        ,
+        attributes: {
+          class: ['text-align--center']
+        }
+      })
+    ,
+    attributes: {
+      class: ['align-self-stretch', 'align-items-center', 'justify-content-center']
+    }
+  },
+  horizontal: true
+}, with_context = false) }}

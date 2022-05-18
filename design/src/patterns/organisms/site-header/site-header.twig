@@ -2,16 +2,38 @@
 
 {% if not attributes is defined %}
   {% set attributes = {
-    class: ['site-header']
+    class: ['site-header'],
   } %}
 {% elseif attributes is defined and not attributes.class is defined %}
   {% set attributes = attributes|merge({
-    class: ['site-header']
+    class: ['site-header'],
   }) %}
 {% else %}
   {% set attributes = attributes|merge({
-    class: ['site-header']|merge(logo.attributes.class)
+    class: ['site-header']|merge(logo.attributes.class),
   }) %}
+{% endif %}
+
+{% if corporate %}
+  {% set attributes = attributes|merge({
+    class: attributes.class|merge(['site-header--corporate']),
+  }) %}
+{% endif %}
+
+{% if not attributes.aria is defined %}
+  {% set attributes = attributes|merge({
+    aria: {
+      role: 'banner'
+    }
+  }) %}
+{% else %}
+  {% if not attributes.aria.role is defined %}
+    {% set attributes = attributes|merge({
+      aria: attributes.aria|merge({
+        role: 'banner'
+      }),
+    }) %}
+  {% endif %}
 {% endif %}
 
 {# Logo #}
@@ -40,10 +62,7 @@
 {# Menu #}
 {% if menu is defined %}
   {% set menu_classes = ['site-header__menu'] %}
-  {% if menu.inline %}
-    {% set menu_classes = menu_classes|merge(['site-header__menu--inline']) %}
-  {% endif %}
-  
+
   {% if not menu.content.attributes is defined %}
     {% set menu = menu|merge({
       content: menu.content|merge({
@@ -72,6 +91,36 @@
   
 {% endif %}
 
+{# Additional Content #}
+{% if addl is defined %}
+  {% set addl_classes = ['site-header__addl'] %}
+  
+  {% if addl.hide == true %}
+    {% set addl_classes = addl_classes|merge(['site-header__addl--hide']) %}
+  {% endif %}
+
+  {% if not addl.attributes is defined %}
+    {% set addl = addl|merge({
+      attributes: {
+        class: addl_classes
+      }
+    }) %}
+  {% elseif addl.attributes is defined and not addl.attributes.class is defined %}
+    {% set addl = addl|merge({
+      attributes: addl.attributes|merge({
+        class: addl_classes
+      })
+    }) %}
+  {% else %}
+    {% set addl = addl|merge({
+      attributes: addl.attributes|merge({
+        class: addl_classes|merge(addl.attributes.class)
+      })
+    }) %}
+  {% endif %}
+  
+{% endif %}
+
 {% block content %}
   {%- if logo is defined -%}
     {{- include ('@atoms/link.twig', {
@@ -92,9 +141,7 @@
   {%- if addl is defined -%}
     {{- include ('@atoms/div.twig', {
       content: addl.content,
-      attributes: {
-        class: ['site-header__addl']
-      }
+      attributes: addl.attributes
     }, with_context = false) -}}
   {%- endif -%}
 {% endblock content %}

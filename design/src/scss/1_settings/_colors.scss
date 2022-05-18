@@ -4,10 +4,7 @@
 ///
 $esl-blue: #00395d;
 $esl-green: #00843d;
-
-$aqua-blue: #00a3e0;
-$medium-green: #02833d;
-$dark-green: #015126;
+$esl-aqua: #00a3e0;
 
 $pga-blue: #00819e;
 $pga-green: #6c7d31;
@@ -15,10 +12,9 @@ $pga-cream: #fbf7e8;
 
 $black: #000;
 $charcoal: #212529;
-$dark-grey: #a8a8a8;
-$medium-grey: #d2d2d7;
+$dark-grey: #d2d2d7;
 $light-grey: #ededee;
 $white: #fff;
 
-$error: #aa0000;
-$warning: #b98900;
+$error: $esl-green;
+$warning: $esl-aqua;

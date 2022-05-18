@@ -48,26 +48,5 @@ ___
       <td><code>true</code></td>
       <td>menu__submenu</td>
     </tr>
-    <tr>
-      <td><code>style</code></td>
-      <td>object</td>
-      <td colspan="4"></td>
-    </tr>
-    <tr>
-      <td><pre>&nbsp;&nbsp;<code>separator</code></pre></td>
-      <td>string</td>
-      <td>Separate top-level items with a small graphical element.</td>
-      <td>-</td>
-      <td class="text-nowrap"><code>"bullet"</code>, <code>"pipe"</code></td>
-      <td class="text-nowrap">separator--[<code>separator</code>]</td>
-    </tr>
-    <tr>
-      <td><pre>&nbsp;&nbsp;<code>bar</code></pre></td>
-      <td>boolean</td>
-      <td>Style the Menu with an alternate "bar" format.</td>
-      <td>-</td>
-      <td class="text-nowrap"><code>true</code></td>
-      <td class="text-nowrap">menu--bar</td>
-    </tr>
   </tbody>
 </table>
