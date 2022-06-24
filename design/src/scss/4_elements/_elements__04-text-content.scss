@@ -61,7 +61,7 @@ li {
 }
 dd:not(:last-child),
 li:not(:last-child) {
-  margin-bottom: $spacing--single + 0rem;
+  margin-bottom: $spacing--1qtr + 0rem;
 }
 
 figure {}
@@ -91,6 +91,6 @@ hr {
 li > {
   ol,
   ul {
-    margin-top: $spacing--single + 0rem;
+    margin-top: $spacing--1qtr + 0rem;
   }
 }
