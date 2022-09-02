@@ -40,9 +40,6 @@
 }
 
 @media (max-width: 767px) {
-  .site-header {
-    /*padding-bottom: $spacing--half + 0rem;*/
-  }
   .site-header__menu {
     margin-top: -3rem;
   }

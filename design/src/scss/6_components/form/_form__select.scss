@@ -164,6 +164,7 @@
 
 .dropdown-menu.show {
   display: block;
+  z-index: 100;
 }
 
 // Dropdown section headers
@@ -296,6 +297,7 @@ select.selectpicker {
   width: auto !important;
 }
 .bootstrap-select.form-control {
+  z-index: 2;
   margin-bottom: 0;
   padding: 0;
   border: none;

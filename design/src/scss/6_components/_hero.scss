@@ -4,92 +4,16 @@
 @use "../1_settings/spacing" as *;
 
 .hero {
-  
-  &__media {
-    margin-right: -100%;
-  }
-  
+  flex-direction: column-reverse;
+
   &__content {
     position: relative;
     z-index: 1;
     width: 100%;
     word-break: break-word;
     
-    &--inset {
-      width: calc(100% - #{$spacing--double + 0rem});
-      margin: $spacing--single + 0rem;
-      
-      &.hero__content--contain {
-        max-width: calc(#{map-get($breakpoints, max)} - #{$spacing--double + 0rem});
-        
-        &.hero__content--half {
-          width: clamp(min(calc((#{map-get($breakpoints, max)} / 2) - #{$spacing--double + 0rem}), calc(100% - #{$spacing--double + 0rem})), calc(#{map-get($breakpoints, sm)} - #{$spacing--double + 0rem}), calc(100% - #{$spacing--double + 0rem}));
-          
-          &.hero__content--left {
-            margin-left: max(#{$spacing--single + 0rem}, calc(((100% - #{map-get($breakpoints, max)}) / 2)) + #{$spacing--single + 0rem});
-          }
-          
-          &.hero__content--right {
-            margin-right: max(#{$spacing--single + 0rem}, calc(((100% - #{map-get($breakpoints, max)}) / 2)) + #{$spacing--single + 0rem});
-          }
-        }
-      }
-      
-      &.hero__content--half {
-        width: clamp(calc(50% - #{$spacing--double + 0rem}), calc(#{map-get($breakpoints, sm)} - #{$spacing--double + 0rem}), calc(100% - #{$spacing--double + 0rem}));
-          
-        &.hero__content--right {
-          margin-right: $spacing--single + 0rem;
-        }
-      }
-    }
-    
-    &--contain {
-      max-width: map-get($breakpoints, max);
-      margin-right: auto;
-      margin-left: auto;
-      
-      &.hero__content--half {
-        width: clamp(min(calc(#{map-get($breakpoints, max)} / 2), 50%), #{map-get($breakpoints, sm)}, 100%);
-        
-        &.hero__content--left {
-          margin-left: max(0px, calc((100% - #{map-get($breakpoints, max)}) / 2));
-        }
-        
-        &.hero__content--right {
-          margin-right: max(0px, calc((100% - #{map-get($breakpoints, max)}) / 2));
-        }
-      }
-    }
-    
-    &--half {
-      width: clamp(50%, #{map-get($breakpoints, sm)}, 100%);
-      
-      &.hero__content--center {
-        margin-right: auto;
-        margin-left: auto;
-      }
-      
-      &.hero__content--right {
-        margin-right: 0;
-        margin-left: auto;
-      }
-    }
-    
-    &--top {
-      align-self: flex-start;
-    }
-    
-    &--middle {
-      align-self: center;
-    }
-    
-    &--bottom {
-      align-self: flex-end;
-    }
-    
     &--light {
-      background-color: color.adjust(colors.$light-grey, $alpha: -0.3);
+      background-color: var(--esl-color-light-grey);
     }
     
     &--dark {
@@ -100,4 +24,104 @@
   &__body {
     padding: $spacing--single + 0rem;
   }
+}
+
+@media (max-width: (map-get($breakpoints, lg) - 1)) {
+  .hero {
+    &__body {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: (map-get($breakpoints, lg))) {
+  .hero {
+    
+    flex-direction: row;
+    
+    &__media {
+      margin-right: -100%;
+    }
+    
+    &__content {
+      &--inset {
+        width: calc(100% - #{$spacing--double + 0rem});
+        margin: $spacing--single + 0rem;
+        
+        &.hero__content--contain {
+          max-width: calc(#{map-get($breakpoints, max)} - #{$spacing--double + 0rem});
+          
+          &.hero__content--half {
+            width: clamp(min(calc((#{map-get($breakpoints, max)} / 2) - #{$spacing--double + 0rem}), calc(50% - #{$spacing--double + 0rem})), calc(#{map-get($breakpoints, xs)} - #{$spacing--double + 0rem}), calc(100% - #{$spacing--double + 0rem}));
+            
+            &.hero__content--left {
+              margin-left: max(#{$spacing--single + 0rem}, calc(((100% - #{map-get($breakpoints, max)}) / 2)) + #{$spacing--single + 0rem});
+            }
+            
+            &.hero__content--right {
+              margin-right: max(#{$spacing--single + 0rem}, calc(((100% - #{map-get($breakpoints, max)}) / 2)) + #{$spacing--single + 0rem});
+            }
+          }
+        }
+        
+        &.hero__content--half {
+          width: clamp(calc(50% - #{$spacing--double + 0rem}), calc(#{map-get($breakpoints, xs)} - #{$spacing--double + 0rem}), calc(100% - #{$spacing--double + 0rem}));
+            
+          &.hero__content--right {
+            margin-right: $spacing--single + 0rem;
+          }
+        }
+      }
+      
+      &--contain {
+        max-width: map-get($breakpoints, max);
+        margin-right: auto;
+        margin-left: auto;
+        
+        &.hero__content--half {
+          width: clamp(min(calc(#{map-get($breakpoints, max)} / 2), 50%), #{map-get($breakpoints, xs)}, 100%);
+          
+          &.hero__content--left {
+            margin-left: max(0px, calc((100% - #{map-get($breakpoints, max)}) / 2));
+          }
+          
+          &.hero__content--right {
+            margin-right: max(0px, calc((100% - #{map-get($breakpoints, max)}) / 2));
+          }
+        }
+      }
+      
+      &--half {
+        width: clamp(50%, #{map-get($breakpoints, xs)}, 100%);
+        
+        &.hero__content--center {
+          margin-right: auto;
+          margin-left: auto;
+        }
+        
+        &.hero__content--right {
+          margin-right: 0;
+          margin-left: auto;
+        }
+      }
+      
+      &--top {
+        align-self: flex-start;
+      }
+      
+      &--middle {
+        align-self: center;
+      }
+      
+      &--bottom {
+        align-self: flex-end;
+      }
+      
+      &--light {
+        background-color: color.adjust(colors.$light-grey, $alpha: -0.3);
+      }
+      
+    }    
+  }
+  
 }
