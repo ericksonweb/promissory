@@ -635,6 +635,7 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  z-index: 1;
   padding: 0.75rem;
   border: 1px solid;
   border-color: var(--esl-color-dark-grey) !important;
@@ -840,6 +841,7 @@ textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  z-index: 1;
   padding: 0.75rem;
   border: 1px solid;
   border-color: var(--esl-color-dark-grey) !important;
