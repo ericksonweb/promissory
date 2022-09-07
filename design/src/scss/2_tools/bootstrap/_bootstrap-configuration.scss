@@ -4,6 +4,7 @@
 ///
 
 @use "../../1_settings/breakpoints" as *;
+@use "../../1_settings/spacing" as *;
 @use "../../1_settings/transition" as *;
 
 //
@@ -14,6 +15,14 @@
 // Default variable overrides
 $grid-breakpoints: $breakpoints;
 $container-max-widths: $breakpoints;
+$spacers: (
+  0: 0,
+  1: $spacing--1qtr + 0rem,
+  2: $spacing--half + 0rem,
+  3: $spacing--3qtr + 0rem,
+  4: $spacing--single + 0rem,
+  5: $spacing--double + 0rem,
+);
 $transition-fade: opacity $transition;
 $enable-negative-margins: true;
 
