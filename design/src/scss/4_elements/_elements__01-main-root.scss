@@ -25,7 +25,7 @@
   --esl-color-light-grey: #{colors.$light-grey};
   --esl-color-white: #{colors.$white};
   
-  --esl-color-error: var(--esl-color-green);
+  --esl-color-error: #{colors.$error};
   --esl-color-warning: var(--esl-color-aqua);
   
   --esl-font-serif: #{fonts.$serif};

@@ -1,5 +1,6 @@
 @use "sass:color";
 @use "sass:math";
+@use "../1_settings/breakpoints" as *;
 @use "../1_settings/colors";
 @use "../1_settings/spacing" as *;
 @use "../1_settings/transition" as *;
@@ -88,9 +89,45 @@ hr {
   }
 }
 
-li > {
+li {
+  break-inside: avoid-column;
+
+  & > {
+    ol,
+    ul {
+      margin-top: $spacing--1qtr + 0rem;
+      
+      &:not(:first-child) {
+        margin-top: $spacing--1qtr + 0rem;
+      }
+      
+      &:not(:last-child) {
+        margin-bottom: $spacing--1qtr + 0rem;
+      }
+    }
+  }
+}
+
+ol,
+ul {
+  column-gap: 0;
+}
+
+@media (min-width: map-get($breakpoints, md)) {
   ol,
   ul {
-    margin-top: $spacing--1qtr + 0rem;
+    &.columns--2,
+    &.columns--3 {
+      columns: 2;
+    }    
+  }
+}
+
+@media (min-width: map-get($breakpoints, lg)) {
+  ol,
+  ul {
+    &.columns--3 {
+      columns: 3;
+    }
   }
 }

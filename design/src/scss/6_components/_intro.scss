@@ -12,6 +12,8 @@
   }
   
   &__content {
+    display: flex;
+    align-items: center;
     flex-basis: calc(#{map-get($breakpoints, lg)} / 2);
     flex-grow: 10000;
     width: 100%;

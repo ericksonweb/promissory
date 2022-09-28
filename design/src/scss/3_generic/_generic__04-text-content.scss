@@ -27,13 +27,6 @@ hr {
   overflow: visible; // Show the overflow in Edge and IE.
 }
 
-li > {
-  ol,
-  ul {
-    @include resets.margin;
-  }
-}
-
 p {
   @include resets.margin;
 }
