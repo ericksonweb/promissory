@@ -42,7 +42,7 @@ $(document).ready(function() {
         error.addClass('invalid-feedback');
         // For checkbox and radio groups
         if (element.attr('type') === 'checkbox' || element.attr('type') === 'radio') {
-          $name = element.attr('name');
+          var $name = element.attr('name');
           if ($form.find('[name="' + $name + '"]').length > 1) {
             error.insertBefore($('[name="' + $name + '"]:first').parent('.form__field'));
           }
@@ -58,7 +58,7 @@ $(document).ready(function() {
       highlight: function(element, errorClass) {
         // For checkbox and radio groups
         if ($(element).attr('type') === 'checkbox' || $(element).attr('type') === 'radio') {
-          $name = $(element).attr('name');
+          var $name = $(element).attr('name');
           if ($form.find('[name="' + $name + '"]').length > 1) {
             $('[name="' + $name + '"]').closest('.form__group').addClass('has-invalid');
             $('[name="' + $name + '"]').closest('fieldset.is-required').addClass('has-invalid');
@@ -73,7 +73,7 @@ $(document).ready(function() {
       unhighlight: function(element, errorClass) {
         // For checkbox and radio groups
         if ($(element).attr('type') === 'checkbox' || $(element).attr('type') === 'radio') {
-          $name = $(element).attr('name');
+          var $name = $(element).attr('name');
           if ($form.find('[name="' + $name + '"]').length > 1) {
             $('[name="' + $name + '"]').closest('.form__group').removeClass('has-invalid');
             $('[name="' + $name + '"]').closest('fieldset.is-required').removeClass('has-invalid');
