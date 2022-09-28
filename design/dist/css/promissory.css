@@ -9217,7 +9217,7 @@ a:not(.btn):active [class*=icon--shape] {
 }
 
 .message--error {
-  background-color: var(--color-secondary);
+  background-color: var(--esl-color-error);
 }
 
 .message--dismissible {
