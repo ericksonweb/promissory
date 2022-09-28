@@ -8640,7 +8640,7 @@ select.selectpicker {
   font-size: 1rem;
   font-weight: bold;
   vertical-align: top;
-  color: var(--esl-color-error);
+  color: var(--color-secondary);
 }
 
 input[type=checkbox] + .mark-required::before, input[type=radio] + .mark-required::before {
