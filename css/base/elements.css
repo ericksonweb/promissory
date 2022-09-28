@@ -12,7 +12,7 @@
   --esl-color-dark-grey: #d2d2d7;
   --esl-color-light-grey: #ededee;
   --esl-color-white: #fff;
-  --esl-color-error: var(--esl-color-green);
+  --esl-color-error: #d2232a;
   --esl-color-warning: var(--esl-color-aqua);
   --esl-font-serif: 'Sutro', serif;
   --esl-font-sans-serif: 'Proxima-Nova', sans-serif;
@@ -248,11 +248,40 @@ hr::after {
   opacity: 0.1;
 }
 
+li {
+  break-inside: avoid-column;
+}
 li > ol,
 li > ul {
   margin-top: 0.375rem;
 }
+li > ol:not(:first-child),
+li > ul:not(:first-child) {
+  margin-top: 0.375rem;
+}
+li > ol:not(:last-child),
+li > ul:not(:last-child) {
+  margin-bottom: 0.375rem;
+}
 
+ol,
+ul {
+  column-gap: 0;
+}
+
+@media (min-width: 576px) {
+  ol.columns--2, ol.columns--3,
+ul.columns--2,
+ul.columns--3 {
+    columns: 2;
+  }
+}
+@media (min-width: 768px) {
+  ol.columns--3,
+ul.columns--3 {
+    columns: 3;
+  }
+}
 img,
 svg {
   vertical-align: text-bottom;

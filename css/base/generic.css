@@ -43,11 +43,6 @@ hr {
   overflow: visible;
 }
 
-li > ol,
-li > ul {
-  margin: 0;
-}
-
 p {
   margin: 0;
 }
