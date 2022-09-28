@@ -38,6 +38,7 @@ label {
   
   input + & {
     flex-basis: calc(100% - 1.5rem - 0.75rem);
+    max-width: max-content;
     margin-right: 0;
     margin-left: $spacing--half + 0rem;
   }
