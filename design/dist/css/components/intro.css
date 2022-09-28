@@ -6,6 +6,8 @@
   flex-grow: 1;
 }
 .intro__content {
+  display: flex;
+  align-items: center;
   flex-basis: calc(768px / 2);
   flex-grow: 10000;
   width: 100%;

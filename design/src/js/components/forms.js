@@ -13,7 +13,7 @@ $(document).ready(function() {
   
   // jQuery Validation for forms.
   $('form.needs-validation').each(function() {
-    $form = $(this);
+    var $form = $(this);
     
     // Wrap checkbox groups.
     var groups = $form.find('input[type=checkbox][name], input[type=radio][name]').map(function() {
