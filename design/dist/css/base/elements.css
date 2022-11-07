@@ -171,6 +171,7 @@ a {
   outline: 0.25rem solid transparent;
   font-weight: bold;
   text-decoration-color: var(--esl-color-dark-grey);
+  text-decoration-thickness: from-font;
   text-underline-offset: 0.1875rem;
   color: var(--color-primary);
   transition: ease-in-out 0.15s;
