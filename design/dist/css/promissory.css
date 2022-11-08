@@ -9309,7 +9309,7 @@ a:not(.btn):active [class*=icon--shape] {
 }
 @media (min-width: 768px) {
   .site-header {
-    column-gap: 1.5rem;
+    column-gap: 3rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
