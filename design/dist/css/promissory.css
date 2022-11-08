@@ -9238,7 +9238,7 @@ a:not(.btn):active [class*=icon--shape] {
   top: 0;
   z-index: 1;
   display: grid;
-  grid-template-columns: calc((100vw - 1400px) / 2) minmax(140px, 30%) auto calc((100vw - 1400px) / 2);
+  grid-template-columns: calc((100vw - 1700px) / 2) minmax(140px, 30%) auto calc((100vw - 1700px) / 2);
   grid-template-rows: minmax(0, 1fr);
   column-gap: 0.75rem;
   row-gap: 0.375rem;
