@@ -159,6 +159,7 @@ summary {
   --esl-font-sans-serif: 'Proxima-Nova', sans-serif;
   line-height: 1.5;
   min-height: 0vw;
+  -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
 
