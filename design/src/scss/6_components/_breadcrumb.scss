@@ -5,7 +5,6 @@
 .breadcrumb {
   font-weight: bold;
   @include font-size.small;
-  background-color: var(--esl-color-light-grey);
   text-transform: uppercase;
   
   > ol {

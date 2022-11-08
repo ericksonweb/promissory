@@ -7557,7 +7557,6 @@ textarea:focus {
 
 .breadcrumb {
   font-weight: bold;
-  background-color: var(--esl-color-light-grey);
   text-transform: uppercase;
 }
 
