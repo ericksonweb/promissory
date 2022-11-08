@@ -10,6 +10,7 @@ a {
   outline: 0.25rem solid transparent;
   font-weight: bold;
   text-decoration-color: var(--esl-color-dark-grey);
+  text-decoration-thickness: from-font;
   text-underline-offset: math.div($spacing--1qtr + 0rem, 2);
   color: var(--color-primary);
   transition: $transition;

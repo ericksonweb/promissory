@@ -11,7 +11,7 @@
   top: 0;
   z-index: 1;
   display: grid;
-  grid-template-columns: calc((100vw - #{map-get($breakpoints, xxl)}) / 2) minmax(140px, 30%) auto calc((100vw - #{map-get($breakpoints, xxl)}) / 2);
+  grid-template-columns: calc((100vw - #{map-get($breakpoints, max)}) / 2) minmax(140px, 30%) auto calc((100vw - #{map-get($breakpoints, max)}) / 2);
   grid-template-rows: minmax(0, 1fr);
   column-gap: $spacing--half + 0rem;
   row-gap: $spacing--1qtr + 0rem;
@@ -94,7 +94,7 @@
 
 @media (min-width: map-get($breakpoints, lg)) {
   .site-header {
-    column-gap: $spacing--single + 0rem;
+    column-gap: $spacing--double + 0rem;
     padding-top: $spacing--single + 0rem;
     padding-bottom: $spacing--single + 0rem;
     
