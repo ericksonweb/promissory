@@ -3,7 +3,7 @@
     $('.site-header').each(function () {
       const stickHeader = () => {
         let stickyPos = parseInt($(this).css('top'));
-        if ($(this).offset().top - $(window).scrollTop() <= stickyPos) {
+        if ($(this).offset().top - $(this).parent().scrollTop() <= stickyPos) {
           $(this).addClass('stuck');
         } else {
           $(this).removeClass('stuck');
