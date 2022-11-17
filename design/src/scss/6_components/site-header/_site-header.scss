@@ -124,7 +124,7 @@
   }
 }
 
-@media (min-width: map-get($breakpoints, xxl)) {
+@media (min-width: map-get($breakpoints, xl)) {
   .site-header {
     top: -$spacing--single + 0rem - $spacing--1qtr + 0rem;
 
