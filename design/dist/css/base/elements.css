@@ -667,7 +667,6 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  z-index: 1;
   padding: 0.75rem;
   border: 1px solid;
   border-color: var(--esl-color-dark-grey) !important;
@@ -675,7 +674,6 @@ input {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: transparent;
   outline: 0.25rem solid transparent;
   outline-offset: unset;
   vertical-align: middle;
@@ -873,7 +871,6 @@ textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  z-index: 1;
   padding: 0.75rem;
   border: 1px solid;
   border-color: var(--esl-color-dark-grey) !important;
@@ -881,7 +878,6 @@ textarea {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-  background-color: transparent;
   outline: 0.25rem solid transparent;
   outline-offset: unset;
   vertical-align: middle;

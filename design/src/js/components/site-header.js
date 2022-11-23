@@ -24,7 +24,7 @@
         }
       }
       
-      $(scrollParent).scroll(stickHeader);
+      $(this).scrollParent().scroll(stickHeader);
       
       let menu = $(this).children('.menu');
       let breakpoint = menu.css('--breakpoint');
