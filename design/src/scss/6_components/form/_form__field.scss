@@ -5,7 +5,7 @@
 @use "../../2_tools/resets";
 
 @mixin label-eyebrow {
-  padding-top: $spacing--1qtr + 0rem;
+  padding-top: $spacing--1qtr + 0em;
   @include font-size.small;
   line-height: 1;
   
@@ -15,8 +15,7 @@
 }
 
 @mixin input-eyebrow {
-  padding: ($spacing--3qtr + 0rem) ($spacing--half + 0rem) ($spacing--1qtr + 0rem);
-  //z-index: 1;
+  padding: ($spacing--3qtr + 0em) ($spacing--half + 0em) ($spacing--1qtr + 0em);
 }
 
 .form__field {
@@ -89,7 +88,7 @@
   align-self: flex-start;
   border: 1px solid;
   @include resets.margin;
-  padding: $spacing--half + 0rem;
+  padding: $spacing--half + 0em;
   border-color: transparent;
   transition: $transition;
   transition-property: padding-top, font-weight, font-size, line-height, color;
