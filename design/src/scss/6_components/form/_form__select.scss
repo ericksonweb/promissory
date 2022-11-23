@@ -36,7 +36,7 @@
   &::before,
   &::after {
     position: absolute;
-    right: $spacing--half + 0rem;
+    right: $spacing--half + 0em;
     font-family: "Font Awesome 5 Pro";
     font-weight: 900;
     color: var(--esl-color-charcoal);
@@ -44,11 +44,11 @@
   
   &::before {
     content: "\f0d8";
-    top: $spacing--1qtr + 0rem;
+    top: $spacing--1qtr + 0em;
   }
   &::after {
     content: "\f0d7";
-    bottom: $spacing--1qtr + 0rem;
+    bottom: $spacing--1qtr + 0em;
   }
 }
 
@@ -402,7 +402,7 @@ select.selectpicker {
   padding-right: inherit;
 }
 .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
-  min-height: $line-height-base + 0rem;
+  min-height: $line-height-base + 0em;
   overflow: hidden;
 }
 .bootstrap-select .dropdown-toggle .filter-expand {
