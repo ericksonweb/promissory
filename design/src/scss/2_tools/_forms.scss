@@ -20,6 +20,6 @@
   transition-property: padding, border-color, background-color, outline-color;
   
   &:focus {
-    outline-color: color.adjust(colors.$esl-aqua, $alpha: -0.75);      
+    outline-color: color.adjust(colors.$esl-aqua, $alpha: -0.75);
   }
 }
