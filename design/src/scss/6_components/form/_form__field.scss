@@ -1,12 +1,14 @@
+@use "sass:math";
 @use "../../1_settings/colors";
 @use "../../1_settings/spacing" as *;
 @use "../../1_settings/transition" as *;
-@use "../../2_tools/font-size";
+@use "../../1_settings/typography";
+@use "../../2_tools/fluid-typography" as *;
 @use "../../2_tools/resets";
 
 @mixin label-eyebrow {
   padding-top: $spacing--1qtr + 0em;
-  @include font-size.small;
+  @include fluid-type(math.pow(typography.$scale--start, -0.5) + 0em, math.pow(typography.$scale--end, -0.5) + 0em);
   line-height: 1;
   
   &.mark-required::before {
@@ -92,6 +94,7 @@
   border-color: transparent;
   transition: $transition;
   transition-property: padding-top, font-weight, font-size, line-height, color;
+  pointer-events: none;
   
   .row > .form__field & {
     margin-left: $spacing--half + 0rem;

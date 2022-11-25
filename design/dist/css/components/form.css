@@ -26,20 +26,20 @@ fieldset .form__field:last-child, .field__group .form__field:last-child {
 .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):focus + .label--placeholder, .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):not(:placeholder-shown) + .label--placeholder,
 .form__field textarea:focus + .label--placeholder,
 .form__field textarea:not(:placeholder-shown) + .label--placeholder {
-  font-size: 0.9128709292rem;
+  font-size: 0.9128709292em;
 }
 @media all and (min-width: 768px) {
   .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):focus + .label--placeholder, .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):not(:placeholder-shown) + .label--placeholder,
 .form__field textarea:focus + .label--placeholder,
 .form__field textarea:not(:placeholder-shown) + .label--placeholder {
-    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.046693008));
+    font-size: calc(0.9128709292em + ((1vw - 7.68px) * -0.046693008));
   }
 }
 @media all and (min-width: 1400px) {
   .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):focus + .label--placeholder, .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):not(:placeholder-shown) + .label--placeholder,
 .form__field textarea:focus + .label--placeholder,
 .form__field textarea:not(:placeholder-shown) + .label--placeholder {
-    font-size: 0.894427191rem;
+    font-size: 0.894427191em;
   }
 }
 .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):focus + .label--placeholder.mark-required::before, .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):not(:placeholder-shown) + .label--placeholder.mark-required::before,
@@ -77,6 +77,7 @@ fieldset .form__field:last-child, .field__group .form__field:last-child {
   border-color: transparent;
   transition: ease-in-out 0.15s;
   transition-property: padding-top, font-weight, font-size, line-height, color;
+  pointer-events: none;
 }
 .row > .form__field .label--eyebrow,
 .row > .form__field .label--placeholder {
@@ -88,16 +89,16 @@ fieldset .form__field:last-child, .field__group .form__field:last-child {
   line-height: 1;
 }
 .label--eyebrow {
-  font-size: 0.9128709292rem;
+  font-size: 0.9128709292em;
 }
 @media all and (min-width: 768px) {
   .label--eyebrow {
-    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.046693008));
+    font-size: calc(0.9128709292em + ((1vw - 7.68px) * -0.046693008));
   }
 }
 @media all and (min-width: 1400px) {
   .label--eyebrow {
-    font-size: 0.894427191rem;
+    font-size: 0.894427191em;
   }
 }
 .label--eyebrow.mark-required::before {
@@ -135,6 +136,7 @@ input:not([placeholder=​]):placeholder-shown + .label--eyebrow {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  background-color: var(--esl-color-white);
   outline: 0.25rem solid transparent;
   outline-offset: unset;
   vertical-align: middle;

@@ -12,7 +12,7 @@
   border: 1px solid;
   border-color: var(--esl-color-dark-grey) !important;
   @include border-radius.none;
-  //background-color: transparent;
+  background-color: var(--esl-color-white);
   outline: 0.25rem solid transparent;
   outline-offset: unset;
   vertical-align: middle;

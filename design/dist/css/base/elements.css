@@ -674,6 +674,7 @@ input {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  background-color: var(--esl-color-white);
   outline: 0.25rem solid transparent;
   outline-offset: unset;
   vertical-align: middle;
@@ -878,6 +879,7 @@ textarea {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  background-color: var(--esl-color-white);
   outline: 0.25rem solid transparent;
   outline-offset: unset;
   vertical-align: middle;
