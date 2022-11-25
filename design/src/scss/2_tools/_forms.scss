@@ -7,7 +7,6 @@
 
 @mixin input {
   @include appearance.none;
-  //z-index: 1;
   padding: $spacing--half + 0em;
   border: 1px solid;
   border-color: var(--esl-color-dark-grey) !important;
