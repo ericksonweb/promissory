@@ -12,6 +12,6 @@
     right: $spacing--3qtr + 0rem;
     bottom: $spacing--3qtr + 0rem;
     left: $spacing--3qtr + 0rem;
-    border: ($spacing--1qtr + 0rem) solid color.adjust(colors.$light-grey, $alpha: -0.3);
+    border: ($spacing--half + 0rem) solid color.adjust(colors.$light-grey, $alpha: -0.3);
   }
 }
