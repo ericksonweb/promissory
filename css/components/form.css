@@ -1,10 +1,19 @@
 @charset "UTF-8";
+.form__fields,
+.form__group {
+  display: flex;
+  row-gap: 1.5rem;
+}
+
+.form__fields:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
 .form__field {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 1.5rem;
 }
 fieldset .form__field:last-child, .field__group .form__field:last-child {
   margin-bottom: 0;
