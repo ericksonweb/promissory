@@ -25,7 +25,7 @@
       }).get();
       groups = $.uniqueSort(groups);
       $.each(groups, function(index, value) {
-        var form_group = '<div class="form__group';
+        var form_group = '<div class="form__group row';
         if ($form.find('[name="' + value + '"]:required').length > 0) {
           form_group += ' has-required';
         }

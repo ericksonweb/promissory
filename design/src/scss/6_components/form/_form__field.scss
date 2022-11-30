@@ -20,17 +20,26 @@
   padding: ($spacing--3qtr + 0em) ($spacing--half + 0em) ($spacing--1qtr + 0em);
 }
 
+.form__fields,
+.form__group {
+  display: flex;
+  row-gap: $spacing--single + 0rem;
+}
+
+.form__fields:not(:last-child) {
+  margin-bottom: $spacing--single + 0rem;
+}
+
 .form__field {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: $spacing--single + 0rem;
   
   fieldset &,
   .field__group & {
     &:last-child {
-      margin-bottom: 0
+      margin-bottom: 0;
     }
   }
   
