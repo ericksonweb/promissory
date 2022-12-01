@@ -3,16 +3,16 @@
   text-transform: uppercase;
 }
 .breadcrumb {
-  font-size: 0.9128709292rem;
+  font-size: 0.9128709292em;
 }
 @media all and (min-width: 768px) {
   .breadcrumb {
-    font-size: calc(0.9128709292rem + ((1vw - 7.68px) * -0.046693008));
+    font-size: calc(0.9128709292em + ((1vw - 7.68px) * -0.046693008));
   }
 }
 @media all and (min-width: 1400px) {
   .breadcrumb {
-    font-size: 0.894427191rem;
+    font-size: 0.894427191em;
   }
 }
 .breadcrumb > ol {
@@ -27,7 +27,7 @@
   margin: 0;
 }
 .breadcrumb > ol > li:not(:last-child) {
-  margin: 0 0.75rem 0 0;
+  margin: 0 0.75em 0 0;
 }
 .breadcrumb > ol > li:not(:last-child)::after {
   content: "\f054";
