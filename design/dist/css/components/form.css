@@ -15,6 +15,9 @@
   flex-wrap: wrap;
   align-items: center;
 }
+.form__field:not([class*=col]) {
+  min-width: max-content;
+}
 fieldset .form__field:last-child, .field__group .form__field:last-child {
   margin-bottom: 0;
 }
@@ -77,22 +80,19 @@ fieldset .form__field:last-child, .field__group .form__field:last-child {
 
 .label--eyebrow,
 .label--placeholder {
-  position: absolute;
+  position: relative;
   left: 0;
   align-self: flex-start;
   border: 1px solid;
   margin: 0;
+  margin-left: -100%;
   padding: 0.75em;
   border-color: transparent;
   transition: ease-in-out 0.15s;
   transition-property: padding-top, font-weight, font-size, line-height, color;
   pointer-events: none;
+  white-space: nowrap;
 }
-.row > .form__field .label--eyebrow,
-.row > .form__field .label--placeholder {
-  margin-left: 0.75rem;
-}
-
 .label--eyebrow {
   padding-top: 0.375em;
   line-height: 1;
