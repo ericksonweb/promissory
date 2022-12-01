@@ -27,7 +27,7 @@
   margin: 0;
 }
 .breadcrumb > ol > li:not(:last-child) {
-  margin: 0 0.75em 0 0;
+  margin: 0 0.75rem 0 0;
 }
 .breadcrumb > ol > li:not(:last-child)::after {
   content: "\f054";
@@ -38,16 +38,16 @@
   vertical-align: middle;
 }
 .breadcrumb > ol > li:not(:last-child)::after {
-  font-size: 0.6944444444rem;
+  font-size: 0.6944444444em;
 }
 @media all and (min-width: 768px) {
   .breadcrumb > ol > li:not(:last-child)::after {
-    font-size: calc(0.6944444444rem + ((1vw - 7.68px) * -0.1378340366));
+    font-size: calc(0.6944444444em + ((1vw - 7.68px) * -0.1378340366));
   }
 }
 @media all and (min-width: 1400px) {
   .breadcrumb > ol > li:not(:last-child)::after {
-    font-size: 0.64rem;
+    font-size: 0.64em;
   }
 }
 .breadcrumb > ol > li[aria-current=page] {
