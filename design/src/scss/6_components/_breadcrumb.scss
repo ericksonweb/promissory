@@ -22,13 +22,13 @@
       margin: 0;
       
       &:not(:last-child) {
-        margin: 0 $spacing--half + 0em 0 0;
+        margin: 0 $spacing--half + 0rem 0 0;
         
         &::after {
           content: '\f054';
           margin-left: $spacing--half + 0rem;
           font-family: "Font Awesome 5 Pro";
-          @include font-size.tiny;
+          @include fluid-type(math.pow(typography.$scale--start, -2) + 0em, math.pow(typography.$scale--end, -2) + 0em);
           font-weight: 400;
           color: var(--color-primary);
           vertical-align: middle;
