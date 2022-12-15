@@ -15,9 +15,6 @@
   flex-wrap: wrap;
   align-items: center;
 }
-.form__field:not([class*=col]) {
-  min-width: max-content;
-}
 fieldset .form__field:last-child, .field__group .form__field:last-child {
   margin-bottom: 0;
 }
