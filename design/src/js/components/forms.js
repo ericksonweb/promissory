@@ -1,7 +1,7 @@
 (function($){
   $(document).ready(function() {
     // Label behavior for Bootstrap Select elements
-    $('.selectpicker').on('changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
+    $('.selectpicker').on('loaded.bs.select changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
       if ($(this).val().length > 0) {
         $(this).parent().next('label').addClass('label--eyebrow').removeClass('label--placeholder');
       }
