@@ -36,10 +36,6 @@
   flex-wrap: wrap;
   align-items: center;
   
-  &:not([class*="col"]) {
-    min-width: max-content;
-  }
-  
   fieldset &,
   .field__group & {
     &:last-child {
