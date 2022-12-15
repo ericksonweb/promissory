@@ -9,7 +9,7 @@
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 500;
+  z-index: 501;
   display: grid;
   grid-template-columns: calc((100vw - #{map-get($breakpoints, max)}) / 2) minmax(140px, 20%) auto calc((100vw - #{map-get($breakpoints, max)}) / 2);
   grid-template-rows: minmax(0, 1fr);
