@@ -10,6 +10,7 @@
 }
 
 .form__field {
+  box-sizing: border-box;
   position: relative;
   display: flex;
   flex-wrap: wrap;
