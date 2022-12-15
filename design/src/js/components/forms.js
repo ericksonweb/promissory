@@ -90,7 +90,7 @@
       });
       
       // Re-validate when changing Bootstrap Select elements.
-      $form.find(".selectpicker").on('changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
+      $form.find(".selectpicker").on('loaded.bs.select changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
         if ($(this).valid()) {
           $(this).closest('.dropdown').removeClass('has-invalid');
         }
