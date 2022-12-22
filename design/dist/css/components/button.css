@@ -5,7 +5,7 @@
   padding: 0.375rem 0.75rem;
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
   border-color: transparent !important;
-  background-color: var(--color-secondary);
+  background-color: var(--color-secondary) !important;
   outline: 0.25rem solid transparent !important;
   font-weight: bold;
   text-align: center;
