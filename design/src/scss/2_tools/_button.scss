@@ -12,7 +12,7 @@
   padding: ($spacing--1qtr + 0rem) ($spacing--half + 0rem);
   box-shadow: 0 3px 7px 0 color.adjust(colors.$black, $alpha: -0.75);
   border-color: transparent !important;
-  background-color: var(--color-secondary) !important;
+  background-color: var(--color-secondary);
   outline: 0.25rem solid transparent !important;
   font-weight: bold;
   text-align: center;
