@@ -1,15 +1,19 @@
 (function($){
+  function sizeLabel(selectpicker) {
+    if ($(selectpicker).val().length > 0) {
+      $(selectpicker).parent().next('label').addClass('label--eyebrow').removeClass('label--placeholder');
+    }
+    else {
+      if ($(selectpicker).parent().find('.filter-option-inner-inner').text().length == 0) {
+        $(selectpicker).parent().next('label').addClass('label--placeholder').removeClass('label--eyebrow');
+      }
+    }
+  }
+  
   $(document).ready(function() {
     // Label behavior for Bootstrap Select elements
-    $('.selectpicker').on('loaded.bs.select changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
-      if ($(this).val().length > 0) {
-        $(this).parent().next('label').addClass('label--eyebrow').removeClass('label--placeholder');
-      }
-      else {
-        if ($(this).parent().find('.filter-option-inner-inner').text().length == 0) {
-          $(this).parent().next('label').addClass('label--placeholder').removeClass('label--eyebrow');
-        }
-      }
+    $('.selectpicker').on('changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
+      sizeLabel($(this));
     });
     
     // jQuery Validation for forms.
@@ -90,7 +94,7 @@
       });
       
       // Re-validate when changing Bootstrap Select elements.
-      $form.find(".selectpicker").on('loaded.bs.select changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
+      $form.find(".selectpicker").on('changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
         if ($(this).valid()) {
           $(this).closest('.dropdown').removeClass('has-invalid');
         }
@@ -98,4 +102,7 @@
       
     });
   });
+  $(".selectpicker").on("loaded.bs.select", (function(e, t, s, a) {
+    sizeLabel($(this));
+  }))
 })(jQuery);
