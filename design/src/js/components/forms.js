@@ -1,6 +1,7 @@
 (function($){
   function sizeLabel(selectpicker) {
-    if ($(selectpicker).val().length > 0) {
+    console.log($(selectpicker).find('option:selected').text());
+    if ($(selectpicker).find('option:selected').text().length > 0) {
       $(selectpicker).parent().next('label').addClass('label--eyebrow').removeClass('label--placeholder');
     }
     else {
@@ -9,6 +10,10 @@
       }
     }
   }
+  
+  $(".selectpicker").on("loaded.bs.select", (function(e, t, s, a) {
+    sizeLabel($(this));
+  }));
   
   $(document).ready(function() {
     // Label behavior for Bootstrap Select elements
@@ -101,8 +106,5 @@
       });
       
     });
-  });
-  $(".selectpicker").on("loaded.bs.select", (function(e, t, s, a) {
-    sizeLabel($(this));
-  }))
+  });  
 })(jQuery);
