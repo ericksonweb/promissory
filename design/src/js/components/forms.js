@@ -1,6 +1,5 @@
 (function($){
   function sizeLabel(selectpicker) {
-    console.log($(selectpicker).find('option:selected').text());
     if ($(selectpicker).find('option:selected').text().length > 0) {
       $(selectpicker).parent().next('label').addClass('label--eyebrow').removeClass('label--placeholder');
     }
