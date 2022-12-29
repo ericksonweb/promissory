@@ -9236,7 +9236,7 @@ a:not(.btn):active [class*=icon--shape] {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 501;
+  z-index: 100;
   display: grid;
   grid-template-columns: calc((100vw - 1700px) / 2) minmax(140px, 20%) auto calc((100vw - 1700px) / 2);
   grid-template-rows: minmax(0, 1fr);
