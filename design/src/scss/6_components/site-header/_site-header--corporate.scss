@@ -7,10 +7,12 @@
 @use "../../2_tools/font-size";
 
 .site-header--corporate {
+  row-gap: $spacing--half + 0rem;
   background-color: var(--esl-color-blue);
   color: var(--esl-color-white);
   
   .site-header__menu {
+    margin-top: -3rem;
     text-transform: uppercase;
     
     nav {
@@ -33,11 +35,6 @@
   
   .menu__submenu {
     display: none;
-  }
-}
-
-@media (max-width: (map-get($breakpoints, lg) - 1)) {
-  .site-header--corporate {
   }
 }
 
@@ -77,7 +74,4 @@
       }
     }
   }
-}
-
-@media (min-width: map-get($breakpoints, xxl)) {
 }

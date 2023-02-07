@@ -14,9 +14,10 @@
   grid-template-columns: calc((100vw - #{map-get($breakpoints, max)}) / 2) minmax(140px, 20%) auto calc((100vw - #{map-get($breakpoints, max)}) / 2);
   grid-template-rows: minmax(0, 1fr);
   column-gap: $spacing--half + 0rem;
-  row-gap: $spacing--half + 0rem;
+  row-gap: $spacing--single + 0rem;
   width: 100%;
   padding-top: $spacing--half + 0rem;
+  padding-bottom: $spacing--half + 0rem;
   background-color: var(--esl-color-white);
   
   a {
@@ -59,7 +60,7 @@
   .site-header {
 
     &__menu {
-      margin-top: -3rem;
+      margin-top: -3.75rem;
       
       & > .menu__content {
         max-height: calc(100vh - 3rem - #{$spacing--1qtr + 0rem});

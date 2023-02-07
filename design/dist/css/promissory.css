@@ -926,6 +926,7 @@ input:is([type=checkbox], [type=radio]):checked::after {
   transform: translateX(-50%);
   font-family: "Font Awesome 5 Pro";
   font-weight: 900;
+  line-height: 1.5rem;
 }
 
 input[type=checkbox]:checked::after {
@@ -9241,9 +9242,10 @@ a:not(.btn):active [class*=icon--shape] {
   grid-template-columns: calc((100vw - 1700px) / 2) minmax(140px, 20%) auto calc((100vw - 1700px) / 2);
   grid-template-rows: minmax(0, 1fr);
   column-gap: 0.75rem;
-  row-gap: 0.75rem;
+  row-gap: 1.5rem;
   width: 100%;
   padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   background-color: var(--esl-color-white);
 }
 
@@ -9282,7 +9284,7 @@ a:not(.btn):active [class*=icon--shape] {
 
 @media (max-width: 767px) {
   .site-header__menu {
-    margin-top: -3rem;
+    margin-top: -3.75rem;
   }
   .site-header__menu > .menu__content {
     max-height: calc(100vh - 3rem - 0.375rem);
@@ -9402,11 +9404,13 @@ a:not(.btn):active [class*=icon--shape] {
   }
 }
 .site-header--corporate {
+  row-gap: 0.75rem;
   background-color: var(--esl-color-blue);
   color: var(--esl-color-white);
 }
 
 .site-header--corporate .site-header__menu {
+  margin-top: -3rem;
   text-transform: uppercase;
 }
 
