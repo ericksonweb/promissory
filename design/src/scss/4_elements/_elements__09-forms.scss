@@ -75,6 +75,7 @@ input {
         transform: translateX(-50%);
         font-family: "Font Awesome 5 Pro";
         font-weight: 900;
+        line-height: $spacing--single + 0rem;
       }
     }
   }
@@ -88,8 +89,8 @@ input {
     
     &:checked::after {
       content: "\f111";
-      font-size: 0.75rem;
-      line-height: 1.5rem;
+      font-size: $spacing--half + 0rem;
+      line-height: $spacing--single + 0rem;
     }
   }
   
