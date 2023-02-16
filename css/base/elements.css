@@ -706,6 +706,7 @@ input:is([type=checkbox], [type=radio]):checked::after {
   transform: translateX(-50%);
   font-family: "Font Awesome 5 Pro";
   font-weight: 900;
+  line-height: 1.5rem;
 }
 input[type=checkbox]:checked::after {
   content: "\f00c";
