@@ -49,9 +49,9 @@
 .form__group {
   &.has-invalid {
     width: calc(100% - (#{$spacing--half + 0rem} * 2));
-    margin: 0 ($spacing--half + 0rem) ($spacing--single + 0rem);
+    margin: 0 ($spacing--half + 0rem);
     border: 1px solid;
-    padding: ($spacing--half + 0rem) ($spacing--half + 0rem) 0;
+    padding: ($spacing--half + 0rem) 0;
     border-color: var(--esl-color-error);
     
     input {
@@ -92,6 +92,6 @@
   }
   
   &:first-child {
-    margin-bottom: $spacing--half + 0rem;
+    //margin-bottom: $spacing--half + 0rem;
   }
 }

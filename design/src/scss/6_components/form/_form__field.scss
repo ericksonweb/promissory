@@ -23,6 +23,7 @@
 .form__fields,
 .form__group {
   display: flex;
+  flex-wrap: wrap;
   row-gap: $spacing--single + 0rem;
 }
 
