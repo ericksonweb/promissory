@@ -42,9 +42,6 @@
       });
       
       $form.validate({
-        debug: true,
-        rules: {
-        },
         errorClass: 'is-invalid',
         errorElement: 'div',
         errorPlacement: function(error, element) {
