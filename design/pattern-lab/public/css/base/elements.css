@@ -273,14 +273,14 @@ ul {
 
 @media (min-width: 576px) {
   ol.columns--2, ol.columns--3,
-ul.columns--2,
-ul.columns--3 {
+  ul.columns--2,
+  ul.columns--3 {
     columns: 2;
   }
 }
 @media (min-width: 768px) {
   ol.columns--3,
-ul.columns--3 {
+  ul.columns--3 {
     columns: 3;
   }
 }
