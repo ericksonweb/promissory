@@ -2,6 +2,7 @@
 .form__fields,
 .form__group {
   display: flex;
+  flex-wrap: wrap;
   row-gap: 1.5rem;
 }
 
@@ -40,15 +41,15 @@ fieldset .form__field:last-child, .field__group .form__field:last-child {
 }
 @media all and (min-width: 768px) {
   .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):focus + .label--placeholder, .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):not(:placeholder-shown) + .label--placeholder,
-.form__field textarea:focus + .label--placeholder,
-.form__field textarea:not(:placeholder-shown) + .label--placeholder {
+  .form__field textarea:focus + .label--placeholder,
+  .form__field textarea:not(:placeholder-shown) + .label--placeholder {
     font-size: calc(0.9128709292em + ((1vw - 7.68px) * -0.046693008));
   }
 }
 @media all and (min-width: 1400px) {
   .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):focus + .label--placeholder, .form__field input:is([type=email], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=url]):not(:placeholder-shown) + .label--placeholder,
-.form__field textarea:focus + .label--placeholder,
-.form__field textarea:not(:placeholder-shown) + .label--placeholder {
+  .form__field textarea:focus + .label--placeholder,
+  .form__field textarea:not(:placeholder-shown) + .label--placeholder {
     font-size: 0.894427191em;
   }
 }
@@ -841,9 +842,9 @@ input[type=checkbox] + .mark-required::before, input[type=radio] + .mark-require
 
 .form__group.has-invalid {
   width: calc(100% - (0.75rem * 2));
-  margin: 0 0.75rem 1.5rem;
+  margin: 0 0.75rem;
   border: 1px solid;
-  padding: 0.75rem 0.75rem 0;
+  padding: 0.75rem 0;
   border-color: var(--esl-color-error);
 }
 .form__group.has-invalid input {
@@ -886,7 +887,4 @@ input[type=checkbox] + .mark-required::before, input[type=radio] + .mark-require
 }
 .mark-required ~ .invalid-feedback {
   margin-bottom: -1.125rem;
-}
-.invalid-feedback:first-child {
-  margin-bottom: 0.75rem;
 }

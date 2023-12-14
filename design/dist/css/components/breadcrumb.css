@@ -27,11 +27,11 @@
   margin: 0;
 }
 .breadcrumb > ol > li:not(:last-child) {
-  margin: 0 0.75rem 0 0;
+  margin: 0 0.75em 0 0;
 }
 .breadcrumb > ol > li:not(:last-child)::after {
   content: "\f054";
-  margin-left: 0.75rem;
+  margin-left: 0.75em;
   font-family: "Font Awesome 5 Pro";
   font-weight: 400;
   color: var(--color-primary);
